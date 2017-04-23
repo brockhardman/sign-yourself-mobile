@@ -7,6 +7,12 @@
 //
 
 import UIKit
+import RadarSDK
+import FacebookCore
+import Fabric
+import Crashlytics
+import TwitterKit
+import Google
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -15,8 +21,32 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
-        return true
+        
+        /**************
+         Radar
+         ***************/
+        
+        Radar.initialize(publishableKey: "org_test_pk_5b2fbea6486e6d94da5b1b6e7fce86f0f4e7ae0e")
+        Radar.setUserId("BrockTest")
+        Radar.setDescription("Testing, duh")
+        
+        let status = Radar.authorizationStatus()
+        if (status == CLAuthorizationStatus.authorizedAlways || status == CLAuthorizationStatus.authorizedWhenInUse) {
+            Radar.trackOnce(completionHandler: { (status: RadarStatus, location: CLLocation?, events: [RadarEvent]?, user: RadarUser?) in
+                if (status == RadarStatus.success) {
+                    debugPrint(user?.userId as Any)
+                    debugPrint(location?.coordinate as Any)
+                } else {
+                    debugPrint(status);
+                }
+            })
+        } else {
+            Radar.requestWhenInUseAuthorization()
+        }
+        
+        initializeApp()
+        
+        return SDKApplicationDelegate.shared.application(application, didFinishLaunchingWithOptions: launchOptions)
     }
 
     func applicationWillResignActive(_ application: UIApplication) {
@@ -41,6 +71,46 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
 
-
+    func application(_ app: UIApplication, open url: URL, options: [UIApplicationOpenURLOptionsKey : Any] = [:]) -> Bool
+    {
+        return SDKApplicationDelegate.shared.application(app, open: url, options: options)
+    }
+    
+    //Custom
+    
+    func initializeApp() {
+        configureFabric()
+        configureGoogle()
+        bootstrapServices()
+    }
+    
+    func configureFabric() {
+        //Fabric
+        Fabric.with([Crashlytics.self, Twitter.self])
+    }
+    
+    func configureGoogle() {
+        // Configure tracker from GoogleService-Info.plist.
+        var configureError: NSError?
+        GGLContext.sharedInstance().configureWithError(&configureError)
+        assert(configureError == nil, "Error configuring Google services: \(configureError)")
+        
+        // Optional: configure GAI options.
+        guard let gai = GAI.sharedInstance() else {
+            assert(false, "Google Analytics not configured correctly")
+        }
+        gai.trackUncaughtExceptions = true  // report uncaught exceptions
+        if Constants.isDebug {
+            gai.logger.logLevel = GAILogLevel.verbose
+        } else {
+            gai.logger.logLevel = GAILogLevel.error
+        }
+    }
+    
+    func bootstrapServices() {
+        //Bootstrap application for startup
+        let bootstrapper = AppBootstrapper()
+        bootstrapper.bootstrap()
+    }
 }
 

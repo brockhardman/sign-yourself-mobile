@@ -1,18 +1,19 @@
 //
-//  ViewController.swift
+//  ProfileViewController.swift
 //  SignYourselfMobile
 //
-//  Created by Brock Hardman on 11/29/16.
-//  Copyright © 2016 SignYourself. All rights reserved.
+//  Created by Brock Hardman on 4/22/17.
+//  Copyright © 2017 SignYourself. All rights reserved.
 //
 
 import UIKit
 
-class ViewController: UIViewController {
+class ProfileViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+
+        // Do any additional setup after loading the view.
     }
 
     override func didReceiveMemoryWarning() {
@@ -20,6 +21,4 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
-
 }
-
