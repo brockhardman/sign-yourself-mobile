@@ -20,6 +20,7 @@ class AppBootstrapper {
     
     func bootstrap() {
         setupConfiguration()
+        loadActiveControllers()
     }
     
     func setupConfiguration() {
@@ -30,6 +31,13 @@ class AppBootstrapper {
             runGoogleTests()
             runTwitterTests()
             runKingfisherTests()
+        }
+    }
+    
+    func loadActiveControllers() {
+        let activeControllerService = ActiveControllerService();
+        activeControllerService.configureWithURL(url: "") { Array in
+            
         }
     }
     

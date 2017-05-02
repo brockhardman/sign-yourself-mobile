@@ -1,0 +1,14 @@
+{
+    "0" : {
+        "navTitle" : "Profile",
+        "navImage" : "icon_profile",
+        "viewControllerClassName" : "SYSProfileViewController",
+        "storyboardName" : "Profile"
+    },
+    "1" : {
+        "navTitle" : "Events",
+        "navImage" : "icon_events",
+        "viewControllerClassName" : "SYSEventsViewController",
+        "storyboardName" : "Events"
+    }
+}

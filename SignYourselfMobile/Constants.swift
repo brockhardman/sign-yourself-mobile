@@ -19,4 +19,5 @@ struct Constants {
     static let testGoogleTracking = "Google Tracking test"
     static let testTweetId = "824695931677274112"
     static let configFileName = "Configuration"
+    static let activeControllersFileName = "activeViewControllers"
 }
