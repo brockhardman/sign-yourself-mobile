@@ -6,14 +6,11 @@
 //  Copyright © 2017 SignYourself. All rights reserved.
 //
 
-import UIKit
-
-class ProfileViewController: UIViewController {
-
+class ProfileViewController: ActiveViewController {
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        let color = UIColor.greenBackgroundColor;
-        self.view.backgroundColor = color;
+        self.view.backgroundColor = UIColor.greenBackgroundColor
     }
 
 }

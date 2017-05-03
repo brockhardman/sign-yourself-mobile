@@ -93,7 +93,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Configure tracker from GoogleService-Info.plist.
         var configureError: NSError?
         GGLContext.sharedInstance().configureWithError(&configureError)
-        assert(configureError == nil, "Error configuring Google services: \(configureError)")
+        assert(configureError == nil, "Error configuring Google services: \(String(describing: configureError))")
         
         // Optional: configure GAI options.
         guard let gai = GAI.sharedInstance() else {

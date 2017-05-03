@@ -20,7 +20,6 @@ class AppBootstrapper {
     
     func bootstrap() {
         setupConfiguration()
-        loadActiveControllers()
     }
     
     func setupConfiguration() {
@@ -31,13 +30,6 @@ class AppBootstrapper {
             runGoogleTests()
             runTwitterTests()
             runKingfisherTests()
-        }
-    }
-    
-    func loadActiveControllers() {
-        let activeControllerService = ActiveControllerService();
-        activeControllerService.configureWithURL(url: "") { Array in
-            
         }
     }
     
@@ -66,7 +58,7 @@ class AppBootstrapper {
             case .success:
                 if let data = response.result.value {
                     let dataString = String(data: data, encoding: .utf8)
-                    debugPrint("DataString: \(dataString)")
+                    debugPrint("DataString: \(String(describing: dataString))")
                     debugPrint("Data: \(data)")
                 }
             case .failure(let error):
@@ -98,7 +90,7 @@ class AppBootstrapper {
     
     func runTwitterTests() {
         TWTRAPIClient().loadTweet(withID: Constants.testTweetId) { (tweet, error) in
-            debugPrint("Tweet: \(tweet?.text)")
+            debugPrint("Tweet: \(String(describing: tweet?.text))")
         }
     }
     
@@ -116,7 +108,7 @@ class AppBootstrapper {
                 debugPrint("Not exist in cache.")
                 ImageDownloader.default.downloadImage(with: URL(string:key)!, options: [], progressBlock: nil) {
                     (image, error, url, data) in
-                    debugPrint("Downloaded Image: \(image)")
+                    debugPrint("Downloaded Image: \(String(describing: image))")
                     if image != nil {
                         ImageCache.default.store(image!, forKey: key)
                     }

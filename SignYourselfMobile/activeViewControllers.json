@@ -2,13 +2,13 @@
     "0" : {
         "navTitle" : "Profile",
         "navImage" : "icon_profile",
-        "viewControllerClassName" : "SYSProfileViewController",
+        "viewControllerClassName" : "ProfileViewController",
         "storyboardName" : "Profile"
     },
     "1" : {
         "navTitle" : "Events",
         "navImage" : "icon_events",
-        "viewControllerClassName" : "SYSEventsViewController",
+        "viewControllerClassName" : "EventsViewController",
         "storyboardName" : "Events"
     }
 }
