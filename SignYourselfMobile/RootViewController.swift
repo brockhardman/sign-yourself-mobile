@@ -15,6 +15,7 @@ class RootViewController: UIViewController, UIScrollViewDelegate, UIGestureRecog
     var mainPinchGestureMaxScale:CGFloat = 1.0
     var mainPinchGestureMinScale:CGFloat = 0.5
     var activeControllers = NSArray()
+    var activeControllersObjects = Array<ActiveViewController>()
     var tapGestures = NSMutableArray()
     var isZoomed = true;
     var currentControllerIndex = 0;
@@ -41,6 +42,13 @@ class RootViewController: UIViewController, UIScrollViewDelegate, UIGestureRecog
         let pinchGesture : UIPinchGestureRecognizer = UIPinchGestureRecognizer(target: self, action:#selector(userDidPinch))
         self.scrollView?.addGestureRecognizer(pinchGesture)
         self.scrollView?.delegate = self;
+    }
+    
+    func trackScreenInfoForIndex(index:NSInteger, didUseNavButton:Bool) {
+        let screenTitle : String = (self.activeControllers.object(at: index) as! NSDictionary).object(forKey: "navTitle") as! String
+        let screenInfo : NSDictionary = ["scrolledToScreen" : screenTitle, "usedNavigationButton" : didUseNavButton]
+        debugPrint(screenInfo)
+//        [[MParticle sharedInstance] logScreen:screenTitle eventInfo:screenInfo];
     }
 
     func userDidPinch(pinch:UIPinchGestureRecognizer) {
@@ -96,6 +104,7 @@ class RootViewController: UIViewController, UIScrollViewDelegate, UIGestureRecog
             activeController.didMove(toParentViewController: self)
             view.addSubview(activeController.view)
             activeController.view.frame = view.bounds
+            self.activeControllersObjects.append(activeController)
         }
     }
     
@@ -122,116 +131,110 @@ class RootViewController: UIViewController, UIScrollViewDelegate, UIGestureRecog
             navButton.setTitleColor(UIColor.darkGray, for: UIControlState.normal)
             navButtonView.addSubview(navButton)
             
-    //        UIImageView *buttonImageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:activeViewController.navigationImage]];
-    //        [buttonImageView setCenter:CGPointMake(navButtonWidth / 2, buttonImageView.frame.size.height / 2 + 3)];
-    //        [buttonImageView setBackgroundColor:[UIColor clearColor]];
-    //        [navButtonView addSubview:buttonImageView];
+            let buttonImageView = UIImageView(image:UIImage(named: (dict.object(forKey: "navImage") as? String)!))
+            buttonImageView.center = CGPoint(x:navButtonWidth / 2, y:buttonImageView.frame.size.height / 2 + 3)
+            buttonImageView.backgroundColor =  UIColor.clear
+            navButtonView.addSubview(buttonImageView)
             
             self.bottomNavView?.addSubview(navButtonView)
             counter += 1
         }
     }
     
-    func setControllersToMinScaleWithDuration(timeInterval:TimeInterval)
-    {
-//    for (UIViewController *controller in self.activeControllers)
-//    {
-//    SYSActiveViewController *activeController = (SYSActiveViewController *)controller;
-//    [activeController.view setClipsToBounds:NO];
-//    
-//    [UIView animateWithDuration:timeInterval animations:^{
-//    CGAffineTransform transform = CGAffineTransformMakeScale(kMainPinchGestureMinScale, kMainPinchGestureMinScale);
-//    activeController.view.transform = transform;
-//    UIView *floatingTitleView = [[UIView alloc] initWithFrame:CGRectMake(activeController.view.bounds.origin.x, activeController.view.bounds.origin.y - 100, activeController.view.bounds.size.width, 50)];
-//    UILabel *titleLabel = [[UILabel alloc] initWithFrame:floatingTitleView.bounds];
-//    titleLabel.textAlignment = NSTextAlignmentCenter;
-//    titleLabel.text = [activeController.navigationTitle uppercaseString];
-//    titleLabel.font = [UIFont systemFontOfSize:25];
-//    [floatingTitleView addSubview:titleLabel];
-//    [controller.view addSubview:floatingTitleView];
-//    } completion:^(BOOL finished) {
-//    [self addShadowToView:controller.view];
-//    }];
-//    }
-//    
-//    [self addTapGestureToView:self.scrollView];
-//    self.isZoomed = YES;
+    func setControllersToMinScaleWithDuration(timeInterval:TimeInterval) {
+
+        for activeController : ActiveViewController in self.activeControllersObjects {
+            activeController.view.clipsToBounds = false
+            UIView.animate(withDuration: timeInterval, animations: { 
+                let transform = CGAffineTransform.init(scaleX: self.mainPinchGestureMinScale, y: self.mainPinchGestureMinScale)
+                activeController.view.transform = transform;
+                let floatingTitleView = UIView(frame:CGRect(x:activeController.view.bounds.origin.x, y:activeController.view.bounds.origin.y - 100, width:activeController.view.bounds.size.width, height:50))
+                let titleLabel = UILabel(frame:floatingTitleView.bounds)
+                titleLabel.textAlignment = NSTextAlignment.center
+                titleLabel.text = activeController.navigationTitle.uppercased()
+                titleLabel.font = UIFont(name: "Helvetica", size: 25)
+                floatingTitleView.addSubview(titleLabel)
+                activeController.view.addSubview(floatingTitleView)
+            }, completion: { (didFinish) in
+                if didFinish {
+                    self.addShadowToView(view: activeController.view)
+                }
+            })
+        }
+    
+        addTapGestureToView(view:self.scrollView!)
+        self.isZoomed = true;
     }
     
     func setControllersToMaxScaleWithDuration(timeInterval:TimeInterval)
     {
-//    for (UIViewController *controller in self.activeControllers)
-//    {
-//    [UIView animateWithDuration:timeInterval animations:^{
-//    CGAffineTransform transform = CGAffineTransformMakeScale(kMainPinchGestureMaxScale, kMainPinchGestureMaxScale);
-//    controller.view.transform = transform;
-//    } completion:^(BOOL finished) {
-//    [self removeShadowFromView:controller.view];
-//    [self removeTapGestureFromView:controller.view];
-//    [controller.view setClipsToBounds:YES];
-//    }];
-//    }
-//    
-//    self.isZoomed = NO;
+        for activeController : ActiveViewController in self.activeControllersObjects {
+            UIView.animate(withDuration: timeInterval, animations: {
+                let transform = CGAffineTransform.init(scaleX: self.mainPinchGestureMaxScale, y: self.mainPinchGestureMaxScale)
+                activeController.view.transform = transform;
+            }, completion: { (didFinish) in
+                if didFinish {
+                    self.removeShadowFromView(view: activeController.view)
+                    self.removeTapGestureFromView(view: activeController.view)
+                    activeController.view.clipsToBounds = true
+                }
+            })
+        }
+    
+        self.isZoomed = false
     }
     
-//    func addShadowToView:(UIView *)view
-//    {
-//    CALayer *layer = [view layer];
-//    [layer setMasksToBounds:NO];
-//    [layer setRasterizationScale:[[UIScreen mainScreen] scale]];
-//    [layer setShouldRasterize:YES];
-//    [layer setShadowColor:[[UIColor blackColor] CGColor]];
-//    [layer setShadowOffset:CGSizeMake(5.0f, 5.0f)];
-//    [layer setShadowRadius:10.0f];
-//    [layer setShadowOpacity:0.5f];
-//    [layer setShadowPath:[[UIBezierPath bezierPathWithRoundedRect:view.bounds cornerRadius:layer.cornerRadius] CGPath]];
-//    }
-//    
-//    func removeShadowFromView:(UIView *)view
-//    {
-//    CALayer *layer = [view layer];
-//    [layer setShadowColor:nil];
-//    [layer setShadowOffset:CGSizeZero];
-//    [layer setShadowRadius:0.0f];
-//    [layer setShadowOpacity:0.0f];
-//    [layer setShadowPath:nil];
-//    }
-//    
-//    func addTapGestureToView:(UIView *)view
-//    {
-//    UITapGestureRecognizer *tapGesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(userDidTap:)];
-//    [view addGestureRecognizer:tapGesture];
-//    [self.tapGestures addObject:tapGesture];
-//    }
-//    
-//    func removeTapGestureFromView:(UIView *)view
-//    {
-//    for (UIGestureRecognizer *recognizer in view.gestureRecognizers)
-//    {
-//    if ([self.tapGestures containsObject:recognizer])
-//    {
-//    [view removeGestureRecognizer:recognizer];
-//    [self.tapGestures removeObject:recognizer];
-//    }
-//    }
-//    }
+    func addShadowToView(view:UIView) {
+        let layer = view.layer
+        layer.masksToBounds = false
+        layer.rasterizationScale = UIScreen.main.scale
+        layer.shouldRasterize = true
+        layer.shadowColor = UIColor.black.cgColor
+        layer.shadowOffset = CGSize(width: 5.0, height: 5.0)
+        layer.shadowRadius = 10.0
+        layer.shadowOpacity = 0.5
+        layer.shadowPath = UIBezierPath(roundedRect: view.bounds, cornerRadius: layer.cornerRadius).cgPath
+    }
+    
+    func removeShadowFromView(view:UIView) {
+        let layer = view.layer
+        layer.masksToBounds = true
+        layer.shadowColor = nil
+        layer.shadowOffset = CGSize.zero
+        layer.shadowRadius = 0.0
+        layer.shadowOpacity = 0.0
+        layer.shadowPath = nil
+    }
+
+    func addTapGestureToView(view:UIView) {
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(userDidTap(tap:)))
+        view.addGestureRecognizer(tapGesture)
+        self.tapGestures.add(tapGesture)
+    }
+
+    func removeTapGestureFromView(view:UIView)
+    {
+        view.gestureRecognizers?.forEach({ recognizer in
+            if self.tapGestures.contains(recognizer) {
+                view.removeGestureRecognizer(recognizer)
+                self.tapGestures.remove(recognizer)
+            }
+        })
+    }
     
     func userDidTap(tap: UITapGestureRecognizer)
     {
-//    if (self.isZoomed)
-//    {
-//    [self setControllersToMaxScaleWithDuration:0.2f];
-//    }
+        if (self.isZoomed) {
+            setControllersToMaxScaleWithDuration(timeInterval: 0.2)
+        }
     }
     
     func updateControllersWithScale(scale:CGFloat)
     {
-//    for (SYSActiveViewController *controller in self.activeControllers)
-//    {
-//    CGAffineTransform transform = CGAffineTransformMakeScale(scale, scale);
-//    controller.view.transform = transform;
-//    }
+        for activeController : ActiveViewController in self.activeControllersObjects {
+            let transform = CGAffineTransform.init(scaleX: scale, y: scale)
+            activeController.view.transform = transform;
+        }
     }
     
     func getUpdatedScaleWithScale(scale:CGFloat) -> CGFloat {
@@ -245,26 +248,23 @@ class RootViewController: UIViewController, UIScrollViewDelegate, UIGestureRecog
     }
     
     func navButtonTapped(sender:UIButton) {
-//    if (self.currentControllerIndex != sender.tag)
-//    {
-//    CGRect screenRect = [[UIScreen mainScreen] bounds];
-//    CGFloat newOffsetX = screenRect.size.width * sender.tag;
-//    
-//    if (!self.isZoomed)
-//    {
-//    [self setControllersToMinScaleWithDuration:0.4f];
+        if (self.currentControllerIndex != sender.tag) {
+            let screenRect = UIScreen.main.bounds
+            let newOffsetX = screenRect.size.width * CGFloat(sender.tag);
+            
+            if (!self.isZoomed) {
+                self.setControllersToMinScaleWithDuration(timeInterval: 0.4)
+            }
+            UIView.animate(withDuration: 0.6, animations: { 
+                self.scrollView!.setContentOffset(CGPoint(x:newOffsetX, y:0), animated: false)
+            }, completion: { (didFinish) in
+                self.setControllersToMaxScaleWithDuration(timeInterval: 0.4)
+                self.currentControllerIndex = sender.tag;
+                self.trackScreenInfoForIndex(index: self.currentControllerIndex, didUseNavButton: true)
+            })
+        }
     }
-//    
-//    [UIView animateWithDuration:0.6f animations:^{
-//    [self.scrollView setContentOffset:CGPointMake(newOffsetX, 0)];
-//    } completion:^(BOOL finished) {
-//    [self setControllersToMaxScaleWithDuration:0.4f];
-//    self.currentControllerIndex = sender.tag;
-//    [self trackScreenInfoForIndex:self.currentControllerIndex didUseNavigationButtons:YES];
-//    }];
-//    }
-//    }
-//    
+//
 //    #pragma mark - Active View Controller Refresh Protocol
 //    
 //    func layoutNeedsRefresh
@@ -275,11 +275,10 @@ class RootViewController: UIViewController, UIScrollViewDelegate, UIGestureRecog
 //    
 //    #pragma mark - Scrollview Delegate Methods
 //    
-//    func scrollViewDidEndDecelerating:(UIScrollView *)scrollView
-//    {
-//    NSInteger pageSize = scrollView.contentSize.width / [self.activeControllers count];
-//    NSInteger pageLandedOn = scrollView.contentOffset.x / pageSize;
-//    self.currentControllerIndex = pageLandedOn;
-//    [self trackScreenInfoForIndex:self.currentControllerIndex didUseNavigationButtons:NO];
-//    }
+    func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
+        let pageSize = scrollView.contentSize.width / CGFloat(self.activeControllers.count)
+        let pageLandedOn = scrollView.contentOffset.x / pageSize;
+        self.currentControllerIndex = Int(pageLandedOn);
+        trackScreenInfoForIndex(index:self.currentControllerIndex, didUseNavButton:false)
+    }
 }
