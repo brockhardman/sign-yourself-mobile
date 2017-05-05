@@ -8,8 +8,6 @@
 
 import UIKit
 
-//typedef void(^ActiveControllersCompletionBlock)(void);
-
 class RootViewController: UIViewController, UIScrollViewDelegate, UIGestureRecognizerDelegate {
     
     var mainPinchGestureMaxScale:CGFloat = 1.0
@@ -39,7 +37,7 @@ class RootViewController: UIViewController, UIScrollViewDelegate, UIGestureRecog
             };
         })
         
-        let pinchGesture : UIPinchGestureRecognizer = UIPinchGestureRecognizer(target: self, action:#selector(userDidPinch))
+        let pinchGesture : UIPinchGestureRecognizer = UIPinchGestureRecognizer(target: self, action:#selector(userDidPinch(pinch:)))
         self.scrollView?.addGestureRecognizer(pinchGesture)
         self.scrollView?.delegate = self;
     }
@@ -111,22 +109,21 @@ class RootViewController: UIViewController, UIScrollViewDelegate, UIGestureRecog
     func buildBottomNavWithActiveControllers() {
         let screenRect = UIScreen.main.bounds;
         let navButtonWidth = screenRect.size.width / CGFloat(self.activeControllers.count);
-        var counter = 0.0;
         
         for index in 0...self.activeControllers.count-1 {
             
-            let beginX = CGFloat(counter) * navButtonWidth;
+            let beginX = CGFloat(index) * navButtonWidth;
             let navButtonView = UIView(frame: CGRect(x:beginX,y:0, width:navButtonWidth, height:(self.bottomNavView?.frame.size.height)!))
             navButtonView.backgroundColor = UIColor.clear
         
             let navButton = UIButton()
             navButton.frame = CGRect(x: 0, y: 0, width: navButtonWidth, height: (self.bottomNavView?.frame.size.height)!)
-            navButton.tag = Int(counter);
+            navButton.tag = index
             navButton.addTarget(self, action: #selector(navButtonTapped), for: UIControlEvents.touchUpInside)
             let dict = self.activeControllers.object(at: index) as! NSDictionary
             navButton.setTitle(dict.object(forKey: "navTitle") as? String, for: UIControlState.normal)
             navButton.titleLabel?.textAlignment = NSTextAlignment.center;
-            navButton.titleEdgeInsets = UIEdgeInsets(top:(self.bottomNavView?.frame.size.height)! - 18, left:0, bottom:0, right:0);
+            navButton.titleEdgeInsets = UIEdgeInsets(top:(self.bottomNavView?.frame.size.height)! - 18, left:0, bottom:0, right:0)
             navButton.titleLabel?.font = UIFont(name:"Helvetica", size:10)
             navButton.setTitleColor(UIColor.darkGray, for: UIControlState.normal)
             navButtonView.addSubview(navButton)
@@ -137,7 +134,6 @@ class RootViewController: UIViewController, UIScrollViewDelegate, UIGestureRecog
             navButtonView.addSubview(buttonImageView)
             
             self.bottomNavView?.addSubview(navButtonView)
-            counter += 1
         }
     }
     
@@ -264,17 +260,9 @@ class RootViewController: UIViewController, UIScrollViewDelegate, UIGestureRecog
             })
         }
     }
-//
-//    #pragma mark - Active View Controller Refresh Protocol
-//    
-//    func layoutNeedsRefresh
-//    {
-//    [self.view setNeedsDisplay];
-//    [self.view setNeedsLayout];
-//    }
-//    
-//    #pragma mark - Scrollview Delegate Methods
-//    
+    
+    // Scrollview Delegate Methods
+    
     func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
         let pageSize = scrollView.contentSize.width / CGFloat(self.activeControllers.count)
         let pageLandedOn = scrollView.contentOffset.x / pageSize;
