@@ -6,8 +6,6 @@
 //  Copyright © 2017 SignYourself. All rights reserved.
 //
 
-import Foundation
-
 class ActiveViewController: UIViewController {
     
     public var navigationTitle = String()
