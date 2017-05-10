@@ -12,7 +12,7 @@
 		382715741EAD08CC004B1994 /* UIColor+SYS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 382715731EAD08CC004B1994 /* UIColor+SYS.swift */; };
 		382715771EAD1535004B1994 /* Events.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 382715761EAD1535004B1994 /* Events.storyboard */; };
 		382715BF1EAEEC2D004B1994 /* EventsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 382715BE1EAEEC2D004B1994 /* EventsViewController.swift */; };
-		385A6B2E1EB199CD00004F33 /* ActiveControllersService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 385A6B2D1EB199CD00004F33 /* ActiveControllersService.swift */; };
+		385A6B2E1EB199CD00004F33 /* ActiveControllerService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 385A6B2D1EB199CD00004F33 /* ActiveControllerService.swift */; };
 		385A6B301EB1AC8100004F33 /* NSDictionary+SYS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 385A6B2F1EB1AC8100004F33 /* NSDictionary+SYS.swift */; };
 		385A6B321EB1BD7100004F33 /* activeViewControllers.json in Resources */ = {isa = PBXBuildFile; fileRef = 385A6B311EB1BD7100004F33 /* activeViewControllers.json */; };
 		389E68051EABFD0200B28BDA /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 389E68041EABFD0200B28BDA /* Profile.storyboard */; };
@@ -34,7 +34,7 @@
 		382715731EAD08CC004B1994 /* UIColor+SYS.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+SYS.swift"; sourceTree = "<group>"; };
 		382715761EAD1535004B1994 /* Events.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Events.storyboard; sourceTree = "<group>"; };
 		382715BE1EAEEC2D004B1994 /* EventsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventsViewController.swift; sourceTree = "<group>"; };
-		385A6B2D1EB199CD00004F33 /* ActiveControllersService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActiveControllersService.swift; sourceTree = "<group>"; };
+		385A6B2D1EB199CD00004F33 /* ActiveControllerService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActiveControllerService.swift; sourceTree = "<group>"; };
 		385A6B2F1EB1AC8100004F33 /* NSDictionary+SYS.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSDictionary+SYS.swift"; sourceTree = "<group>"; };
 		385A6B311EB1BD7100004F33 /* activeViewControllers.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = activeViewControllers.json; sourceTree = "<group>"; };
 		389E68041EABFD0200B28BDA /* Profile.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Profile.storyboard; sourceTree = "<group>"; };
@@ -98,7 +98,7 @@
 		385A6B2C1EB1998300004F33 /* Services */ = {
 			isa = PBXGroup;
 			children = (
-				385A6B2D1EB199CD00004F33 /* ActiveControllersService.swift */,
+				385A6B2D1EB199CD00004F33 /* ActiveControllerService.swift */,
 			);
 			name = Services;
 			sourceTree = "<group>";
@@ -309,7 +309,7 @@
 				389E68111EAC7EDA00B28BDA /* AppBootstrapper.swift in Sources */,
 				38E34C001DEE866E00D1D37E /* AppDelegate.swift in Sources */,
 				295DBE381EBFAC8000355ABE /* TabbedViewController.swift in Sources */,
-				385A6B2E1EB199CD00004F33 /* ActiveControllersService.swift in Sources */,
+				385A6B2E1EB199CD00004F33 /* ActiveControllerService.swift in Sources */,
 				38C11E321EB9888500D788D0 /* ActiveViewController.swift in Sources */,
 				382715BF1EAEEC2D004B1994 /* EventsViewController.swift in Sources */,
 				382715741EAD08CC004B1994 /* UIColor+SYS.swift in Sources */,
