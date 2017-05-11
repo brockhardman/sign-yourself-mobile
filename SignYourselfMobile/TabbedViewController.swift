@@ -252,11 +252,17 @@ class TabbedViewController: UIViewController, UIScrollViewDelegate, UIGestureRec
             UIView.animate(withDuration: 0.6, animations: {
                 self.scrollView!.setContentOffset(CGPoint(x:newOffsetX, y:0), animated: false)
             }, completion: { (didFinish) in
-                self.setControllersToMaxScaleWithDuration(timeInterval: 0.4)
-                self.currentControllerIndex = sender.tag;
-                self.trackScreenInfoForIndex(index: self.currentControllerIndex, didUseNavButton: true)
+                if didFinish {
+                    self.setControllersToMaxScaleWithDuration(timeInterval: 0.4)
+                    self.currentControllerIndex = sender.tag;
+                    self.trackScreenInfoForIndex(index: self.currentControllerIndex, didUseNavButton: true)
+                }
             })
         }
+    }
+    
+    func updateTabSelected() {
+        
     }
     
     // Scrollview Delegate Methods
