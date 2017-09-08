@@ -11,7 +11,6 @@ import UIKit
 import FacebookCore
 import Alamofire
 import SwiftyJSON
-import Kingfisher
 import TwitterKit
 
 var config = [String: Any]()
@@ -29,7 +28,7 @@ class AppBootstrapper {
             runAlamofireTests()
             runGoogleTests()
             runTwitterTests()
-            runKingfisherTests()
+            //runKingfisherTests()
         }
     }
     
@@ -94,27 +93,27 @@ class AppBootstrapper {
         }
     }
     
-    func runKingfisherTests() {
-        
-        //Examples can be found at https://github.com/onevcat/Kingfisher/wiki/Cheat-Sheet
-        
-        let key = Constants.testImageUrl
-        
-        ImageCache.default.retrieveImage(forKey: key, options: nil) {
-            image, cacheType in
-            if let image = image {
-                debugPrint("Get image \(image), cacheType: \(cacheType).")
-            } else {
-                debugPrint("Not exist in cache.")
-                ImageDownloader.default.downloadImage(with: URL(string:key)!, options: [], progressBlock: nil) {
-                    (image, error, url, data) in
-                    debugPrint("Downloaded Image: \(String(describing: image))")
-                    if image != nil {
-                        ImageCache.default.store(image!, forKey: key)
-                    }
-                    
-                }
-            }
-        }
-    }
+//    func runKingfisherTests() {
+//
+//        //Examples can be found at https://github.com/onevcat/Kingfisher/wiki/Cheat-Sheet
+//
+//        let key = Constants.testImageUrl
+//
+//        ImageCache.default.retrieveImage(forKey: key, options: nil) {
+//            image, cacheType in
+//            if let image = image {
+//                debugPrint("Get image \(image), cacheType: \(cacheType).")
+//            } else {
+//                debugPrint("Not exist in cache.")
+//                ImageDownloader.default.downloadImage(with: URL(string:key)!, options: [], progressBlock: nil) {
+//                    (image, error, url, data) in
+//                    debugPrint("Downloaded Image: \(String(describing: image))")
+//                    if image != nil {
+//                        ImageCache.default.store(image!, forKey: key)
+//                    }
+//
+//                }
+//            }
+//        }
+//    }
 }

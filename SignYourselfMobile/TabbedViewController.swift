@@ -47,7 +47,7 @@ class TabbedViewController: UIViewController, UIScrollViewDelegate, UIGestureRec
         //        [[MParticle sharedInstance] logScreen:screenTitle eventInfo:screenInfo];
     }
     
-    func userDidPinch(pinch:UIPinchGestureRecognizer) {
+    @objc func userDidPinch(pinch:UIPinchGestureRecognizer) {
         let scaleToUse : CGFloat = getUpdatedScaleWithScale(scale: pinch.scale);
         
         if (pinch.state == UIGestureRecognizerState.changed)
@@ -216,7 +216,7 @@ class TabbedViewController: UIViewController, UIScrollViewDelegate, UIGestureRec
         })
     }
     
-    func userDidTap(tap: UITapGestureRecognizer)
+    @objc func userDidTap(tap: UITapGestureRecognizer)
     {
         if (self.isZoomed) {
             setControllersToMaxScaleWithDuration(timeInterval: 0.2)
@@ -241,7 +241,7 @@ class TabbedViewController: UIViewController, UIScrollViewDelegate, UIGestureRec
         return min(passedScale, self.mainPinchGestureMaxScale);
     }
     
-    func navButtonTapped(sender:UIButton) {
+    @objc func navButtonTapped(sender:UIButton) {
         if (self.currentControllerIndex != sender.tag) {
             let screenRect = UIScreen.main.bounds
             let newOffsetX = screenRect.size.width * CGFloat(sender.tag);
