@@ -7,13 +7,13 @@
 //
 
 extension UIColor {
-    @nonobjc public class var greenBackgroundColor : UIColor {
+    public class var greenBackgroundColor : UIColor {
         return UIColor(red:0/255.0, green:150.0/255.0 ,blue:136.0/255.0 , alpha:1.00)
     }
-    @nonobjc public class var navSelectedBackgroundColor : UIColor {
+    public class var navSelectedBackgroundColor : UIColor {
         return UIColor(red:7/255.0, green:168.0/255.0 ,blue:153.0/255.0 , alpha:1.00)
     }
-    @nonobjc public class var navNormalBackgroundColor : UIColor {
+    public class var navNormalBackgroundColor : UIColor {
         return UIColor(red:0/255.0, green:150.0/255.0 ,blue:136.0/255.0 , alpha:1.00)
     }
 }
