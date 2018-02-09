@@ -13,7 +13,7 @@ class TabbedViewController: UIViewController, UIScrollViewDelegate, UIGestureRec
     var activeControllers = NSArray()
     var activeControllersObjects = Array<ActiveViewController>()
     var tapGestures = NSMutableArray()
-    var isZoomed = true;
+    var isZoomed = false;
     var currentControllerIndex = 0;
     @IBOutlet weak var visualEffectsView:UIVisualEffectView?;
     @IBOutlet weak var scrollView:UIScrollView?;
