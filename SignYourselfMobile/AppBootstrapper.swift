@@ -10,7 +10,6 @@ import Foundation
 import UIKit
 import FacebookCore
 import SwiftyJSON
-import Kingfisher
 import Firebase
 
 var config = [String: Any]()
@@ -25,7 +24,6 @@ class AppBootstrapper {
         parseConfiguration(fileName: Constants.configFileName)
         if Constants.isDebug {
             runFacebookTests()
-            runKingfisherTests()
         }
     }
     
@@ -41,29 +39,5 @@ class AppBootstrapper {
     
     func runFacebookTests() {
         AppEventsLogger.log("Application did load - FacebookSDK")
-    }
-    
-    func runKingfisherTests() {
-        
-        //Examples can be found at https://github.com/onevcat/Kingfisher/wiki/Cheat-Sheet
-        
-        let key = Constants.testImageUrl
-        
-        ImageCache.default.retrieveImage(forKey: key, options: nil) {
-            image, cacheType in
-            if let image = image {
-                debugPrint("Get image \(image), cacheType: \(cacheType).")
-            } else {
-                debugPrint("Not exist in cache.")
-                ImageDownloader.default.downloadImage(with: URL(string:key)!, options: [], progressBlock: nil) {
-                    (image, error, url, data) in
-                    debugPrint("Downloaded Image: \(String(describing: image))")
-                    if image != nil {
-                        ImageCache.default.store(image!, forKey: key)
-                    }
-                    
-                }
-            }
-        }
     }
 }
