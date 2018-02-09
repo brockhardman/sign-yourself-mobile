@@ -7,16 +7,17 @@ target 'SignYourselfMobile' do
 pod 'FacebookCore'
 pod 'FacebookLogin'
 pod 'FacebookShare'
-pod 'TwitterKit'
-pod 'Google/Analytics'
+pod 'Firebase/Core'
 pod 'Google/SignIn' 
-pod 'Alamofire'
+pod 'GoogleMaps'
+pod 'GooglePlaces' 
 pod 'SwiftyJSON'
 pod 'SVProgressHUD'
 pod 'Kingfisher'
 pod 'Fabric'
 pod 'Crashlytics'
 pod 'RadarSDK'
+
 
 end
 

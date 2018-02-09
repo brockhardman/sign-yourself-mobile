@@ -68,17 +68,6 @@
 				<key>KitName</key>
 				<string>Crashlytics</string>
 			</dict>
-			<dict>
-				<key>KitInfo</key>
-				<dict>
-					<key>consumerKey</key>
-					<string>Igx9qcZiy39Uqe6mI8ljPq416</string>
-					<key>consumerSecret</key>
-					<string>cnnuNxofUncJ6dS1xWOawkoNM8QcwgJdTMSg9rCB87mcjaaTSQ</string>
-				</dict>
-				<key>KitName</key>
-				<string>Twitter</string>
-			</dict>
 		</array>
 	</dict>
 	<key>LSApplicationQueriesSchemes</key>

@@ -2,29 +2,39 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>TRACKING_ID</key>
-	<string>UA-70670607-2</string>
+	<key>AD_UNIT_ID_FOR_BANNER_TEST</key>
+	<string>ca-app-pub-3940256099942544/2934735716</string>
+	<key>AD_UNIT_ID_FOR_INTERSTITIAL_TEST</key>
+	<string>ca-app-pub-3940256099942544/4411468910</string>
 	<key>CLIENT_ID</key>
-	<string>522043211193-27s4d4gjukefatnsnp3qt47bu5pqg6kn.apps.googleusercontent.com</string>
+	<string>596187197601-rqom7vd82bind5dja1lrjiilhrt5h84d.apps.googleusercontent.com</string>
 	<key>REVERSED_CLIENT_ID</key>
-	<string>com.googleusercontent.apps.522043211193-27s4d4gjukefatnsnp3qt47bu5pqg6kn</string>
+	<string>com.googleusercontent.apps.596187197601-rqom7vd82bind5dja1lrjiilhrt5h84d</string>
+	<key>API_KEY</key>
+	<string>AIzaSyARuBT5IHFF6gqHouWWu688RQUmu27kRlM</string>
+	<key>GCM_SENDER_ID</key>
+	<string>596187197601</string>
 	<key>PLIST_VERSION</key>
 	<string>1</string>
 	<key>BUNDLE_ID</key>
 	<string>com.signyourself.mobile</string>
 	<key>PROJECT_ID</key>
-	<string>firebase-signyourself</string>
+	<string>signyourself-d1dd2</string>
+	<key>STORAGE_BUCKET</key>
+	<string>signyourself-d1dd2.appspot.com</string>
 	<key>IS_ADS_ENABLED</key>
-	<false/>
+	<true></true>
 	<key>IS_ANALYTICS_ENABLED</key>
-	<true/>
+	<false></false>
 	<key>IS_APPINVITE_ENABLED</key>
-	<false/>
+	<false></false>
 	<key>IS_GCM_ENABLED</key>
-	<false/>
+	<true></true>
 	<key>IS_SIGNIN_ENABLED</key>
-	<true/>
+	<true></true>
 	<key>GOOGLE_APP_ID</key>
-	<string>1:522043211193:ios:1baed220719402fe</string>
+	<string>1:596187197601:ios:1baed220719402fe</string>
+	<key>DATABASE_URL</key>
+	<string>https://signyourself-d1dd2.firebaseio.com</string>
 </dict>
 </plist>

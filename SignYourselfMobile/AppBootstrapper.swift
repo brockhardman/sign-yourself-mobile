@@ -9,10 +9,9 @@
 import Foundation
 import UIKit
 import FacebookCore
-import Alamofire
 import SwiftyJSON
 import Kingfisher
-import TwitterKit
+import Firebase
 
 var config = [String: Any]()
 
@@ -26,9 +25,6 @@ class AppBootstrapper {
         parseConfiguration(fileName: Constants.configFileName)
         if Constants.isDebug {
             runFacebookTests()
-            runAlamofireTests()
-            runGoogleTests()
-            runTwitterTests()
             runKingfisherTests()
         }
     }
@@ -45,53 +41,6 @@ class AppBootstrapper {
     
     func runFacebookTests() {
         AppEventsLogger.log("Application did load - FacebookSDK")
-    }
-    
-    func runAlamofireTests() {
-        
-        //Examples can be found at https://github.com/Alamofire/Alamofire
-        //Examples can be found at https://github.com/SwiftyJSON/SwiftyJSON
-        //Examples can be found at https://jsonplaceholder.typicode.com/
-        
-        Alamofire.request(Constants.testDataUrl, method: .get).validate().responseData { response in
-            switch response.result {
-            case .success:
-                if let data = response.result.value {
-                    let dataString = String(data: data, encoding: .utf8)
-                    debugPrint("DataString: \(String(describing: dataString))")
-                    debugPrint("Data: \(data)")
-                }
-            case .failure(let error):
-                debugPrint(error)
-            }
-        }
-        
-        Alamofire.request(Constants.testJSONUrl, method: .get).validate().responseJSON { response in
-            switch response.result {
-            case .success(let value):
-                let json = JSON(value)
-                debugPrint("JSON: \(json)")
-            case .failure(let error):
-                debugPrint(error)
-            }
-        }
-    }
-    
-    func runGoogleTests() {
-        
-        //Examples can be found at https://developers.google.com/analytics/devguides/collection/ios/v3/?ver=swift
-        
-        guard let tracker = GAI.sharedInstance().defaultTracker else { return }
-        tracker.set(kGAIScreenName, value: Constants.testGoogleTracking)
-        
-        guard let builder = GAIDictionaryBuilder.createScreenView() else { return }
-        tracker.send(builder.build() as [NSObject : AnyObject])
-    }
-    
-    func runTwitterTests() {
-        TWTRAPIClient().loadTweet(withID: Constants.testTweetId) { (tweet, error) in
-            debugPrint("Tweet: \(String(describing: tweet?.text))")
-        }
     }
     
     func runKingfisherTests() {

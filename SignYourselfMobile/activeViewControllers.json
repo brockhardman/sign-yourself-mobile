@@ -10,5 +10,11 @@
         "navImage" : "icon_events",
         "viewControllerClassName" : "EventsViewController",
         "storyboardName" : "Events"
+    },
+    "2" : {
+        "navTitle" : "Donate",
+        "navImage" : "ContributionsIcon",
+        "viewControllerClassName" : "DonateViewController",
+        "storyboardName" : "Donate"
     }
 }

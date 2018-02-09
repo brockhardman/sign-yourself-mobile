@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="wS9-Fv-afM">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="wS9-Fv-afM">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -20,12 +20,64 @@
                     <view key="view" contentMode="scaleToFill" id="gS2-32-e5e">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="g6j-eQ-RMn">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="375"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="375" id="Ps1-J0-IDf"/>
+                                </constraints>
+                                <connections>
+                                    <segue destination="r7S-ec-5zL" kind="embed" id="Lel-Kz-YYe"/>
+                                </connections>
+                            </containerView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Kdx-LT-Y0V">
+                                <rect key="frame" x="0.0" y="375" width="375" height="292"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="profileFooterCell" rowHeight="64" id="ndY-Ng-nNt">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="64"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ndY-Ng-nNt" id="IuK-ad-Onp">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="63.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="g6j-eQ-RMn" secondAttribute="trailing" id="0BQ-bq-kCt"/>
+                            <constraint firstItem="g6j-eQ-RMn" firstAttribute="leading" secondItem="gS2-32-e5e" secondAttribute="leading" id="9EJ-D5-Jmg"/>
+                            <constraint firstAttribute="trailing" secondItem="Kdx-LT-Y0V" secondAttribute="trailing" id="D5P-5e-Ka0"/>
+                            <constraint firstItem="Kdx-LT-Y0V" firstAttribute="top" secondItem="g6j-eQ-RMn" secondAttribute="bottom" id="PLf-3L-1Xz"/>
+                            <constraint firstItem="d4Z-U2-FHP" firstAttribute="top" secondItem="Kdx-LT-Y0V" secondAttribute="bottom" id="myk-rq-wyK"/>
+                            <constraint firstItem="g6j-eQ-RMn" firstAttribute="top" secondItem="gS2-32-e5e" secondAttribute="top" id="rM0-Ff-KCE"/>
+                            <constraint firstItem="Kdx-LT-Y0V" firstAttribute="leading" secondItem="gS2-32-e5e" secondAttribute="leading" id="uSs-UG-QUb"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kcj-8I-28q" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="71" y="107"/>
+            <point key="canvasLocation" x="69.599999999999994" y="106.59670164917542"/>
+        </scene>
+        <!--Profile Header View Controller-->
+        <scene sceneID="Rgx-Vo-CY7">
+            <objects>
+                <viewController id="r7S-ec-5zL" customClass="ProfileHeaderViewController" customModule="SignYourselfMobile" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="HvJ-4R-U5d"/>
+                        <viewControllerLayoutGuide type="bottom" id="b6y-4X-bn5"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="UIG-pO-R9g">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="375"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PWb-O3-NJx" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1121" y="107"/>
         </scene>
     </scenes>
 </document>

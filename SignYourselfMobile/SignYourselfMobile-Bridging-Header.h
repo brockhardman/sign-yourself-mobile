@@ -7,7 +7,6 @@
 //
 
 #import <UIKit/UIKit.h>
-#import <Google/Analytics.h>
 
 #ifndef SignYourselfMobile_Bridging_Header_h
 #define SignYourselfMobile_Bridging_Header_h
