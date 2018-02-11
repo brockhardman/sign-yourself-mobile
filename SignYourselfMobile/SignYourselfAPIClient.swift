@@ -6,16 +6,15 @@
 //  Copyright © 2018 SignYourself. All rights reserved.
 //
 
-import SwiftyJSON
-
 typealias CompletionHandlerAPI = (Result<Any>) -> Void
 
 enum Result<T:Any> {
     case Success(T)
-    case Failure(Error)
+    case Failure(ErrorType)
 }
 
 enum ErrorType: Error {
+    case Unknown
     case AuthenticationFailure
 }
 
@@ -28,5 +27,13 @@ class SignYourselfAPIClient : NSObject {
         let configuration = URLSessionConfiguration.default
         configuration.httpAdditionalHeaders = ["Authorization": accessToken]
         return URLSession(configuration: configuration, delegate: nil, delegateQueue: OperationQueue.main)
+    }
+    
+    func getErrorType(error : Error) -> ErrorType {
+        if (error.localizedDescription.debugDescription.range(of: "401") != nil) {
+            return .AuthenticationFailure
+        }
+        
+        return .Unknown
     }
 }
