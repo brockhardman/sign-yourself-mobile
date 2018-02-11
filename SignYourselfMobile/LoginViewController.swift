@@ -14,15 +14,8 @@ class LoginViewController: UIViewController {
     
     weak var delegate : LoginProtocol?
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-    }
-    
     @IBAction func loginButtonTapped(_ sender: UIButton) {
-    
-    SignYourselfAPIClient.shared.login(username: "brock.hardman@sbcglobal.net", password: "Ngunayic14!") { result in
-            
+        SignYourselfAPIClient.shared.login(username: "brock.hardman@sbcglobal.net", password: "Ngunayic14!") { result in
             switch result {
             case .Success(let loginResponse):
                 self.delegate?.processLoginResponse(loginResponse: loginResponse as! LoginResponse)
