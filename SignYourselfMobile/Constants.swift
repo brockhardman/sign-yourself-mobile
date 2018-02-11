@@ -19,6 +19,10 @@ struct Constants {
     static let configFileName = "Configuration"
     static let activeControllersFileName = "activeViewControllers"
     
+    //NOTIFICATIONS
+    static let userDidLoginNotification = "userDidLoginNotification"
+    
     //APIs
     static let profileAPI = "/profile?user_id=%@"
+    static let loginAPI = "/user/login"
 }

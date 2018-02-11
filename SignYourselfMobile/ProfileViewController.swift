@@ -10,24 +10,16 @@ import SwiftyJSON
 
 class ProfileViewController: ActiveViewController {
     
-    var profileData : Profile?
+    var profile : Profile?
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
         self.view.backgroundColor = UIColor.greenBackgroundColor
         
-        loadProfileData()
+        NotificationCenter.default.addObserver(self, selector: #selector(didLogin), name: Notification.Name(Constants.userDidLoginNotification), object: nil)
     }
     
-    private func loadProfileData() {
-        SignYourselfAPIClient.shared.getProfileData(profileID: "22") { result in
-            
-            switch result {
-            case .Success(let profile):
-                self.profileData = profile as? Profile
-            case .Failure(let error):
-                debugPrint(error)
-            }
-        }
+    @objc func didLogin() {
+        self.profile = SignYourselfAPIManager.shared.profileData
     }
 }

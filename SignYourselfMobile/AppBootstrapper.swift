@@ -23,7 +23,7 @@ class AppBootstrapper {
     func setupConfiguration() {
         parseConfiguration(fileName: Constants.configFileName)
         if Constants.isDebug {
-            runFacebookTests()
+            
         }
     }
     
@@ -35,9 +35,5 @@ class AppBootstrapper {
                 debugPrint("JSON: \(JSON(config))")
             }
         }
-    }
-    
-    func runFacebookTests() {
-        AppEventsLogger.log("Application did load - FacebookSDK")
     }
 }

@@ -18,6 +18,10 @@
 		380426DD2028FE8400F336B4 /* Donate.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 380426DC2028FE8400F336B4 /* Donate.storyboard */; };
 		380426DF2028FE9D00F336B4 /* DonateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 380426DE2028FE9D00F336B4 /* DonateViewController.swift */; };
 		380426E1202C90FB00F336B4 /* SignYourselfProfileAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 380426E0202C90FB00F336B4 /* SignYourselfProfileAPI.swift */; };
+		380426E320308E6200F336B4 /* SignYourselfLoginAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 380426E220308E6200F336B4 /* SignYourselfLoginAPI.swift */; };
+		380426E5203093CB00F336B4 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 380426E4203093CB00F336B4 /* LoginViewController.swift */; };
+		380426E72030BE0700F336B4 /* LoginResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 380426E62030BE0700F336B4 /* LoginResponse.swift */; };
+		380426E92030C67F00F336B4 /* SignYourselfAPIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 380426E82030C67F00F336B4 /* SignYourselfAPIManager.swift */; };
 		382715741EAD08CC004B1994 /* UIColor+SYS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 382715731EAD08CC004B1994 /* UIColor+SYS.swift */; };
 		382715771EAD1535004B1994 /* Events.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 382715761EAD1535004B1994 /* Events.storyboard */; };
 		382715BF1EAEEC2D004B1994 /* EventsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 382715BE1EAEEC2D004B1994 /* EventsViewController.swift */; };
@@ -51,6 +55,10 @@
 		380426DC2028FE8400F336B4 /* Donate.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Donate.storyboard; sourceTree = "<group>"; };
 		380426DE2028FE9D00F336B4 /* DonateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DonateViewController.swift; sourceTree = "<group>"; };
 		380426E0202C90FB00F336B4 /* SignYourselfProfileAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignYourselfProfileAPI.swift; sourceTree = "<group>"; };
+		380426E220308E6200F336B4 /* SignYourselfLoginAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignYourselfLoginAPI.swift; sourceTree = "<group>"; };
+		380426E4203093CB00F336B4 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		380426E62030BE0700F336B4 /* LoginResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginResponse.swift; sourceTree = "<group>"; };
+		380426E82030C67F00F336B4 /* SignYourselfAPIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignYourselfAPIManager.swift; sourceTree = "<group>"; };
 		382715731EAD08CC004B1994 /* UIColor+SYS.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+SYS.swift"; sourceTree = "<group>"; };
 		382715761EAD1535004B1994 /* Events.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Events.storyboard; sourceTree = "<group>"; };
 		382715BE1EAEEC2D004B1994 /* EventsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventsViewController.swift; sourceTree = "<group>"; };
@@ -106,6 +114,7 @@
 				380426D6201D30B700F336B4 /* Event.swift */,
 				380426D8201D312500F336B4 /* Donation.swift */,
 				380426DA201D334E00F336B4 /* Role.swift */,
+				380426E62030BE0700F336B4 /* LoginResponse.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -142,6 +151,7 @@
 		389E68061EABFE3300B28BDA /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				380426E4203093CB00F336B4 /* LoginViewController.swift */,
 				389E68071EABFE5600B28BDA /* ProfileViewController.swift */,
 				389E68091EABFE9D00B28BDA /* RootViewController.swift */,
 				382715BE1EAEEC2D004B1994 /* EventsViewController.swift */,
@@ -156,7 +166,9 @@
 		38BCC056201B74C4004343B5 /* Networking */ = {
 			isa = PBXGroup;
 			children = (
+				380426E82030C67F00F336B4 /* SignYourselfAPIManager.swift */,
 				38BCC057201B74EF004343B5 /* SignYourselfAPIClient.swift */,
+				380426E220308E6200F336B4 /* SignYourselfLoginAPI.swift */,
 				380426E0202C90FB00F336B4 /* SignYourselfProfileAPI.swift */,
 			);
 			name = Networking;
@@ -357,6 +369,7 @@
 				389E68121EAC7EDA00B28BDA /* Constants.swift in Sources */,
 				380426D3201D306000F336B4 /* Profile.swift in Sources */,
 				380426DB201D334E00F336B4 /* Role.swift in Sources */,
+				380426E5203093CB00F336B4 /* LoginViewController.swift in Sources */,
 				389E68081EABFE5600B28BDA /* ProfileViewController.swift in Sources */,
 				389E680A1EABFE9D00B28BDA /* RootViewController.swift in Sources */,
 				38ACB7F61F2D4035005B9085 /* ProfileHeaderViewController.swift in Sources */,
@@ -367,13 +380,16 @@
 				295DBE381EBFAC8000355ABE /* TabbedViewController.swift in Sources */,
 				385A6B2E1EB199CD00004F33 /* ActiveControllerService.swift in Sources */,
 				38C11E321EB9888500D788D0 /* ActiveViewController.swift in Sources */,
+				380426E72030BE0700F336B4 /* LoginResponse.swift in Sources */,
 				382715BF1EAEEC2D004B1994 /* EventsViewController.swift in Sources */,
 				382715741EAD08CC004B1994 /* UIColor+SYS.swift in Sources */,
 				385A6B301EB1AC8100004F33 /* NSDictionary+SYS.swift in Sources */,
+				380426E92030C67F00F336B4 /* SignYourselfAPIManager.swift in Sources */,
 				380426D9201D312500F336B4 /* Donation.swift in Sources */,
 				380426E1202C90FB00F336B4 /* SignYourselfProfileAPI.swift in Sources */,
 				38BCC058201B74EF004343B5 /* SignYourselfAPIClient.swift in Sources */,
 				380426D5201D307D00F336B4 /* Project.swift in Sources */,
+				380426E320308E6200F336B4 /* SignYourselfLoginAPI.swift in Sources */,
 				380426DF2028FE9D00F336B4 /* DonateViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -21,11 +21,10 @@ enum ErrorType: Error {
 class SignYourselfAPIClient : NSObject {
     
     static let shared : SignYourselfAPIClient = SignYourselfAPIClient()
-    var accessToken : String = "adbb4eb8cce17819f000e5df7db1a666"
     
     func defaultSession() -> URLSession {
         let configuration = URLSessionConfiguration.default
-        configuration.httpAdditionalHeaders = ["Authorization": accessToken]
+        configuration.httpAdditionalHeaders = ["Authorization": SignYourselfAPIManager.shared.accessToken]
         return URLSession(configuration: configuration, delegate: nil, delegateQueue: OperationQueue.main)
     }
     
