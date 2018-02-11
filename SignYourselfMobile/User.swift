@@ -6,7 +6,7 @@
 //  Copyright © 2018 SignYourself. All rights reserved.
 //
 
-class User : Codable {
+struct User : Codable {
     var id : String?
     var username : String?
     var password_hash : String?
@@ -23,7 +23,7 @@ class User : Codable {
     var author_id : String?
     var created_at : String?
     var updated_at : String?
-//    var projects : [Project] = []
-//    var events : [Event] = []
-//    var roles : [Role] = []
+    var projects : [Project]?
+    var events : [Event] = []
+    var roles : [Role] = []
 }

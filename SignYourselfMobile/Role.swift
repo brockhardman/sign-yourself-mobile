@@ -6,12 +6,7 @@
 //  Copyright © 2018 SignYourself. All rights reserved.
 //
 
-class Role {
-    /*
-     "user_id": "22",
-     "role_id": "5",
-     "role": {
-     "id": "5",
-     "role": "SUPPORTER"
-    */
+struct Role : Codable {
+    var user_id : String?
+    var role_id : String?
 }

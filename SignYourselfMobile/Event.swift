@@ -6,15 +6,12 @@
 //  Copyright © 2018 SignYourself. All rights reserved.
 //
 
-class Event {
-    
-    /*
-     "title": "Event Title",
-     "description": "Here is a description",
-     "status": "1",
-     "author_id": "3",
-     "start_time": "3",
-     "end_time": "3",
-     "location": "Dallas, TX"
-    */
+struct Event : Codable {
+    var title : String?
+    var description : String?
+    var status : String?
+    var author_id : String?
+    var start_time : String?
+    var end_time : String?
+    var location : String?
 }

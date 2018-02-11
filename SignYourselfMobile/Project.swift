@@ -6,30 +6,26 @@
 //  Copyright © 2018 SignYourself. All rights reserved.
 //
 
-class Project {
-    
-    /*
-     "id": "42",
-     "name": "First Album",
-     "description": "First album to drop this year!",
-     "goal": "15000.00",
-     "status": "1",
-     "trending": "0",
-     "image_thumb_path": "",
-     "image_path": "",
-     "media_path": "",
-     "embed_media": "",
-     "video_path": "",
-     "embed_video": "",
-     "slug": "first-album",
-     "owner_id": "22",
-     "token": "8a32b614c96ba388776ab922de65ef78",
-     "created_at": "2018-01-23 23:21:58",
-     "updated_at": "2018-01-23 23:21:58",
-     "avatar_file_name": null,
-     "avatar_file_size": null,
-     "avatar_content_type": null,
-     "avatar_updated_at": "2016-03-23 00:00:00",
-     "members": []
-    */
+class Project : Codable {
+    var id : String?
+    var name : String?
+    var description : String?
+    var goal : String?
+    var status : String?
+    var trending : String?
+    var image_thumb_path : String?
+    var image_path : String?
+    var media_path : String?
+    var embed_media : String?
+    var video_path : String?
+    var embed_video : String?
+    var slug : String?
+    var owner_id : String?
+    var token : String?
+    var created_at : String?
+    var updated_at : String?
+    var avatar_file_name : String?
+    var avatar_file_size : String?
+    var avatar_content_type : String?
+    var avatar_updated_at : String?
 }
