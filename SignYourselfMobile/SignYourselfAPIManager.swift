@@ -25,9 +25,17 @@ class SignYourselfAPIManager : NSObject {
             case .Success(let profile):
                 self.profileData = profile as? Profile
                 completion()
+            case .Errors(let errors):
+                debugPrint(errors)
             case .Failure(let error):
                 debugPrint(error)
             }
         }
+    }
+    
+    func logout() {
+        profileData = nil
+        currentUser = nil
+        accessToken = ""
     }
 }

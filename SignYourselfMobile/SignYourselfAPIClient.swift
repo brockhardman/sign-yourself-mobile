@@ -10,6 +10,7 @@ typealias CompletionHandlerAPI = (Result<Any>) -> Void
 
 enum Result<T:Any> {
     case Success(T)
+    case Errors([String : [String]])
     case Failure(ErrorType)
 }
 

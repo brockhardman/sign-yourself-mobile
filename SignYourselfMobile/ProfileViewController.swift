@@ -10,7 +10,8 @@ import SwiftyJSON
 
 class ProfileViewController: ActiveViewController {
     
-    var profile : Profile?
+    @IBOutlet var headerView: UIView!
+    @IBOutlet var tableView: UITableView!
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
@@ -20,6 +21,6 @@ class ProfileViewController: ActiveViewController {
     }
     
     @objc func didLogin() {
-        self.profile = SignYourselfAPIManager.shared.profileData
+        
     }
 }

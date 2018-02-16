@@ -1,7 +1,7 @@
 {
     "0" : {
         "navTitle" : "Profile",
-        "navImage" : "icon_profile",
+        "navImage" : "ProfileIcon",
         "viewControllerClassName" : "ProfileViewController",
         "storyboardName" : "Profile"
     },
@@ -16,5 +16,17 @@
         "navImage" : "ContributionsIcon",
         "viewControllerClassName" : "DonateViewController",
         "storyboardName" : "Donate"
+    },
+    "3" : {
+        "navTitle" : "Projects",
+        "navImage" : "ProjectsIcon",
+        "viewControllerClassName" : "ProjectsViewController",
+        "storyboardName" : "Projects"
+    },
+    "4" : {
+        "navTitle" : "Search",
+        "navImage" : "SearchIcon",
+        "viewControllerClassName" : "SearchViewController",
+        "storyboardName" : "Search"
     }
 }

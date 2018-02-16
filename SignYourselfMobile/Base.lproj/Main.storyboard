@@ -29,6 +29,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="50"/>
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                         </view>
+                                        <color key="backgroundColor" red="0.1215686275" green="0.54901960780000003" blue="0.50980392159999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <blurEffect style="light"/>
                                     </visualEffectView>
                                 </subviews>
@@ -51,7 +52,6 @@
                             <constraint firstItem="B6y-gD-Wj7" firstAttribute="top" secondItem="RKq-xM-A1c" secondAttribute="bottom" id="84S-ux-3MS"/>
                             <constraint firstAttribute="trailing" secondItem="RKq-xM-A1c" secondAttribute="trailing" id="BHS-Yv-ZCp"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="B6y-gD-Wj7" secondAttribute="bottom" id="cZm-cF-WoE"/>
-                            <constraint firstItem="B6y-gD-Wj7" firstAttribute="top" secondItem="RKq-xM-A1c" secondAttribute="bottom" id="lcu-GO-EjV"/>
                             <constraint firstAttribute="trailing" secondItem="B6y-gD-Wj7" secondAttribute="trailing" id="rDd-an-Nkb"/>
                             <constraint firstItem="B6y-gD-Wj7" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="t0s-zO-NdF"/>
                             <constraint firstItem="RKq-xM-A1c" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="vkO-Sb-7fn"/>
@@ -66,6 +66,76 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="136.80000000000001" y="92.203898050974516"/>
+        </scene>
+        <!--Register View Controller-->
+        <scene sceneID="BAm-Ei-fff">
+            <objects>
+                <viewController storyboardIdentifier="RegisterViewController" id="F7o-Sg-1Qr" customClass="RegisterViewController" customModule="SignYourselfMobile" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="YAv-Bi-nfw"/>
+                        <viewControllerLayoutGuide type="bottom" id="ag0-Z5-N6t"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="gwr-IV-e9w">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dSf-1u-Gxk">
+                                <rect key="frame" x="78" y="80" width="219" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2ZV-Q9-3ew">
+                                <rect key="frame" x="78" y="154" width="219" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="P9T-ci-VXk">
+                                <rect key="frame" x="78" y="236" width="219" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Verify Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pfW-hG-xYE">
+                                <rect key="frame" x="78" y="330" width="219" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bxr-md-e4Z">
+                                <rect key="frame" x="126" y="408" width="122" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Register"/>
+                                <connections>
+                                    <action selector="registerButtonTapped:" destination="F7o-Sg-1Qr" eventType="touchUpInside" id="wWx-x5-3Zs"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eEa-Nb-VkE">
+                                <rect key="frame" x="82" y="486" width="211" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Sign in with Facebook"/>
+                                <connections>
+                                    <action selector="registerWithFacebookButtonTapped:" destination="F7o-Sg-1Qr" eventType="touchUpInside" id="kDK-Db-u4q"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </view>
+                    <connections>
+                        <outlet property="emailTextField" destination="2ZV-Q9-3ew" id="BtH-oc-6Fb"/>
+                        <outlet property="passwordTextField" destination="P9T-ci-VXk" id="9Vg-JN-eBx"/>
+                        <outlet property="usernameTextField" destination="dSf-1u-Gxk" id="vTT-pU-keD"/>
+                        <outlet property="verifyPasswordTextField" destination="pfW-hG-xYE" id="VPs-ts-Dcy"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qfI-6Z-uT5" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1076" y="85.907046476761622"/>
         </scene>
         <!--Login View Controller-->
         <scene sceneID="uNH-Ed-iJF">
@@ -88,6 +158,14 @@
                                 </state>
                                 <connections>
                                     <action selector="loginButtonTapped:" destination="zia-EE-80t" eventType="touchUpInside" id="FOG-so-lnX"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GXB-v6-tuO">
+                                <rect key="frame" x="140" y="429" width="95" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Register"/>
+                                <connections>
+                                    <action selector="registerButtonTapped:" destination="zia-EE-80t" eventType="touchUpInside" id="EtI-XC-3tj"/>
                                 </connections>
                             </button>
                         </subviews>

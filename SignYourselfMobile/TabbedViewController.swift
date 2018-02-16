@@ -72,7 +72,7 @@ class TabbedViewController: UIViewController, UIScrollViewDelegate, UIGestureRec
     func buildScrollViewWithActiveControllers() {
         let screenBounds = UIScreen.main.bounds
         
-        for index in 0...self.activeControllers.count-1 {
+        for (index, _) in self.activeControllers.enumerated() {
             let originX = CGFloat(index) * screenBounds.size.width;
             let height = screenBounds.size.height - (self.bottomNavView?.frame.size.height)!;
             let frame = CGRect(x:originX, y:screenBounds.origin.y, width:screenBounds.size.width, height:height);
@@ -127,10 +127,11 @@ class TabbedViewController: UIViewController, UIScrollViewDelegate, UIGestureRec
             navButtonView.addSubview(navButton)
             
             let buttonImageView = UIImageView(image:UIImage(named: (dict.object(forKey: "navImage") as? String)!))
+            buttonImageView.frame = CGRect(x: 0, y: 0, width: 29, height: 29)
             buttonImageView.center = CGPoint(x:navButtonWidth / 2, y:buttonImageView.frame.size.height / 2 + 3)
             buttonImageView.backgroundColor =  UIColor.clear
             navButtonView.addSubview(buttonImageView)
-            
+            debugPrint(navButtonView)
             self.bottomNavView?.addSubview(navButtonView)
         }
     }

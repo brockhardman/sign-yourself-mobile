@@ -13,6 +13,7 @@ struct Constants {
         static let baseRestURL = "https://sy-api-prod.herokuapp.com/site/v1"
     #else
         static let isDebug = false
+        static let baseRestURL = "https://sy-api-prod.herokuapp.com/site/v1"
     #endif
     
     static let testImageUrl = "https://image.s4.exct.net/lib/fe9f15707567057e7d/m/1/christmas-email_01.png"
@@ -21,8 +22,10 @@ struct Constants {
     
     //NOTIFICATIONS
     static let userDidLoginNotification = "userDidLoginNotification"
+    static let userDidRegisterNotification = "userDidRegisterNotification"
     
     //APIs
     static let profileAPI = "/profile?user_id=%@"
     static let loginAPI = "/user/login"
+    static let registerAPI = "/user/register"
 }
