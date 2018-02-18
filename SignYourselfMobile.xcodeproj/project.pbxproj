@@ -41,6 +41,8 @@
 		38B7E4D520373E0E000B5CA0 /* ProjectsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38B7E4D420373E0E000B5CA0 /* ProjectsViewController.swift */; };
 		38B7E4D720377C54000B5CA0 /* Search.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 38B7E4D620377C54000B5CA0 /* Search.storyboard */; };
 		38B7E4D920377C5F000B5CA0 /* Projects.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 38B7E4D820377C5F000B5CA0 /* Projects.storyboard */; };
+		38B7E4DB20389A01000B5CA0 /* SignYourselfEventAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38B7E4DA20389A01000B5CA0 /* SignYourselfEventAPI.swift */; };
+		38B7E4DD2038A13E000B5CA0 /* SignYourselfProjectAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38B7E4DC2038A13E000B5CA0 /* SignYourselfProjectAPI.swift */; };
 		38BCC055201914AB004343B5 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 38BCC054201914AB004343B5 /* GoogleService-Info.plist */; };
 		38BCC058201B74EF004343B5 /* SignYourselfAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38BCC057201B74EF004343B5 /* SignYourselfAPIClient.swift */; };
 		38C11E321EB9888500D788D0 /* ActiveViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38C11E311EB9888500D788D0 /* ActiveViewController.swift */; };
@@ -86,6 +88,8 @@
 		38B7E4D420373E0E000B5CA0 /* ProjectsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectsViewController.swift; sourceTree = "<group>"; };
 		38B7E4D620377C54000B5CA0 /* Search.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Search.storyboard; sourceTree = "<group>"; };
 		38B7E4D820377C5F000B5CA0 /* Projects.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Projects.storyboard; sourceTree = "<group>"; };
+		38B7E4DA20389A01000B5CA0 /* SignYourselfEventAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignYourselfEventAPI.swift; sourceTree = "<group>"; };
+		38B7E4DC2038A13E000B5CA0 /* SignYourselfProjectAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignYourselfProjectAPI.swift; sourceTree = "<group>"; };
 		38BCC054201914AB004343B5 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		38BCC057201B74EF004343B5 /* SignYourselfAPIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignYourselfAPIClient.swift; sourceTree = "<group>"; };
 		38C11E311EB9888500D788D0 /* ActiveViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActiveViewController.swift; sourceTree = "<group>"; };
@@ -191,6 +195,8 @@
 				38BCC057201B74EF004343B5 /* SignYourselfAPIClient.swift */,
 				380426E220308E6200F336B4 /* SignYourselfLoginAPI.swift */,
 				380426E0202C90FB00F336B4 /* SignYourselfProfileAPI.swift */,
+				38B7E4DA20389A01000B5CA0 /* SignYourselfEventAPI.swift */,
+				38B7E4DC2038A13E000B5CA0 /* SignYourselfProjectAPI.swift */,
 			);
 			name = Networking;
 			sourceTree = "<group>";
@@ -400,12 +406,14 @@
 				38ACB7F61F2D4035005B9085 /* ProfileHeaderViewController.swift in Sources */,
 				389E68111EAC7EDA00B28BDA /* AppBootstrapper.swift in Sources */,
 				38E34C001DEE866E00D1D37E /* AppDelegate.swift in Sources */,
+				38B7E4DB20389A01000B5CA0 /* SignYourselfEventAPI.swift in Sources */,
 				380426D1201CED2000F336B4 /* User.swift in Sources */,
 				380426D7201D30B700F336B4 /* Event.swift in Sources */,
 				295DBE381EBFAC8000355ABE /* TabbedViewController.swift in Sources */,
 				385A6B2E1EB199CD00004F33 /* ActiveControllerService.swift in Sources */,
 				38C11E321EB9888500D788D0 /* ActiveViewController.swift in Sources */,
 				380426E72030BE0700F336B4 /* LoginResponse.swift in Sources */,
+				38B7E4DD2038A13E000B5CA0 /* SignYourselfProjectAPI.swift in Sources */,
 				382715BF1EAEEC2D004B1994 /* EventsViewController.swift in Sources */,
 				382715741EAD08CC004B1994 /* UIColor+SYS.swift in Sources */,
 				385A6B301EB1AC8100004F33 /* NSDictionary+SYS.swift in Sources */,

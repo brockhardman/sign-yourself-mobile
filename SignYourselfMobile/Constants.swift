@@ -28,4 +28,6 @@ struct Constants {
     static let profileAPI = "/profile?user_id=%@"
     static let loginAPI = "/user/login"
     static let registerAPI = "/user/register"
+    static let eventListAPI = "/event/list?author_id=%@"
+    static let projectListAPI = "/project/list?owner_id=%@"
 }

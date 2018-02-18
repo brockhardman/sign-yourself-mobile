@@ -8,11 +8,25 @@
 
 class ProjectsViewController: ActiveViewController {
     
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
+    override func viewDidLoad() {
+        super.viewDidLoad()
         self.view.backgroundColor = UIColor.purple
         
-        
+        NotificationCenter.default.addObserver(self, selector: #selector(didLogin), name: Notification.Name(Constants.userDidLoginNotification), object: nil)
+    }
+    
+    @objc func didLogin() {
+        getProjects()
+    }
+    
+    private func getProjects() {
+        if let ownerID = SignYourselfAPIManager.shared.currentUser?.author_id! {
+            SignYourselfAPIClient.shared.getProjects(ownerID:ownerID, completionHandlerAPI: { projects in
+                DispatchQueue.main.async {
+                    
+                }
+            })
+        }
     }
 }
 
