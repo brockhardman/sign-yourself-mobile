@@ -10,7 +10,7 @@ import Foundation
 
 typealias ControllersCompletionHandler = (_ controllers:Array<Any>) -> Void
 
-class ActiveControllerService: NSObject {
+class ActiveControllerService {
     
     public func configureWithURL(url: String, completionBlock: @escaping ControllersCompletionHandler) {
         if (url.isEmpty)
