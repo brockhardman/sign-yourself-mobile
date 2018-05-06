@@ -20,7 +20,7 @@ class ProjectsViewController: ActiveViewController {
     }
     
     private func getProjects() {
-        if let ownerID = SignYourselfAPIManager.shared.currentUser?.author_id! {
+        if let ownerID = SignYourselfAPIManager.shared.currentUser?.id! {
             SignYourselfAPIClient.shared.getProjects(ownerID:ownerID, completionHandlerAPI: { projects in
                 DispatchQueue.main.async {
                     

@@ -20,7 +20,7 @@ class EventsViewController: ActiveViewController {
     }
     
     private func getEvents() {
-        if let authorID = SignYourselfAPIManager.shared.currentUser?.author_id! {
+        if let authorID = SignYourselfAPIManager.shared.currentUser?.id! {
             SignYourselfAPIClient.shared.getEvents(authorID:authorID, completionHandlerAPI: { events in
                 DispatchQueue.main.async {
                     

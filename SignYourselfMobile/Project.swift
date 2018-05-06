@@ -21,6 +21,7 @@ class Project : Codable {
     var embed_video : String?
     var slug : String?
     var owner_id : String?
+    var members : [String]?
     var token : String?
     var created_at : String?
     var updated_at : String?

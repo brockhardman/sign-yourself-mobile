@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <WePay/WePay.h>
 
 #ifndef SignYourselfMobile_Bridging_Header_h
 #define SignYourselfMobile_Bridging_Header_h

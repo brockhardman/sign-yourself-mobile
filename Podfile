@@ -16,7 +16,7 @@ pod 'SVProgressHUD'
 pod 'Fabric'
 pod 'Crashlytics'
 pod 'RadarSDK'
-
+pod 'WePay'
 
 end
 

@@ -11,9 +11,13 @@ struct Constants {
     #if DEBUG
         static let isDebug = true
         static let baseRestURL = "https://sy-api-prod.herokuapp.com/site/v1"
+        static let wepayEnvironment = kWPEnvironmentStage
+        static let wepayClientId = ""
     #else
         static let isDebug = false
         static let baseRestURL = "https://sy-api-prod.herokuapp.com/site/v1"
+        static let wepayEnvironment = kWPEnvironmentProduction
+        static let wepayClientId = "187582"
     #endif
     
     static let testImageUrl = "https://image.s4.exct.net/lib/fe9f15707567057e7d/m/1/christmas-email_01.png"

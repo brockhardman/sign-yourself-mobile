@@ -19,8 +19,8 @@ extension SignYourselfAPIClient {
             }
             if (data != nil) {
                 do {
-                    let event = try JSONDecoder().decode(Event.self, from: data!)
-                    completionHandlerAPI(Result.Success(event))
+                    let events = try JSONDecoder().decode([Event].self, from: data!)
+                    completionHandlerAPI(Result.Success(events))
                 } catch {
                     debugPrint("JSON Serialization Error")
                 }
