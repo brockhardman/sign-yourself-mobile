@@ -11,11 +11,6 @@ class ActiveViewController: UIViewController {
     public var navigationTitle = String()
     public var navigationImage = String()
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-    }
-    
     public func configure(title:String, image:String) {
         self.navigationTitle = title;
         self.navigationImage = image;

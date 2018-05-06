@@ -26,8 +26,7 @@ class TabbedViewController: UIViewController, UIScrollViewDelegate, UIGestureRec
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let activeControllerService = ActiveControllerService();
-        activeControllerService.configureWithURL(url: "", completionBlock: {controllers in
+        ActiveControllerService().configureWithURL(url: "", completionBlock: {controllers in
             self.activeControllers = controllers as NSArray
             DispatchQueue.main.async {
                 self.buildScrollViewWithActiveControllers()
