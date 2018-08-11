@@ -8,9 +8,7 @@
 
 import Foundation
 import UIKit
-import FacebookCore
 import SwiftyJSON
-import Firebase
 
 var config = [String: Any]()
 

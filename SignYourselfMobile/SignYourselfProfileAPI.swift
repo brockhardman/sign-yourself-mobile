@@ -11,6 +11,7 @@ extension SignYourselfAPIClient {
     func getProfileData(profileID : String, completionHandlerAPI: @escaping CompletionHandlerAPI) {
         
         let url = Constants.baseRestURL + String(format:Constants.profileAPI, profileID)
+        print(url)
         let task = SignYourselfAPIClient.shared.defaultSession().dataTask(with: URL(string:url)!, completionHandler: { (data: Data?, response: URLResponse?, error: Error?) in
             
             if (error != nil) {
@@ -19,7 +20,9 @@ extension SignYourselfAPIClient {
             }
             if (data != nil) {
                 do {
-                    let profile = try JSONDecoder().decode(Profile.self, from: data!)
+                    let profile = try JSONSerialization.jsonObject(with: data!, options: [])
+                    //let profile = try JSONDecoder().decode(Profile.self, from: data!)
+                    print(profile)
                     completionHandlerAPI(Result.Success(profile))
                 } catch {
                    debugPrint("JSON Serialization Error")

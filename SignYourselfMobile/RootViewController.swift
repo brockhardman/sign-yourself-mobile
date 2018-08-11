@@ -6,11 +6,16 @@
 //  Copyright © 2017 SignYourself. All rights reserved.
 //
 
+import CoreLocation
+
 class RootViewController: TabbedViewController {
+    
+    var locationManager: CLLocationManager = CLLocationManager()
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
+        self.locationManager.requestWhenInUseAuthorization()
         showLoginScreen()
     }
     

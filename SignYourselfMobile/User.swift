@@ -14,7 +14,8 @@ struct User : Codable {
     var status : String?
     var toc : String?
     var banned : String?
-    var passwordLost : Bool? = false
+    //var passwordLost : Bool? = false
+    var passwordLost : String?
     var confirmRegistration : String?
     var token : String?
     var artist : String?

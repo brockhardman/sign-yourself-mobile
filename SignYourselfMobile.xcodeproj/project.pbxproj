@@ -37,6 +37,7 @@
 		389E680A1EABFE9D00B28BDA /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 389E68091EABFE9D00B28BDA /* RootViewController.swift */; };
 		389E68111EAC7EDA00B28BDA /* AppBootstrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 389E680F1EAC7EDA00B28BDA /* AppBootstrapper.swift */; };
 		389E68121EAC7EDA00B28BDA /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 389E68101EAC7EDA00B28BDA /* Constants.swift */; };
+		38A995F7211F780A0061A022 /* RadarManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38A995F6211F780A0061A022 /* RadarManager.swift */; };
 		38ACB7F61F2D4035005B9085 /* ProfileHeaderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38ACB7F51F2D4035005B9085 /* ProfileHeaderViewController.swift */; };
 		38B7E4D320373DB4000B5CA0 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38B7E4D220373DB4000B5CA0 /* SearchViewController.swift */; };
 		38B7E4D520373E0E000B5CA0 /* ProjectsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38B7E4D420373E0E000B5CA0 /* ProjectsViewController.swift */; };
@@ -86,6 +87,7 @@
 		389E680F1EAC7EDA00B28BDA /* AppBootstrapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppBootstrapper.swift; sourceTree = "<group>"; };
 		389E68101EAC7EDA00B28BDA /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		38A995EB209613190061A022 /* SignYourselfMobile.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SignYourselfMobile.entitlements; sourceTree = "<group>"; };
+		38A995F6211F780A0061A022 /* RadarManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RadarManager.swift; sourceTree = "<group>"; };
 		38ACB7F51F2D4035005B9085 /* ProfileHeaderViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileHeaderViewController.swift; sourceTree = "<group>"; };
 		38B7E4D220373DB4000B5CA0 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		38B7E4D420373E0E000B5CA0 /* ProjectsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectsViewController.swift; sourceTree = "<group>"; };
@@ -178,6 +180,7 @@
 			children = (
 				380426E82030C67F00F336B4 /* SignYourselfAPIManager.swift */,
 				38652336203A490900D0871C /* WePayManager.swift */,
+				38A995F6211F780A0061A022 /* RadarManager.swift */,
 			);
 			name = Managers;
 			sourceTree = "<group>";
@@ -300,7 +303,7 @@
 						CreatedOnToolsVersion = 8.0;
 						DevelopmentTeam = J724PJQ9EM;
 						LastSwiftMigration = 0900;
-						ProvisioningStyle = Automatic;
+						ProvisioningStyle = Manual;
 						SystemCapabilities = {
 							com.apple.ApplePay = {
 								enabled = 0;
@@ -440,6 +443,7 @@
 				385A6B2E1EB199CD00004F33 /* ActiveControllerService.swift in Sources */,
 				38C11E321EB9888500D788D0 /* ActiveViewController.swift in Sources */,
 				380426E72030BE0700F336B4 /* LoginResponse.swift in Sources */,
+				38A995F7211F780A0061A022 /* RadarManager.swift in Sources */,
 				38B7E4DD2038A13E000B5CA0 /* SignYourselfProjectAPI.swift in Sources */,
 				382715BF1EAEEC2D004B1994 /* EventsViewController.swift in Sources */,
 				382715741EAD08CC004B1994 /* UIColor+SYS.swift in Sources */,
@@ -597,14 +601,17 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_ENTITLEMENTS = SignYourselfMobile/SignYourselfMobile.entitlements;
+				CODE_SIGN_STYLE = Manual;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = J724PJQ9EM;
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = SignYourselfMobile/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.signyourself.mobile;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "8517b2d0-b008-4065-93d9-7ffe8029402d";
+				PROVISIONING_PROFILE_SPECIFIER = SignYourselfMobile_Development;
 				SWIFT_OBJC_BRIDGING_HEADER = "SignYourselfMobile/SignYourselfMobile-Bridging-Header.h";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
 				SWIFT_VERSION = 4.0;
@@ -620,13 +627,16 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_ENTITLEMENTS = SignYourselfMobile/SignYourselfMobile.entitlements;
+				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = J724PJQ9EM;
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = SignYourselfMobile/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.signyourself.mobile;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "8517b2d0-b008-4065-93d9-7ffe8029402d";
+				PROVISIONING_PROFILE_SPECIFIER = SignYourselfMobile_Development;
 				SWIFT_OBJC_BRIDGING_HEADER = "SignYourselfMobile/SignYourselfMobile-Bridging-Header.h";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
 				SWIFT_VERSION = 4.0;
