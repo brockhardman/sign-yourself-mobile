@@ -45,7 +45,7 @@
                                     <constraint firstAttribute="trailing" secondItem="YGg-Ac-ftA" secondAttribute="trailing" id="q8D-qg-5GP"/>
                                 </constraints>
                             </view>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" alwaysBounceVertical="YES" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" keyboardDismissMode="onDrag" translatesAutoresizingMaskIntoConstraints="NO" id="Z9M-Mf-khU">
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" alwaysBounceVertical="YES" scrollEnabled="NO" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" keyboardDismissMode="onDrag" translatesAutoresizingMaskIntoConstraints="NO" id="Z9M-Mf-khU">
                                 <rect key="frame" x="0.0" y="20" width="375" height="597"/>
                             </scrollView>
                         </subviews>
