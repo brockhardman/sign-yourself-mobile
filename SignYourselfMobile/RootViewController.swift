@@ -17,10 +17,12 @@ class RootViewController: TabbedViewController {
         
         self.locationManager.requestWhenInUseAuthorization()
         showLoginScreen()
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(showLoginScreen), name: NSNotification.Name(Constants.signInNeededNotification), object: nil)
     }
     
-    func showLoginScreen() {
-        let loginController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "LoginViewController") as! LoginViewController
+    @objc func showLoginScreen() {
+        let loginController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: Constants.LOGIN_SCREEN) as! LoginViewController
         loginController.modalPresentationStyle = .overFullScreen
         loginController.delegate = self
         present(loginController, animated: true, completion: nil)

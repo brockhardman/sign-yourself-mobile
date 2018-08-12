@@ -28,6 +28,9 @@
 		382715741EAD08CC004B1994 /* UIColor+SYS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 382715731EAD08CC004B1994 /* UIColor+SYS.swift */; };
 		382715771EAD1535004B1994 /* Events.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 382715761EAD1535004B1994 /* Events.storyboard */; };
 		382715BF1EAEEC2D004B1994 /* EventsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 382715BE1EAEEC2D004B1994 /* EventsViewController.swift */; };
+		3853184B21209F4B0022DF76 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3853184A21209F4B0022DF76 /* Main.storyboard */; };
+		3853184E2120A0260022DF76 /* HoshiTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3853184D2120A0260022DF76 /* HoshiTextField.swift */; };
+		385318502120A1DD0022DF76 /* TextFieldEffects.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3853184F2120A1DD0022DF76 /* TextFieldEffects.swift */; };
 		385A6B2E1EB199CD00004F33 /* ActiveControllerService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 385A6B2D1EB199CD00004F33 /* ActiveControllerService.swift */; };
 		385A6B301EB1AC8100004F33 /* NSDictionary+SYS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 385A6B2F1EB1AC8100004F33 /* NSDictionary+SYS.swift */; };
 		385A6B321EB1BD7100004F33 /* activeViewControllers.json in Resources */ = {isa = PBXBuildFile; fileRef = 385A6B311EB1BD7100004F33 /* activeViewControllers.json */; };
@@ -38,6 +41,7 @@
 		389E68111EAC7EDA00B28BDA /* AppBootstrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 389E680F1EAC7EDA00B28BDA /* AppBootstrapper.swift */; };
 		389E68121EAC7EDA00B28BDA /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 389E68101EAC7EDA00B28BDA /* Constants.swift */; };
 		38A995F7211F780A0061A022 /* RadarManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38A995F6211F780A0061A022 /* RadarManager.swift */; };
+		38A995F9211FD69E0061A022 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38A995F8211FD69E0061A022 /* UIView+Extension.swift */; };
 		38ACB7F61F2D4035005B9085 /* ProfileHeaderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38ACB7F51F2D4035005B9085 /* ProfileHeaderViewController.swift */; };
 		38B7E4D320373DB4000B5CA0 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38B7E4D220373DB4000B5CA0 /* SearchViewController.swift */; };
 		38B7E4D520373E0E000B5CA0 /* ProjectsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38B7E4D420373E0E000B5CA0 /* ProjectsViewController.swift */; };
@@ -49,7 +53,6 @@
 		38BCC058201B74EF004343B5 /* SignYourselfAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38BCC057201B74EF004343B5 /* SignYourselfAPIClient.swift */; };
 		38C11E321EB9888500D788D0 /* ActiveViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38C11E311EB9888500D788D0 /* ActiveViewController.swift */; };
 		38E34C001DEE866E00D1D37E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38E34BFF1DEE866E00D1D37E /* AppDelegate.swift */; };
-		38E34C051DEE866E00D1D37E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 38E34C031DEE866E00D1D37E /* Main.storyboard */; };
 		38E34C071DEE866E00D1D37E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 38E34C061DEE866E00D1D37E /* Assets.xcassets */; };
 		38E34C0A1DEE866E00D1D37E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 38E34C081DEE866E00D1D37E /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
@@ -76,6 +79,9 @@
 		382715731EAD08CC004B1994 /* UIColor+SYS.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+SYS.swift"; sourceTree = "<group>"; };
 		382715761EAD1535004B1994 /* Events.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Events.storyboard; sourceTree = "<group>"; };
 		382715BE1EAEEC2D004B1994 /* EventsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventsViewController.swift; sourceTree = "<group>"; };
+		3853184A21209F4B0022DF76 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		3853184D2120A0260022DF76 /* HoshiTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HoshiTextField.swift; sourceTree = "<group>"; };
+		3853184F2120A1DD0022DF76 /* TextFieldEffects.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldEffects.swift; sourceTree = "<group>"; };
 		385A6B2D1EB199CD00004F33 /* ActiveControllerService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActiveControllerService.swift; sourceTree = "<group>"; };
 		385A6B2F1EB1AC8100004F33 /* NSDictionary+SYS.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSDictionary+SYS.swift"; sourceTree = "<group>"; };
 		385A6B311EB1BD7100004F33 /* activeViewControllers.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = activeViewControllers.json; sourceTree = "<group>"; };
@@ -88,6 +94,7 @@
 		389E68101EAC7EDA00B28BDA /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		38A995EB209613190061A022 /* SignYourselfMobile.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SignYourselfMobile.entitlements; sourceTree = "<group>"; };
 		38A995F6211F780A0061A022 /* RadarManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RadarManager.swift; sourceTree = "<group>"; };
+		38A995F8211FD69E0061A022 /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
 		38ACB7F51F2D4035005B9085 /* ProfileHeaderViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileHeaderViewController.swift; sourceTree = "<group>"; };
 		38B7E4D220373DB4000B5CA0 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		38B7E4D420373E0E000B5CA0 /* ProjectsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectsViewController.swift; sourceTree = "<group>"; };
@@ -100,7 +107,6 @@
 		38C11E311EB9888500D788D0 /* ActiveViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActiveViewController.swift; sourceTree = "<group>"; };
 		38E34BFC1DEE866E00D1D37E /* SignYourselfMobile.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SignYourselfMobile.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		38E34BFF1DEE866E00D1D37E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		38E34C041DEE866E00D1D37E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		38E34C061DEE866E00D1D37E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		38E34C091DEE866E00D1D37E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		38E34C0B1DEE866E00D1D37E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -149,6 +155,7 @@
 				382715731EAD08CC004B1994 /* UIColor+SYS.swift */,
 				385A6B2F1EB1AC8100004F33 /* NSDictionary+SYS.swift */,
 				380426EA20321BD900F336B4 /* UIImageView+SYS.swift */,
+				38A995F8211FD69E0061A022 /* UIView+Extension.swift */,
 			);
 			name = Extensions;
 			sourceTree = "<group>";
@@ -156,7 +163,7 @@
 		382715751EAD151C004B1994 /* Storyboards */ = {
 			isa = PBXGroup;
 			children = (
-				38E34C031DEE866E00D1D37E /* Main.storyboard */,
+				3853184A21209F4B0022DF76 /* Main.storyboard */,
 				38E34C081DEE866E00D1D37E /* LaunchScreen.storyboard */,
 				389E68041EABFD0200B28BDA /* Profile.storyboard */,
 				382715761EAD1535004B1994 /* Events.storyboard */,
@@ -165,6 +172,15 @@
 				38B7E4D820377C5F000B5CA0 /* Projects.storyboard */,
 			);
 			name = Storyboards;
+			sourceTree = "<group>";
+		};
+		3853184C21209FCD0022DF76 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				3853184D2120A0260022DF76 /* HoshiTextField.swift */,
+				3853184F2120A1DD0022DF76 /* TextFieldEffects.swift */,
+			);
+			name = Utilities;
 			sourceTree = "<group>";
 		};
 		385A6B2C1EB1998300004F33 /* Services */ = {
@@ -236,6 +252,7 @@
 		38E34BFE1DEE866E00D1D37E /* SignYourselfMobile */ = {
 			isa = PBXGroup;
 			children = (
+				3853184C21209FCD0022DF76 /* Utilities */,
 				38A995EB209613190061A022 /* SignYourselfMobile.entitlements */,
 				38652335203A48C400D0871C /* Managers */,
 				380426CF201CED1100F336B4 /* Models */,
@@ -345,12 +362,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				38E34C0A1DEE866E00D1D37E /* LaunchScreen.storyboard in Resources */,
+				3853184B21209F4B0022DF76 /* Main.storyboard in Resources */,
 				38E34C071DEE866E00D1D37E /* Assets.xcassets in Resources */,
 				38B7E4D920377C5F000B5CA0 /* Projects.storyboard in Resources */,
 				389E68051EABFD0200B28BDA /* Profile.storyboard in Resources */,
 				380426DD2028FE8400F336B4 /* Donate.storyboard in Resources */,
 				38B7E4D720377C54000B5CA0 /* Search.storyboard in Resources */,
-				38E34C051DEE866E00D1D37E /* Main.storyboard in Resources */,
 				385A6B321EB1BD7100004F33 /* activeViewControllers.json in Resources */,
 				382715771EAD1535004B1994 /* Events.storyboard in Resources */,
 				38BCC055201914AB004343B5 /* GoogleService-Info.plist in Resources */,
@@ -433,6 +450,7 @@
 				389E68081EABFE5600B28BDA /* ProfileViewController.swift in Sources */,
 				38B7E4D520373E0E000B5CA0 /* ProjectsViewController.swift in Sources */,
 				389E680A1EABFE9D00B28BDA /* RootViewController.swift in Sources */,
+				38A995F9211FD69E0061A022 /* UIView+Extension.swift in Sources */,
 				38ACB7F61F2D4035005B9085 /* ProfileHeaderViewController.swift in Sources */,
 				389E68111EAC7EDA00B28BDA /* AppBootstrapper.swift in Sources */,
 				38E34C001DEE866E00D1D37E /* AppDelegate.swift in Sources */,
@@ -441,6 +459,7 @@
 				380426D7201D30B700F336B4 /* Event.swift in Sources */,
 				295DBE381EBFAC8000355ABE /* TabbedViewController.swift in Sources */,
 				385A6B2E1EB199CD00004F33 /* ActiveControllerService.swift in Sources */,
+				385318502120A1DD0022DF76 /* TextFieldEffects.swift in Sources */,
 				38C11E321EB9888500D788D0 /* ActiveViewController.swift in Sources */,
 				380426E72030BE0700F336B4 /* LoginResponse.swift in Sources */,
 				38A995F7211F780A0061A022 /* RadarManager.swift in Sources */,
@@ -451,6 +470,7 @@
 				380426EB20321BD900F336B4 /* UIImageView+SYS.swift in Sources */,
 				380426E92030C67F00F336B4 /* SignYourselfAPIManager.swift in Sources */,
 				380426D9201D312500F336B4 /* Donation.swift in Sources */,
+				3853184E2120A0260022DF76 /* HoshiTextField.swift in Sources */,
 				380426E1202C90FB00F336B4 /* SignYourselfProfileAPI.swift in Sources */,
 				38BCC058201B74EF004343B5 /* SignYourselfAPIClient.swift in Sources */,
 				380426D5201D307D00F336B4 /* Project.swift in Sources */,
@@ -465,14 +485,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		38E34C031DEE866E00D1D37E /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				38E34C041DEE866E00D1D37E /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		38E34C081DEE866E00D1D37E /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (

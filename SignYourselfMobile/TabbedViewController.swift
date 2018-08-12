@@ -34,8 +34,8 @@ class TabbedViewController: UIViewController, UIScrollViewDelegate, UIGestureRec
             };
         })
         
-        let pinchGesture : UIPinchGestureRecognizer = UIPinchGestureRecognizer(target: self, action:#selector(userDidPinch(pinch:)))
-        self.scrollView?.addGestureRecognizer(pinchGesture)
+//        let pinchGesture : UIPinchGestureRecognizer = UIPinchGestureRecognizer(target: self, action:#selector(userDidPinch(pinch:)))
+//        self.scrollView?.addGestureRecognizer(pinchGesture)
         self.scrollView?.delegate = self;
     }
     
