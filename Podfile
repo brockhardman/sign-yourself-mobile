@@ -10,6 +10,9 @@ pod 'Fabric'
 pod 'Crashlytics'
 pod 'RadarSDK', '~> 2.0.0'
 pod 'WePay'
+pod 'DropDown'
+pod 'Charts', '~>3.0.1'
+pod 'ViewPager-Swift'
 
 end
 

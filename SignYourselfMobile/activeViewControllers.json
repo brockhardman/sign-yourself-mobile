@@ -1,32 +1,32 @@
 {
     "0" : {
-        "navTitle" : "Profile",
+        "navTitle" : "Home",
         "navImage" : "ProfileIcon",
-        "viewControllerClassName" : "ProfileViewController",
-        "storyboardName" : "Profile"
+        "viewControllerClassName" : "HomeViewController",
+        "storyboardName" : "Home"
     },
     "1" : {
-        "navTitle" : "Events",
-        "navImage" : "icon_events",
-        "viewControllerClassName" : "EventsViewController",
-        "storyboardName" : "Events"
-    },
-    "2" : {
-        "navTitle" : "Donate",
-        "navImage" : "ContributionsIcon",
-        "viewControllerClassName" : "DonateViewController",
-        "storyboardName" : "Donate"
-    },
-    "3" : {
         "navTitle" : "Projects",
         "navImage" : "ProjectsIcon",
         "viewControllerClassName" : "ProjectsViewController",
         "storyboardName" : "Projects"
     },
+    "2" : {
+        "navTitle" : "Associates",
+        "navImage" : "AssociatesIcon",
+        "viewControllerClassName" : "AssociatesViewController",
+        "storyboardName" : "Associates"
+    },
+    "3" : {
+        "navTitle" : "Fans",
+        "navImage" : "FansIcon",
+        "viewControllerClassName" : "FansViewController",
+        "storyboardName" : "Fans"
+    },
     "4" : {
-        "navTitle" : "Search",
-        "navImage" : "SearchIcon",
-        "viewControllerClassName" : "SearchViewController",
-        "storyboardName" : "Search"
+        "navTitle" : "Contributions",
+        "navImage" : "ContributionsIcon",
+        "viewControllerClassName" : "ContributionsViewController",
+        "storyboardName" : "Contributions"
     }
 }
