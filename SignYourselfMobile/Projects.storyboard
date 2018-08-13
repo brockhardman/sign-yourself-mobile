@@ -159,10 +159,10 @@
             </objects>
             <point key="canvasLocation" x="7830" y="-811.26760563380287"/>
         </scene>
-        <!--Project Detail View Controller-->
+        <!--Projects-->
         <scene sceneID="6w0-D1-yB4">
             <objects>
-                <viewController storyboardIdentifier="ProjectDetailViewController" id="2fE-Ar-j3J" customClass="ProjectDetailViewController" customModule="SignYourselfMobile" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ProjectDetailViewController" title="Projects" id="2fE-Ar-j3J" customClass="ProjectDetailViewController" customModule="SignYourselfMobile" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="0ZH-UV-pkp"/>
                         <viewControllerLayoutGuide type="bottom" id="eZW-Cf-z5d"/>

@@ -16,10 +16,10 @@
         </array>
     </customFonts>
     <scenes>
-        <!--Home View Controller-->
+        <!--Home-->
         <scene sceneID="2Ht-DI-UEw">
             <objects>
-                <viewController storyboardIdentifier="HomeViewController" id="yO4-KI-MWB" customClass="HomeViewController" customModule="SignYourselfMobile" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="HomeViewController" title="Home" id="yO4-KI-MWB" customClass="HomeViewController" customModule="SignYourselfMobile" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="RFR-Z3-maV"/>
                         <viewControllerLayoutGuide type="bottom" id="AMs-YA-Tre"/>

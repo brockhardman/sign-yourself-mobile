@@ -34,6 +34,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         RadarManager.shared.loadDefaults()
         configureFabric()
         bootstrapServices()
+        configureAppDefaults()
+    }
+    
+    func configureAppDefaults() {
+        let navigationBarAppearace = UINavigationBar.appearance()
+        navigationBarAppearace.titleTextAttributes = [NSAttributedStringKey.foregroundColor:UIColor.white]
     }
     
     func configureFabric() {

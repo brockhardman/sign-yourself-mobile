@@ -35,6 +35,7 @@ class TabbedViewController: UIViewController, UIScrollViewDelegate, UIGestureRec
             DispatchQueue.main.async {
                 self.buildScrollViewWithActiveControllers()
                 self.buildBottomNavWithActiveControllers()
+                self.currentControllerIndex = 0
             };
         })
         
@@ -77,7 +78,7 @@ class TabbedViewController: UIViewController, UIScrollViewDelegate, UIGestureRec
         
         for (index, _) in self.activeControllers.enumerated() {
             let originX = CGFloat(index) * screenBounds.size.width;
-            let height = screenBounds.size.height - (self.bottomNavView?.frame.size.height)!;
+            let height = screenBounds.size.height - (self.bottomNavView?.frame.size.height)! - 64;
             let frame = CGRect(x:originX, y:screenBounds.origin.y, width:screenBounds.size.width, height:height);
             let backingView = UIView(frame: frame)
             self.scrollView?.addSubview(backingView)
@@ -174,6 +175,7 @@ class TabbedViewController: UIViewController, UIScrollViewDelegate, UIGestureRec
                 if didFinish {
                     self.removeShadowFromView(view: activeController.view)
                     self.removeTapGestureFromView(view: activeController.view)
+                    self.updateTitle()
                     activeController.view.clipsToBounds = true
                 }
             })
@@ -202,6 +204,14 @@ class TabbedViewController: UIViewController, UIScrollViewDelegate, UIGestureRec
         layer.shadowRadius = 0.0
         layer.shadowOpacity = 0.0
         layer.shadowPath = nil
+    }
+    
+    func updateTitle() {
+        let fadeTextAnimation : CATransition = CATransition()
+        fadeTextAnimation.duration = 0.5;
+        fadeTextAnimation.type = kCATransitionFade;
+        navigationController?.navigationBar.layer.add(fadeTextAnimation, forKey: "fadeText")
+        navigationItem.title = activeControllersObjects[self.currentControllerIndex].navigationTitle
     }
     
     func addTapGestureToView(view:UIView) {
@@ -258,7 +268,7 @@ class TabbedViewController: UIViewController, UIScrollViewDelegate, UIGestureRec
             }, completion: { (didFinish) in
                 if didFinish {
                     self.setControllersToMaxScaleWithDuration(timeInterval: 0.4)
-                    self.currentControllerIndex = sender.tag;
+                    self.currentControllerIndex = sender.tag
                     self.trackScreenInfoForIndex(index: self.currentControllerIndex, didUseNavButton: true)
                 }
             })
@@ -266,7 +276,7 @@ class TabbedViewController: UIViewController, UIScrollViewDelegate, UIGestureRec
     }
     
     func updateTabSelected(index: Int) {
-        //bottomNavView?.transform = CATransform3DMakeScale(<#T##sx: CGFloat##CGFloat#>, <#T##sy: CGFloat##CGFloat#>, <#T##sz: CGFloat##CGFloat#>)
+        self.updateTitle()
     }
     
     // Scrollview Delegate Methods

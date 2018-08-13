@@ -38,6 +38,7 @@ class HomeViewController: ActiveViewController, UIGestureRecognizerDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         initializeScreens()
         setUpGestures()
         setUpViewList()

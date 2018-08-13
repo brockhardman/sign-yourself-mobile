@@ -16,10 +16,10 @@
         </array>
     </customFonts>
     <scenes>
-        <!--Contributions View Controller-->
+        <!--Contributions-->
         <scene sceneID="RrR-ex-fJn">
             <objects>
-                <viewController storyboardIdentifier="ContributionsViewController" id="ElO-1z-6Y1" customClass="ContributionsViewController" customModule="SignYourselfMobile" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ContributionsViewController" title="Contributions" id="ElO-1z-6Y1" customClass="ContributionsViewController" customModule="SignYourselfMobile" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="4CK-pd-o41"/>
                         <viewControllerLayoutGuide type="bottom" id="6yg-pN-tYg"/>

@@ -10,10 +10,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Fans View Controller-->
+        <!--Fans-->
         <scene sceneID="x8I-Qe-sGU">
             <objects>
-                <viewController storyboardIdentifier="FansViewController" id="QWq-Ha-bzN" customClass="FansViewController" customModule="SignYourselfMobile" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="FansViewController" title="Fans" id="QWq-Ha-bzN" customClass="FansViewController" customModule="SignYourselfMobile" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="mol-Zz-7BF"/>
                         <viewControllerLayoutGuide type="bottom" id="q0M-f2-ZaU"/>

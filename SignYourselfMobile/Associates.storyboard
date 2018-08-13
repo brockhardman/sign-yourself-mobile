@@ -10,10 +10,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Associates View Controller-->
+        <!--Associates-->
         <scene sceneID="mvB-WM-bcg">
             <objects>
-                <viewController storyboardIdentifier="AssociatesViewController" id="KTp-8z-9Cu" customClass="AssociatesViewController" customModule="SignYourselfMobile" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="AssociatesViewController" title="Associates" id="KTp-8z-9Cu" customClass="AssociatesViewController" customModule="SignYourselfMobile" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="jrP-uj-lDd"/>
                         <viewControllerLayoutGuide type="bottom" id="wIo-8o-wQg"/>
