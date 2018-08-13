@@ -33,6 +33,7 @@
 		38426DC5212116E30003791B /* GlobalCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38426DC3212116E30003791B /* GlobalCell.swift */; };
 		38426DC6212116E30003791B /* GlobalCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 38426DC4212116E30003791B /* GlobalCell.xib */; };
 		38426DCA212117B10003791B /* Media.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 38426DC9212117B10003791B /* Media.storyboard */; };
+		38426DCC212122150003791B /* UserManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38426DCB212122150003791B /* UserManager.swift */; };
 		3853184B21209F4B0022DF76 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3853184A21209F4B0022DF76 /* Main.storyboard */; };
 		3853184E2120A0260022DF76 /* HoshiTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3853184D2120A0260022DF76 /* HoshiTextField.swift */; };
 		385318502120A1DD0022DF76 /* TextFieldEffects.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3853184F2120A1DD0022DF76 /* TextFieldEffects.swift */; };
@@ -108,6 +109,7 @@
 		38426DC3212116E30003791B /* GlobalCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlobalCell.swift; sourceTree = "<group>"; };
 		38426DC4212116E30003791B /* GlobalCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GlobalCell.xib; sourceTree = "<group>"; };
 		38426DC9212117B10003791B /* Media.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Media.storyboard; sourceTree = "<group>"; };
+		38426DCB212122150003791B /* UserManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserManager.swift; sourceTree = "<group>"; };
 		3853184A21209F4B0022DF76 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		3853184D2120A0260022DF76 /* HoshiTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HoshiTextField.swift; sourceTree = "<group>"; };
 		3853184F2120A1DD0022DF76 /* TextFieldEffects.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldEffects.swift; sourceTree = "<group>"; };
@@ -283,6 +285,7 @@
 				380426E82030C67F00F336B4 /* SignYourselfAPIManager.swift */,
 				38652336203A490900D0871C /* WePayManager.swift */,
 				38A995F6211F780A0061A022 /* RadarManager.swift */,
+				38426DCB212122150003791B /* UserManager.swift */,
 			);
 			name = Managers;
 			sourceTree = "<group>";
@@ -580,6 +583,7 @@
 				38A995F9211FD69E0061A022 /* UIView+Extension.swift in Sources */,
 				38ACB7F61F2D4035005B9085 /* ProfileHeaderViewController.swift in Sources */,
 				389E68111EAC7EDA00B28BDA /* AppBootstrapper.swift in Sources */,
+				38426DCC212122150003791B /* UserManager.swift in Sources */,
 				38E34C001DEE866E00D1D37E /* AppDelegate.swift in Sources */,
 				38B7E4DB20389A01000B5CA0 /* SignYourselfEventAPI.swift in Sources */,
 				380426D1201CED2000F336B4 /* User.swift in Sources */,

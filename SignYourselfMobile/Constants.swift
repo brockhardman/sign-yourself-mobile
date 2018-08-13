@@ -111,3 +111,17 @@ struct Constants {
     static let EDIT_AND_ADD_TRACKING_TAB = "EditAndAddTrackingTab"
     static let TRACKING_MEMBERS_TAB = "TrackingMembersTab"
 }
+
+struct UserDefaultKeys {
+    public static let loggedInKey = "loggedIn"
+    public static let contentCheckKey = "contentCheckKey"
+    public static let contentUpdateDateKey = "contentUpdateDateKey"
+    public static let contentVersionNumberKey = "versionNumberKey"
+    public static let touchIDKey = "touchIDKey"
+    public static let rememberCredentialKey = "rememberCredentialKey"
+    public static let firstTimeLoadKey = "firstTimeLoadKey"
+    public static let touchIDPopupKey = "touchIDPopuKey"
+    public static let tabBarIndexKey = "tabBarIndex"
+    public static let didShowIntroDemoKey = "didShowIntroDemoKey"
+    public static let loginEmailAddress = "loginEmailAddress"
+}

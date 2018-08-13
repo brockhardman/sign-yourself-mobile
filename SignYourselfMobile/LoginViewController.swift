@@ -53,10 +53,13 @@ class LoginViewController: UIViewController,UIGestureRecognizerDelegate{
         SignYourselfAPIClient.shared.login(username: "gashousesmitty@gmail.com", password: "Therealones1") { result in
             switch result {
             case .Success(let loginResponse):
+                UserDefaults.standard.set(true, forKey: UserDefaultKeys.loggedInKey)
                 self.delegate?.processLoginResponse(loginResponse: loginResponse as! LoginResponse)
             case .Errors(let errors):
+                UserDefaults.standard.set(false, forKey: UserDefaultKeys.loggedInKey)
                 debugPrint(errors)
             case .Failure(let error):
+                UserDefaults.standard.set(false, forKey: UserDefaultKeys.loggedInKey)
                 debugPrint(error)
             }
         }

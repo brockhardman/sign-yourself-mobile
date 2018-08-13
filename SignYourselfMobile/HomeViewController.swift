@@ -116,13 +116,13 @@ class HomeViewController: ActiveViewController, UIGestureRecognizerDelegate {
     
     private func initializeScreens()  {
 //        addNewProjectScreen = getStoryboard().instantiateViewController(withIdentifier: Constants.ADD_NEWPROJECT_SCREEN) as? AddNewProjectScreen
-        let projectDetailViewController = UIStoryboard(name: "Projects", bundle: nil).instantiateViewController(withIdentifier: Constants.PROJECT_DETAIL_SCREEN) as! ProjectDetailViewController
-        let profileViewController = UIStoryboard(name: "Profile", bundle: nil).instantiateViewController(withIdentifier: Constants.PROFILE_SCREEN) as! ProfileViewController
+        projectDetailViewController = UIStoryboard(name: "Projects", bundle: nil).instantiateViewController(withIdentifier: Constants.PROJECT_DETAIL_SCREEN) as? ProjectDetailViewController
+        profileViewController = UIStoryboard(name: "Profile", bundle: nil).instantiateViewController(withIdentifier: Constants.PROFILE_SCREEN) as? ProfileViewController
 //        marketingScreen = getStoryboard().instantiateViewController(withIdentifier: Constants.MARKETING_SCREEN) as? MarketingScreen
 //
-        projectDetailViewController.modalTransitionStyle = .crossDissolve
+        projectDetailViewController?.modalTransitionStyle = .crossDissolve
 //        addNewProjectScreen?.modalTransitionStyle = .crossDissolve
-        profileViewController.modalTransitionStyle = .crossDissolve
+        profileViewController?.modalTransitionStyle = .crossDissolve
 //        marketingScreen?.modalTransitionStyle = .crossDissolve
     }
     

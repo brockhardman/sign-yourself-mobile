@@ -25,8 +25,8 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ce5-X5-enn">
                                 <rect key="frame" x="0.0" y="128" width="173" height="35"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="They are looking for hope" textAlignment="natural" lineBreakMode="tailTruncation" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b1v-Vf-dUe">
-                                        <rect key="frame" x="10" y="11" width="143" height="14.5"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="They are looking for hope" textAlignment="natural" lineBreakMode="tailTruncation" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="b1v-Vf-dUe">
+                                        <rect key="frame" x="10" y="11" width="153" height="14.5"/>
                                         <fontDescription key="fontDescription" type="system" weight="light" pointSize="12"/>
                                         <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
@@ -34,7 +34,7 @@
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstItem="b1v-Vf-dUe" firstAttribute="leading" secondItem="Ce5-X5-enn" secondAttribute="leading" constant="10" id="FCk-H6-Oj0"/>
+                                    <constraint firstAttribute="trailing" secondItem="b1v-Vf-dUe" secondAttribute="trailing" constant="10" id="B7E-z4-EjR"/>
                                     <constraint firstAttribute="height" constant="35" id="vDI-Pf-ZTJ"/>
                                     <constraint firstItem="b1v-Vf-dUe" firstAttribute="centerY" secondItem="Ce5-X5-enn" secondAttribute="centerY" id="wNt-QR-uOm"/>
                                 </constraints>
@@ -73,7 +73,6 @@
                             <constraint firstItem="r4C-3D-zQo" firstAttribute="leading" secondItem="Q40-Hm-ZC3" secondAttribute="leading" id="1D9-mf-DYU"/>
                             <constraint firstAttribute="trailing" secondItem="Ce5-X5-enn" secondAttribute="trailing" id="75M-OQ-sGM"/>
                             <constraint firstItem="b1v-Vf-dUe" firstAttribute="leading" secondItem="Q40-Hm-ZC3" secondAttribute="leading" constant="10" id="9UH-WR-Ago"/>
-                            <constraint firstItem="b1v-Vf-dUe" firstAttribute="centerY" secondItem="Q40-Hm-ZC3" secondAttribute="centerY" constant="64.75" id="Qyt-3L-1lr"/>
                             <constraint firstItem="3eT-6p-f73" firstAttribute="centerY" secondItem="khc-Tt-Ar9" secondAttribute="centerY" id="TDd-hE-gR5"/>
                             <constraint firstItem="Ce5-X5-enn" firstAttribute="top" secondItem="x6d-Y4-Ai6" secondAttribute="bottom" id="apL-Dv-sxf"/>
                             <constraint firstItem="Ce5-X5-enn" firstAttribute="leading" secondItem="Q40-Hm-ZC3" secondAttribute="leading" id="bjh-BD-b53"/>

@@ -12,13 +12,19 @@ class RootViewController: TabbedViewController {
     
     var locationManager: CLLocationManager = CLLocationManager()
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(showLoginScreen), name: NSNotification.Name(Constants.signInNeededNotification), object: nil)
+    }
+    
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
+        if !UserManager.shared.userIsLoggedIn() {
+            showLoginScreen()
+        }
         self.locationManager.requestWhenInUseAuthorization()
-        showLoginScreen()
-        
-        NotificationCenter.default.addObserver(self, selector: #selector(showLoginScreen), name: NSNotification.Name(Constants.signInNeededNotification), object: nil)
     }
     
     @objc func showLoginScreen() {
