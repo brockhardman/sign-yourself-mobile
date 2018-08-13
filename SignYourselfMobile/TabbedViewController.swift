@@ -13,11 +13,15 @@ class TabbedViewController: UIViewController, UIScrollViewDelegate, UIGestureRec
     var activeControllers = NSArray()
     var activeControllersObjects = Array<ActiveViewController>()
     var tapGestures = NSMutableArray()
-    var isZoomed = false;
-    var currentControllerIndex = 0;
-    @IBOutlet weak var visualEffectsView:UIVisualEffectView?;
-    @IBOutlet weak var scrollView:UIScrollView?;
-    @IBOutlet weak var bottomNavView:UIView?;
+    var isZoomed = false
+    var currentControllerIndex = 0 {
+        didSet {
+            updateTabSelected(index: currentControllerIndex)
+        }
+    }
+    @IBOutlet weak var visualEffectsView:UIVisualEffectView?
+    @IBOutlet weak var scrollView:UIScrollView?
+    @IBOutlet weak var bottomNavView:UIView?
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
@@ -122,7 +126,7 @@ class TabbedViewController: UIViewController, UIScrollViewDelegate, UIGestureRec
             navButton.titleLabel?.textAlignment = NSTextAlignment.center;
             navButton.titleEdgeInsets = UIEdgeInsets(top:(self.bottomNavView?.frame.size.height)! - 18, left:0, bottom:0, right:0)
             navButton.titleLabel?.font = UIFont(name:"Helvetica", size:10)
-            navButton.setTitleColor(UIColor.darkGray, for: UIControlState.normal)
+            navButton.setTitleColor(UIColor.white, for: UIControlState.normal)
             navButtonView.addSubview(navButton)
             
             let buttonImageView = UIImageView(image:UIImage(named: (dict.object(forKey: "navImage") as? String)!))
@@ -261,8 +265,8 @@ class TabbedViewController: UIViewController, UIScrollViewDelegate, UIGestureRec
         }
     }
     
-    func updateTabSelected() {
-        
+    func updateTabSelected(index: Int) {
+        //bottomNavView?.transform = CATransform3DMakeScale(<#T##sx: CGFloat##CGFloat#>, <#T##sy: CGFloat##CGFloat#>, <#T##sz: CGFloat##CGFloat#>)
     }
     
     // Scrollview Delegate Methods

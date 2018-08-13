@@ -78,7 +78,7 @@ struct Constants {
     static let CONTRIBUTION_SCREEN = "ContributionViewController"
     static let MAIN_SCREEN = "MainScreen"
     static let PROJECTS_SCREEN = "ProjectsViewController"
-    static let PROFILE_SCREEN = "ProfileScreen"
+    static let PROFILE_SCREEN = "ProfileViewController"
     static let ADD_NEWPROJECT_SCREEN = "AddNewProjectScreen"
     static let ASSOCIATESCREEN = "AssociatesScreen"
     static let ADVISOR_SCREEN = "AdvisorsScreen"
@@ -100,7 +100,7 @@ struct Constants {
     
     //Tabs
     static let PROJECTS_TAB = "ProjectsTab"
-    static let MEDIA_TAB = "MediaTab"
+    static let MEDIA_TAB_VIEW_CONTROLLER = "MediaTabViewController"
     static let EVENTS_TAB = "EventsTab"
     static let ALL_EVENTS_TAB = "AllEventsTab"
     static let LATEST_EVENT_TAB = "LatestEventTab"

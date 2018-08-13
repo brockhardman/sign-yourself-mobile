@@ -195,9 +195,6 @@ extension UIViewController{
         
     }
     
-    func getStoryboard() -> UIStoryboard {
-        return UIStoryboard(name: "Main", bundle: nil)
-    }
     func getViewPagerOptions(view:UIView,tabViewHeight:CGFloat = 50,tabBackgroundColor:UIColor = UIColor.lightGray,tabSelectedIndicatorColor:UIColor = UIColor.navSelectedBackgroundColor,textColor:UIColor = .darkGray) -> ViewPagerOptions {
         let options = ViewPagerOptions(viewPagerWithFrame: view.bounds)
         options.tabType = ViewPagerTabType.basic

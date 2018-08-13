@@ -81,14 +81,14 @@ class ProjectDetailViewController: UIViewController,UIGestureRecognizerDelegate,
     //MARK:Set up ViewPager
     func setUpTabs(){
 //        let infoTab = getStoryboard().instantiateViewController(withIdentifier: Constants.UPCOMMING_EVENT_TAB) as? UpcommingEventTab
-//        let mediaTab = getStoryboard().instantiateViewController(withIdentifier: Constants.MEDIA_TAB) as? MediaTab
-//        mediaTab?.collapseDelegate = self
+        let mediaTabViewController = UIStoryboard(name: "Media", bundle: nil).instantiateViewController(withIdentifier: Constants.MEDIA_TAB_VIEW_CONTROLLER) as! MediaTabViewController
+        mediaTabViewController.collapseDelegate = self
 //        let updatesTab = getStoryboard().instantiateViewController(withIdentifier: Constants.UPCOMMING_EVENT_TAB) as? UpcommingEventTab
 //        let joinProjectTab = getStoryboard().instantiateViewController(withIdentifier: Constants.UPCOMMING_EVENT_TAB) as? UpcommingEventTab
 //        let commentsTab = getStoryboard().instantiateViewController(withIdentifier: Constants.UPCOMMING_EVENT_TAB) as? UpcommingEventTab
 //
 //        tabList.append(infoTab!)
-//        tabList.append(mediaTab!)
+        tabList.append(mediaTabViewController)
 //        tabList.append(updatesTab!)
 //        tabList.append(joinProjectTab!)
 //        tabList.append(commentsTab!)

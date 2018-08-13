@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Media Tab View Controller-->
+        <scene sceneID="g7U-Z8-a66">
+            <objects>
+                <viewController storyboardIdentifier="MediaTabViewController" id="rOr-6F-q2c" customClass="MediaTabViewController" customModule="SignYourselfMobile" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="SDM-R6-Bmg"/>
+                        <viewControllerLayoutGuide type="bottom" id="kHT-y6-fQJ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="qVD-OD-mlL">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MEDIA" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eW1-zc-WTP">
+                                <rect key="frame" x="10" y="10" width="50.5" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(10) " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nU9-aP-npP">
+                                <rect key="frame" x="70.5" y="9.5" width="35.5" height="21"/>
+                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="18"/>
+                                <color key="textColor" red="0.067309729750000005" green="0.58878129720000005" blue="0.53171449900000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" bouncesZoom="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="3RY-BU-wBe">
+                                <rect key="frame" x="0.0" y="40.5" width="375" height="626.5"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Hvf-6T-rgz">
+                                    <size key="itemSize" width="50" height="50"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <connections>
+                                    <outlet property="dataSource" destination="rOr-6F-q2c" id="2dk-2q-KYq"/>
+                                    <outlet property="delegate" destination="rOr-6F-q2c" id="9U4-5j-227"/>
+                                </connections>
+                            </collectionView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="kHT-y6-fQJ" firstAttribute="top" secondItem="3RY-BU-wBe" secondAttribute="bottom" id="4KH-R9-yrB"/>
+                            <constraint firstItem="eW1-zc-WTP" firstAttribute="top" secondItem="qVD-OD-mlL" secondAttribute="top" constant="10" id="8mM-5V-OnV"/>
+                            <constraint firstItem="nU9-aP-npP" firstAttribute="leading" secondItem="eW1-zc-WTP" secondAttribute="trailing" constant="10" id="bOT-CS-XTC"/>
+                            <constraint firstItem="eW1-zc-WTP" firstAttribute="leading" secondItem="qVD-OD-mlL" secondAttribute="leading" constant="10" id="cN3-Tp-oG8"/>
+                            <constraint firstItem="nU9-aP-npP" firstAttribute="centerY" secondItem="eW1-zc-WTP" secondAttribute="centerY" id="eEv-nv-9c7"/>
+                            <constraint firstItem="3RY-BU-wBe" firstAttribute="leading" secondItem="qVD-OD-mlL" secondAttribute="leading" id="mG8-qy-XWd"/>
+                            <constraint firstAttribute="trailing" secondItem="3RY-BU-wBe" secondAttribute="trailing" id="qQX-rn-uwL"/>
+                            <constraint firstItem="3RY-BU-wBe" firstAttribute="top" secondItem="eW1-zc-WTP" secondAttribute="bottom" constant="10" id="uOp-dQ-4je"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Uu9-q8-xjK"/>
+                    </view>
+                    <connections>
+                        <outlet property="collectionView" destination="3RY-BU-wBe" id="Hz1-JD-stm"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="P7H-f9-aMv" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="9870" y="74"/>
+        </scene>
+    </scenes>
+</document>

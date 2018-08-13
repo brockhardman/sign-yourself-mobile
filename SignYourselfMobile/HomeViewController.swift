@@ -30,8 +30,8 @@ class HomeViewController: ActiveViewController, UIGestureRecognizerDelegate {
     @IBOutlet weak var easy1Label: UILabel!
     
 //    var addNewProjectScreen:AddNewProjectScreen?
-//    var projectDetailScreen:ProjectDetailScreen?
-//    var profileScreen:ProfileScreen?
+    var projectDetailViewController:ProjectDetailViewController?
+    var profileViewController:ProfileViewController?
 //    var marketingScreen:MarketingScreen?
 //    
 //    var viewGroupList = [SetViewGroupModal]()
@@ -72,7 +72,7 @@ class HomeViewController: ActiveViewController, UIGestureRecognizerDelegate {
         
     }
     @objc func myProfileTapped() {
-        //present(profileScreen!, animated: true, completion: nil)
+        present(profileViewController!, animated: true, completion: nil)
     }
     
     
@@ -116,13 +116,13 @@ class HomeViewController: ActiveViewController, UIGestureRecognizerDelegate {
     
     private func initializeScreens()  {
 //        addNewProjectScreen = getStoryboard().instantiateViewController(withIdentifier: Constants.ADD_NEWPROJECT_SCREEN) as? AddNewProjectScreen
-//        projectDetailScreen = getStoryboard().instantiateViewController(withIdentifier: Constants.PROJECT_DETAIL_SCREEN) as? ProjectDetailScreen
-//        profileScreen = getStoryboard().instantiateViewController(withIdentifier: Constants.PROFILE_SCREEN) as? ProfileScreen
+        let projectDetailViewController = UIStoryboard(name: "Projects", bundle: nil).instantiateViewController(withIdentifier: Constants.PROJECT_DETAIL_SCREEN) as! ProjectDetailViewController
+        let profileViewController = UIStoryboard(name: "Profile", bundle: nil).instantiateViewController(withIdentifier: Constants.PROFILE_SCREEN) as! ProfileViewController
 //        marketingScreen = getStoryboard().instantiateViewController(withIdentifier: Constants.MARKETING_SCREEN) as? MarketingScreen
 //
-//        projectDetailScreen?.modalTransitionStyle = .crossDissolve
+        projectDetailViewController.modalTransitionStyle = .crossDissolve
 //        addNewProjectScreen?.modalTransitionStyle = .crossDissolve
-//        profileScreen?.modalTransitionStyle = .crossDissolve
+        profileViewController.modalTransitionStyle = .crossDissolve
 //        marketingScreen?.modalTransitionStyle = .crossDissolve
     }
     
