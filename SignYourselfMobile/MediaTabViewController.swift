@@ -33,7 +33,6 @@ extension MediaTabViewController: UICollectionViewDataSource{
         return cell
     }
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
-//        print(scrollView.contentOffset.y)
         offset = scrollView.contentOffset.y
         collapseDelegate?.collapse(offset: offset!)
     }

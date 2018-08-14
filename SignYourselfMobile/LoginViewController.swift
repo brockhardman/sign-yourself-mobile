@@ -10,7 +10,7 @@ protocol LoginProtocol : class {
     func processLoginResponse(loginResponse: LoginResponse)
 }
 
-class LoginViewController: UIViewController,UIGestureRecognizerDelegate{
+class LoginViewController: UIViewController, UIGestureRecognizerDelegate    {
     
     @IBOutlet weak var signUpLabel: UILabel!
     @IBOutlet weak var UsernameField: UITextField!
@@ -35,7 +35,7 @@ class LoginViewController: UIViewController,UIGestureRecognizerDelegate{
         self.signUpLabel.isUserInteractionEnabled = true
         self.signUpLabel!.addGestureRecognizer(sigupGesture)
         
-        let rememberViewGesture = UITapGestureRecognizer(target: self, action: #selector(self.rememberViewTapped))
+        let rememberViewGesture = UITapGestureRecognizer(target: self, action: #selector(rememberViewTapped))
         rememberViewGesture.delegate = self
         self.rememberView.isUserInteractionEnabled = true
         self.rememberView!.addGestureRecognizer(rememberViewGesture)
@@ -44,10 +44,11 @@ class LoginViewController: UIViewController,UIGestureRecognizerDelegate{
     @objc func signUpTapped(){
         let signUpController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: Constants.REGISTER_SCREEN) as! RegisterViewController
         signUpController.modalPresentationStyle = .overFullScreen
+        signUpController.modalTransitionStyle = .crossDissolve
         present(signUpController, animated: true, completion: nil)
     }
     @objc func rememberViewTapped() {
-        //setUpButton(button: btnRemember,checkedImage: #imageLiteral(resourceName: "check"),uncheckedImage: #imageLiteral(resourceName: "RoundIcon"))
+        setUpButton(button: btnRemember,checkedImage: #imageLiteral(resourceName: "check"),uncheckedImage: #imageLiteral(resourceName: "RoundIcon"))
     }
     @IBAction func btnSignInAction(_ sender: UIButton) {
         SignYourselfAPIClient.shared.login(username: "gashousesmitty@gmail.com", password: "Therealones1") { result in
@@ -65,6 +66,11 @@ class LoginViewController: UIViewController,UIGestureRecognizerDelegate{
         }
         
     }
+    
+    @IBAction func btnRememberTapped(_ sender: UIButton) {
+        setUpButton(button: sender,checkedImage: #imageLiteral(resourceName: "check"),uncheckedImage: #imageLiteral(resourceName: "RoundIcon"))
+    }
+    
     @IBAction func btnFacebookAction(_ sender: UIButton) {
         
     }

@@ -11,6 +11,20 @@ extension UIView {
         self.layer.cornerRadius = cornerRadius
         self.clipsToBounds = true
     }
+    
+    public class func fromNib<T : UIView>() -> T {
+        let module = NSStringFromClass(self).components(separatedBy: ".").first!
+        let stringToRemove = "\(module)."
+        let className = String(describing: self).replacingOccurrences(of: stringToRemove, with: "")
+        return Bundle.main.loadNibNamed(className, owner: nil, options: nil)![0] as! T
+    }
+    
+    public class func fromNib<T : UIView>(bundle : Bundle) -> T {
+        let module = NSStringFromClass(self).components(separatedBy: ".").first!
+        let stringToRemove = "\(module)."
+        let className = String(describing: self).replacingOccurrences(of: stringToRemove, with: "")
+        return bundle.loadNibNamed(className, owner: nil, options: nil)![0] as! T
+    }
 }
 
 extension UIView {

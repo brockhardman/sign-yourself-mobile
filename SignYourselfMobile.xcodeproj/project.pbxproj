@@ -24,6 +24,41 @@
 		380426EB20321BD900F336B4 /* UIImageView+SYS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 380426EA20321BD900F336B4 /* UIImageView+SYS.swift */; };
 		380426ED203240D600F336B4 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 380426EC203240D600F336B4 /* RegisterViewController.swift */; };
 		380426EF2032428300F336B4 /* RegisterResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 380426EE2032428300F336B4 /* RegisterResponse.swift */; };
+		3813B910212254720070FE2D /* AllEventsTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3813B90F212254720070FE2D /* AllEventsTabViewController.swift */; };
+		3813B913212255490070FE2D /* EventCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3813B911212255490070FE2D /* EventCell.swift */; };
+		3813B914212255490070FE2D /* EventCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3813B912212255490070FE2D /* EventCell.xib */; };
+		3813B91721226F910070FE2D /* AppHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3813B91621226F910070FE2D /* AppHelper.swift */; };
+		3813B919212272F80070FE2D /* Optional+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3813B918212272F80070FE2D /* Optional+Extension.swift */; };
+		3813B93A212273650070FE2D /* Int+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3813B91B2122735F0070FE2D /* Int+Extension.swift */; };
+		3813B93B212273650070FE2D /* Array+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3813B91C2122735F0070FE2D /* Array+Extension.swift */; };
+		3813B93D212273650070FE2D /* NSTextAlignment+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3813B91E212273600070FE2D /* NSTextAlignment+Extension.swift */; };
+		3813B93E212273650070FE2D /* Dictionary+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3813B91F212273600070FE2D /* Dictionary+Extension.swift */; };
+		3813B93F212273650070FE2D /* CGSize+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3813B920212273600070FE2D /* CGSize+Extension.swift */; };
+		3813B940212273650070FE2D /* DateComponents+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3813B921212273600070FE2D /* DateComponents+Extension.swift */; };
+		3813B941212273650070FE2D /* CAAnimation+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3813B922212273610070FE2D /* CAAnimation+Extension.swift */; };
+		3813B942212273650070FE2D /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3813B923212273610070FE2D /* String+Extension.swift */; };
+		3813B943212273650070FE2D /* ReliantFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3813B924212273610070FE2D /* ReliantFont.swift */; };
+		3813B944212273650070FE2D /* Calendar+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3813B925212273610070FE2D /* Calendar+Extension.swift */; };
+		3813B945212273650070FE2D /* UIBarButtonItem+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3813B926212273610070FE2D /* UIBarButtonItem+Extension.swift */; };
+		3813B946212273650070FE2D /* CGPoint+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3813B927212273620070FE2D /* CGPoint+Extension.swift */; };
+		3813B948212273650070FE2D /* NSDateFormatter+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3813B929212273620070FE2D /* NSDateFormatter+Extension.swift */; };
+		3813B94B212273650070FE2D /* URL+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3813B92C212273630070FE2D /* URL+Extension.swift */; };
+		3813B94C212273650070FE2D /* RELString+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3813B92D212273630070FE2D /* RELString+Extension.swift */; };
+		3813B94D212273650070FE2D /* Date+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3813B92E212273630070FE2D /* Date+Extension.swift */; };
+		3813B94E212273650070FE2D /* Double+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3813B92F212273630070FE2D /* Double+Extension.swift */; };
+		3813B94F212273650070FE2D /* UserDefaults+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3813B930212273640070FE2D /* UserDefaults+Extension.swift */; };
+		3813B950212273650070FE2D /* UIImage+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3813B931212273640070FE2D /* UIImage+Extension.swift */; };
+		3813B951212273650070FE2D /* TimeInterval+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3813B932212273640070FE2D /* TimeInterval+Extension.swift */; };
+		3813B953212273650070FE2D /* UIToolbar+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3813B934212273640070FE2D /* UIToolbar+Extension.swift */; };
+		3813B954212273650070FE2D /* DateFormatter+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3813B935212273650070FE2D /* DateFormatter+Extension.swift */; };
+		3813B955212273650070FE2D /* CLLocation+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3813B936212273650070FE2D /* CLLocation+Extension.swift */; };
+		3813B956212273650070FE2D /* NSLineBreakMode+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3813B937212273650070FE2D /* NSLineBreakMode+Extension.swift */; };
+		3813B957212273650070FE2D /* NumberFormatter+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3813B938212273650070FE2D /* NumberFormatter+Extension.swift */; };
+		3813B959212275A20070FE2D /* Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3813B958212275A20070FE2D /* Utility.swift */; };
+		3813B95C212275EA0070FE2D /* SignYourselfHud.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3813B95A212275E90070FE2D /* SignYourselfHud.swift */; };
+		3813B95D212275EA0070FE2D /* Hud.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3813B95B212275EA0070FE2D /* Hud.swift */; };
+		3813B95F2122772B0070FE2D /* SpinnerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3813B95E2122772B0070FE2D /* SpinnerView.swift */; };
+		3813B961212278520070FE2D /* AlertMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3813B960212278520070FE2D /* AlertMessage.swift */; };
 		382715741EAD08CC004B1994 /* UIColor+SYS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 382715731EAD08CC004B1994 /* UIColor+SYS.swift */; };
 		382715771EAD1535004B1994 /* Events.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 382715761EAD1535004B1994 /* Events.storyboard */; };
 		382715BF1EAEEC2D004B1994 /* EventsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 382715BE1EAEEC2D004B1994 /* EventsViewController.swift */; };
@@ -100,6 +135,41 @@
 		380426EA20321BD900F336B4 /* UIImageView+SYS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+SYS.swift"; sourceTree = "<group>"; };
 		380426EC203240D600F336B4 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		380426EE2032428300F336B4 /* RegisterResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterResponse.swift; sourceTree = "<group>"; };
+		3813B90F212254720070FE2D /* AllEventsTabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllEventsTabViewController.swift; sourceTree = "<group>"; };
+		3813B911212255490070FE2D /* EventCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventCell.swift; sourceTree = "<group>"; };
+		3813B912212255490070FE2D /* EventCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EventCell.xib; sourceTree = "<group>"; };
+		3813B91621226F910070FE2D /* AppHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppHelper.swift; sourceTree = "<group>"; };
+		3813B918212272F80070FE2D /* Optional+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Optional+Extension.swift"; sourceTree = "<group>"; };
+		3813B91B2122735F0070FE2D /* Int+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Int+Extension.swift"; sourceTree = "<group>"; };
+		3813B91C2122735F0070FE2D /* Array+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Array+Extension.swift"; sourceTree = "<group>"; };
+		3813B91E212273600070FE2D /* NSTextAlignment+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSTextAlignment+Extension.swift"; sourceTree = "<group>"; };
+		3813B91F212273600070FE2D /* Dictionary+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Dictionary+Extension.swift"; sourceTree = "<group>"; };
+		3813B920212273600070FE2D /* CGSize+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CGSize+Extension.swift"; sourceTree = "<group>"; };
+		3813B921212273600070FE2D /* DateComponents+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "DateComponents+Extension.swift"; sourceTree = "<group>"; };
+		3813B922212273610070FE2D /* CAAnimation+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CAAnimation+Extension.swift"; sourceTree = "<group>"; };
+		3813B923212273610070FE2D /* String+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
+		3813B924212273610070FE2D /* ReliantFont.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReliantFont.swift; sourceTree = "<group>"; };
+		3813B925212273610070FE2D /* Calendar+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Calendar+Extension.swift"; sourceTree = "<group>"; };
+		3813B926212273610070FE2D /* UIBarButtonItem+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIBarButtonItem+Extension.swift"; sourceTree = "<group>"; };
+		3813B927212273620070FE2D /* CGPoint+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CGPoint+Extension.swift"; sourceTree = "<group>"; };
+		3813B929212273620070FE2D /* NSDateFormatter+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSDateFormatter+Extension.swift"; sourceTree = "<group>"; };
+		3813B92C212273630070FE2D /* URL+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "URL+Extension.swift"; sourceTree = "<group>"; };
+		3813B92D212273630070FE2D /* RELString+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "RELString+Extension.swift"; sourceTree = "<group>"; };
+		3813B92E212273630070FE2D /* Date+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Date+Extension.swift"; sourceTree = "<group>"; };
+		3813B92F212273630070FE2D /* Double+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Double+Extension.swift"; sourceTree = "<group>"; };
+		3813B930212273640070FE2D /* UserDefaults+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UserDefaults+Extension.swift"; sourceTree = "<group>"; };
+		3813B931212273640070FE2D /* UIImage+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+Extension.swift"; sourceTree = "<group>"; };
+		3813B932212273640070FE2D /* TimeInterval+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "TimeInterval+Extension.swift"; sourceTree = "<group>"; };
+		3813B934212273640070FE2D /* UIToolbar+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIToolbar+Extension.swift"; sourceTree = "<group>"; };
+		3813B935212273650070FE2D /* DateFormatter+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "DateFormatter+Extension.swift"; sourceTree = "<group>"; };
+		3813B936212273650070FE2D /* CLLocation+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CLLocation+Extension.swift"; sourceTree = "<group>"; };
+		3813B937212273650070FE2D /* NSLineBreakMode+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSLineBreakMode+Extension.swift"; sourceTree = "<group>"; };
+		3813B938212273650070FE2D /* NumberFormatter+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NumberFormatter+Extension.swift"; sourceTree = "<group>"; };
+		3813B958212275A20070FE2D /* Utility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utility.swift; sourceTree = "<group>"; };
+		3813B95A212275E90070FE2D /* SignYourselfHud.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignYourselfHud.swift; sourceTree = "<group>"; };
+		3813B95B212275EA0070FE2D /* Hud.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Hud.swift; sourceTree = "<group>"; };
+		3813B95E2122772B0070FE2D /* SpinnerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpinnerView.swift; sourceTree = "<group>"; };
+		3813B960212278520070FE2D /* AlertMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertMessage.swift; sourceTree = "<group>"; };
 		382715731EAD08CC004B1994 /* UIColor+SYS.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+SYS.swift"; sourceTree = "<group>"; };
 		382715761EAD1535004B1994 /* Events.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Events.storyboard; sourceTree = "<group>"; };
 		382715BE1EAEEC2D004B1994 /* EventsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventsViewController.swift; sourceTree = "<group>"; };
@@ -200,14 +270,51 @@
 			name = Models;
 			sourceTree = "<group>";
 		};
+		3813B91521226F380070FE2D /* App */ = {
+			isa = PBXGroup;
+			children = (
+				38E34BFF1DEE866E00D1D37E /* AppDelegate.swift */,
+				389E680F1EAC7EDA00B28BDA /* AppBootstrapper.swift */,
+				389E68101EAC7EDA00B28BDA /* Constants.swift */,
+				3813B91621226F910070FE2D /* AppHelper.swift */,
+			);
+			name = App;
+			sourceTree = "<group>";
+		};
 		382715721EAD08AE004B1994 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				3813B91C2122735F0070FE2D /* Array+Extension.swift */,
+				3813B922212273610070FE2D /* CAAnimation+Extension.swift */,
+				3813B925212273610070FE2D /* Calendar+Extension.swift */,
+				3813B927212273620070FE2D /* CGPoint+Extension.swift */,
+				3813B920212273600070FE2D /* CGSize+Extension.swift */,
+				3813B936212273650070FE2D /* CLLocation+Extension.swift */,
+				3813B92E212273630070FE2D /* Date+Extension.swift */,
+				3813B921212273600070FE2D /* DateComponents+Extension.swift */,
+				3813B935212273650070FE2D /* DateFormatter+Extension.swift */,
+				3813B91F212273600070FE2D /* Dictionary+Extension.swift */,
+				3813B92F212273630070FE2D /* Double+Extension.swift */,
+				3813B91B2122735F0070FE2D /* Int+Extension.swift */,
+				3813B929212273620070FE2D /* NSDateFormatter+Extension.swift */,
+				3813B937212273650070FE2D /* NSLineBreakMode+Extension.swift */,
+				3813B91E212273600070FE2D /* NSTextAlignment+Extension.swift */,
+				3813B938212273650070FE2D /* NumberFormatter+Extension.swift */,
+				3813B924212273610070FE2D /* ReliantFont.swift */,
+				3813B92D212273630070FE2D /* RELString+Extension.swift */,
+				3813B923212273610070FE2D /* String+Extension.swift */,
+				3813B932212273640070FE2D /* TimeInterval+Extension.swift */,
+				3813B926212273610070FE2D /* UIBarButtonItem+Extension.swift */,
+				3813B931212273640070FE2D /* UIImage+Extension.swift */,
+				3813B934212273640070FE2D /* UIToolbar+Extension.swift */,
+				3813B92C212273630070FE2D /* URL+Extension.swift */,
+				3813B930212273640070FE2D /* UserDefaults+Extension.swift */,
 				382715731EAD08CC004B1994 /* UIColor+SYS.swift */,
 				385A6B2F1EB1AC8100004F33 /* NSDictionary+SYS.swift */,
 				380426EA20321BD900F336B4 /* UIImageView+SYS.swift */,
 				38A995F8211FD69E0061A022 /* UIView+Extension.swift */,
 				38A6BB1B2120E0DD00F956FB /* UIViewController+Extensions.swift */,
+				3813B918212272F80070FE2D /* Optional+Extension.swift */,
 			);
 			name = Extensions;
 			sourceTree = "<group>";
@@ -233,9 +340,14 @@
 		3853184C21209FCD0022DF76 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				3813B95B212275EA0070FE2D /* Hud.swift */,
+				3813B95A212275E90070FE2D /* SignYourselfHud.swift */,
 				3853184D2120A0260022DF76 /* HoshiTextField.swift */,
 				3853184F2120A1DD0022DF76 /* TextFieldEffects.swift */,
 				38A6BB152120DFC000F956FB /* CollapsingUtil.swift */,
+				3813B95E2122772B0070FE2D /* SpinnerView.swift */,
+				3813B958212275A20070FE2D /* Utility.swift */,
+				3813B960212278520070FE2D /* AlertMessage.swift */,
 			);
 			name = Utilities;
 			sourceTree = "<group>";
@@ -310,6 +422,7 @@
 				38A6BB1F2120E1B000F956FB /* AssociatesViewController.swift */,
 				38A6BB242120E32600F956FB /* FansViewController.swift */,
 				38A6BB262120E37F00F956FB /* ContributionsViewController.swift */,
+				3813B90F212254720070FE2D /* AllEventsTabViewController.swift */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -325,6 +438,8 @@
 		38A6BB212120E24E00F956FB /* TableViewCells */ = {
 			isa = PBXGroup;
 			children = (
+				3813B911212255490070FE2D /* EventCell.swift */,
+				3813B912212255490070FE2D /* EventCell.xib */,
 				38A6BB292120E3EA00F956FB /* ContributionCell.swift */,
 				38A6BB282120E3EA00F956FB /* ContributionCell.xib */,
 				38A6BB222120E26400F956FB /* AssociateCell.swift */,
@@ -365,6 +480,7 @@
 		38E34BFE1DEE866E00D1D37E /* SignYourselfMobile */ = {
 			isa = PBXGroup;
 			children = (
+				3813B91521226F380070FE2D /* App */,
 				38A6BB122120DF7400F956FB /* Protocols */,
 				3853185C2120D6340022DF76 /* Views */,
 				385318512120AAEC0022DF76 /* Resources */,
@@ -377,9 +493,6 @@
 				382715751EAD151C004B1994 /* Storyboards */,
 				382715721EAD08AE004B1994 /* Extensions */,
 				389E68061EABFE3300B28BDA /* ViewControllers */,
-				38E34BFF1DEE866E00D1D37E /* AppDelegate.swift */,
-				389E680F1EAC7EDA00B28BDA /* AppBootstrapper.swift */,
-				389E68101EAC7EDA00B28BDA /* Constants.swift */,
 				38E34C061DEE866E00D1D37E /* Assets.xcassets */,
 				38E34C0B1DEE866E00D1D37E /* Info.plist */,
 				38BCC054201914AB004343B5 /* GoogleService-Info.plist */,
@@ -493,6 +606,7 @@
 				38BCC055201914AB004343B5 /* GoogleService-Info.plist in Resources */,
 				38426DCA212117B10003791B /* Media.storyboard in Resources */,
 				38426DC22121166F0003791B /* MediaCell.xib in Resources */,
+				3813B914212255490070FE2D /* EventCell.xib in Resources */,
 				385318532120CD0B0022DF76 /* Contributions.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -565,13 +679,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3813B954212273650070FE2D /* DateFormatter+Extension.swift in Sources */,
+				3813B93D212273650070FE2D /* NSTextAlignment+Extension.swift in Sources */,
 				380426ED203240D600F336B4 /* RegisterViewController.swift in Sources */,
 				38A6BB2B2120E3EA00F956FB /* ContributionCell.swift in Sources */,
+				3813B955212273650070FE2D /* CLLocation+Extension.swift in Sources */,
+				3813B95D212275EA0070FE2D /* Hud.swift in Sources */,
 				38426DC12121166F0003791B /* MediaCell.swift in Sources */,
 				389E68121EAC7EDA00B28BDA /* Constants.swift in Sources */,
 				38A6BB272120E37F00F956FB /* ContributionsViewController.swift in Sources */,
 				38A6BB192120E01200F956FB /* ProjectCell.swift in Sources */,
 				380426D3201D306000F336B4 /* Profile.swift in Sources */,
+				3813B942212273650070FE2D /* String+Extension.swift in Sources */,
 				38A6BB162120DFC000F956FB /* CollapsingUtil.swift in Sources */,
 				380426DB201D334E00F336B4 /* Role.swift in Sources */,
 				380426E5203093CB00F336B4 /* LoginViewController.swift in Sources */,
@@ -580,37 +699,66 @@
 				38B7E4D520373E0E000B5CA0 /* ProjectsViewController.swift in Sources */,
 				38A6BB252120E32600F956FB /* FansViewController.swift in Sources */,
 				389E680A1EABFE9D00B28BDA /* RootViewController.swift in Sources */,
+				3813B919212272F80070FE2D /* Optional+Extension.swift in Sources */,
+				3813B94D212273650070FE2D /* Date+Extension.swift in Sources */,
 				38A995F9211FD69E0061A022 /* UIView+Extension.swift in Sources */,
 				38ACB7F61F2D4035005B9085 /* ProfileHeaderViewController.swift in Sources */,
 				389E68111EAC7EDA00B28BDA /* AppBootstrapper.swift in Sources */,
 				38426DCC212122150003791B /* UserManager.swift in Sources */,
+				3813B961212278520070FE2D /* AlertMessage.swift in Sources */,
+				3813B95C212275EA0070FE2D /* SignYourselfHud.swift in Sources */,
 				38E34C001DEE866E00D1D37E /* AppDelegate.swift in Sources */,
+				3813B913212255490070FE2D /* EventCell.swift in Sources */,
 				38B7E4DB20389A01000B5CA0 /* SignYourselfEventAPI.swift in Sources */,
+				3813B91721226F910070FE2D /* AppHelper.swift in Sources */,
 				380426D1201CED2000F336B4 /* User.swift in Sources */,
+				3813B950212273650070FE2D /* UIImage+Extension.swift in Sources */,
 				380426D7201D30B700F336B4 /* Event.swift in Sources */,
+				3813B953212273650070FE2D /* UIToolbar+Extension.swift in Sources */,
 				295DBE381EBFAC8000355ABE /* TabbedViewController.swift in Sources */,
+				3813B957212273650070FE2D /* NumberFormatter+Extension.swift in Sources */,
+				3813B956212273650070FE2D /* NSLineBreakMode+Extension.swift in Sources */,
 				385A6B2E1EB199CD00004F33 /* ActiveControllerService.swift in Sources */,
 				385318502120A1DD0022DF76 /* TextFieldEffects.swift in Sources */,
+				3813B95F2122772B0070FE2D /* SpinnerView.swift in Sources */,
 				38426DBE212116470003791B /* MediaTabViewController.swift in Sources */,
+				3813B941212273650070FE2D /* CAAnimation+Extension.swift in Sources */,
 				38A6BB202120E1B000F956FB /* AssociatesViewController.swift in Sources */,
 				38C11E321EB9888500D788D0 /* ActiveViewController.swift in Sources */,
 				380426E72030BE0700F336B4 /* LoginResponse.swift in Sources */,
 				38A995F7211F780A0061A022 /* RadarManager.swift in Sources */,
+				3813B948212273650070FE2D /* NSDateFormatter+Extension.swift in Sources */,
+				3813B93F212273650070FE2D /* CGSize+Extension.swift in Sources */,
 				3853185B2120D3A10022DF76 /* HomeViewController.swift in Sources */,
 				38B7E4DD2038A13E000B5CA0 /* SignYourselfProjectAPI.swift in Sources */,
 				38A6BB142120DF8400F956FB /* CollapseProtocol.swift in Sources */,
 				382715BF1EAEEC2D004B1994 /* EventsViewController.swift in Sources */,
+				3813B959212275A20070FE2D /* Utility.swift in Sources */,
+				3813B93B212273650070FE2D /* Array+Extension.swift in Sources */,
+				3813B94B212273650070FE2D /* URL+Extension.swift in Sources */,
 				38A6BB1C2120E0DD00F956FB /* UIViewController+Extensions.swift in Sources */,
+				3813B951212273650070FE2D /* TimeInterval+Extension.swift in Sources */,
 				382715741EAD08CC004B1994 /* UIColor+SYS.swift in Sources */,
 				385A6B301EB1AC8100004F33 /* NSDictionary+SYS.swift in Sources */,
+				3813B94F212273650070FE2D /* UserDefaults+Extension.swift in Sources */,
 				38426DC5212116E30003791B /* GlobalCell.swift in Sources */,
 				380426EB20321BD900F336B4 /* UIImageView+SYS.swift in Sources */,
+				3813B944212273650070FE2D /* Calendar+Extension.swift in Sources */,
 				380426E92030C67F00F336B4 /* SignYourselfAPIManager.swift in Sources */,
 				380426D9201D312500F336B4 /* Donation.swift in Sources */,
+				3813B943212273650070FE2D /* ReliantFont.swift in Sources */,
+				3813B940212273650070FE2D /* DateComponents+Extension.swift in Sources */,
+				3813B93A212273650070FE2D /* Int+Extension.swift in Sources */,
+				3813B94C212273650070FE2D /* RELString+Extension.swift in Sources */,
 				3853184E2120A0260022DF76 /* HoshiTextField.swift in Sources */,
 				385318612120D7EA0022DF76 /* ProjectDetailViewController.swift in Sources */,
+				3813B945212273650070FE2D /* UIBarButtonItem+Extension.swift in Sources */,
+				3813B93E212273650070FE2D /* Dictionary+Extension.swift in Sources */,
 				380426E1202C90FB00F336B4 /* SignYourselfProfileAPI.swift in Sources */,
 				38A6BB1E2120E12E00F956FB /* SetViewGroupModal.swift in Sources */,
+				3813B94E212273650070FE2D /* Double+Extension.swift in Sources */,
+				3813B910212254720070FE2D /* AllEventsTabViewController.swift in Sources */,
+				3813B946212273650070FE2D /* CGPoint+Extension.swift in Sources */,
 				38BCC058201B74EF004343B5 /* SignYourselfAPIClient.swift in Sources */,
 				380426D5201D307D00F336B4 /* Project.swift in Sources */,
 				380426EF2032428300F336B4 /* RegisterResponse.swift in Sources */,
@@ -755,6 +903,7 @@
 				CODE_SIGN_ENTITLEMENTS = SignYourselfMobile/SignYourselfMobile.entitlements;
 				CODE_SIGN_STYLE = Manual;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFAULT_BUILD = QA;
 				DEVELOPMENT_TEAM = J724PJQ9EM;
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = SignYourselfMobile/Info.plist;
@@ -779,7 +928,9 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_ENTITLEMENTS = SignYourselfMobile/SignYourselfMobile.entitlements;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				CODE_SIGN_STYLE = Manual;
+				DEFAULT_BUILD = Prod;
 				DEVELOPMENT_TEAM = J724PJQ9EM;
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = SignYourselfMobile/Info.plist;
@@ -787,8 +938,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.signyourself.mobile;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "8517b2d0-b008-4065-93d9-7ffe8029402d";
-				PROVISIONING_PROFILE_SPECIFIER = SignYourselfMobile_Development;
+				PROVISIONING_PROFILE = "f4ecafaf-f6a7-4bc8-86f5-d8c14f7727b8";
+				PROVISIONING_PROFILE_SPECIFIER = SignYourselfMobile_AppStoreProvisioningProfile;
 				SWIFT_OBJC_BRIDGING_HEADER = "SignYourselfMobile/SignYourselfMobile-Bridging-Header.h";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
 				SWIFT_VERSION = 4.0;

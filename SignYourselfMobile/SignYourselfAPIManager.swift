@@ -37,5 +37,7 @@ class SignYourselfAPIManager : NSObject {
         profileData = nil
         currentUser = nil
         accessToken = ""
+        UserDefaults.standard.set(false, forKey: UserDefaultKeys.loggedInKey)
+        NotificationCenter.default.post(name: NSNotification.Name(Constants.signInNeededNotification), object: nil)
     }
 }

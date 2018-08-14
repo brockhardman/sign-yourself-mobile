@@ -9,6 +9,8 @@
 class ProjectsViewController: ActiveViewController {
     
     var projectDetailScreen: ProjectDetailViewController?
+    var collapseDelegate: CollapseDelegate?
+    var offset:CGFloat?
     
     @IBOutlet weak var projectsCollectionView: UICollectionView!
     @IBOutlet weak var searchView: UIView!
@@ -21,8 +23,8 @@ class ProjectsViewController: ActiveViewController {
     }
     
     private func initializeScreens()  {
-        let projectDetailScreen = UIStoryboard(name: "Projects", bundle: nil).instantiateViewController(withIdentifier: Constants.PROJECT_DETAIL_SCREEN) as! ProjectDetailViewController
-        projectDetailScreen.modalTransitionStyle = .crossDissolve
+        projectDetailScreen = UIStoryboard(name: "Projects", bundle: nil).instantiateViewController(withIdentifier: Constants.PROJECT_DETAIL_SCREEN) as? ProjectDetailViewController
+        projectDetailScreen?.modalTransitionStyle = .crossDissolve
     }
     
     @objc func didLogin() {
@@ -50,13 +52,18 @@ extension ProjectsViewController : UICollectionViewDataSource{
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ProjectCell", for: indexPath) as? ProjectCell
         return cell!
     }
+    
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        offset = scrollView.contentOffset.y
+        collapseDelegate?.collapse(offset: offset!)
+    }
 }
 extension ProjectsViewController : UICollectionViewDelegate{
     func numberOfSections(in collectionView: UICollectionView) -> Int {
         return 1
     }
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        //present(projectDetailScreen!, animated: true, completion: nil)
+        present(projectDetailScreen!, animated: true, completion: nil)
     }
     
 }

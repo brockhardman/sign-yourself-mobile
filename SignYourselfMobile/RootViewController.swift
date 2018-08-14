@@ -30,6 +30,7 @@ class RootViewController: TabbedViewController {
     @objc func showLoginScreen() {
         let loginController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: Constants.LOGIN_SCREEN) as! LoginViewController
         loginController.modalPresentationStyle = .overFullScreen
+        loginController.modalTransitionStyle = .crossDissolve
         loginController.delegate = self
         present(loginController, animated: true, completion: nil)
     }

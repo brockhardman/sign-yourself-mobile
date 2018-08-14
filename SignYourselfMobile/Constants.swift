@@ -88,7 +88,7 @@ struct Constants {
     static let ANALYTICS_SCREEN = "AnalyticsScreen"
     static let SOCIAL_MEDIA_SCREEN = "SocialMediaScreen"
     static let GRAPH_ANALYTICS_SCREEN = "GraphAnalyticsScreen"
-    static let EVENTS_SCREEN = "EventsScreen"
+    static let EVENTS_SCREEN = "EventsViewController"
     static let NEWS_SCREEN = "NewsScreen"
     static let MY_ACCOUNT_SCREEN = "MyAccountScreen"
     static let EDIT_AND_ADD_BANNER_SCREEN = "EditAndAddBannerScreen"
@@ -102,7 +102,7 @@ struct Constants {
     static let PROJECTS_TAB = "ProjectsTab"
     static let MEDIA_TAB_VIEW_CONTROLLER = "MediaTabViewController"
     static let EVENTS_TAB = "EventsTab"
-    static let ALL_EVENTS_TAB = "AllEventsTab"
+    static let ALL_EVENTS_TAB = "AllEventsTabViewController"
     static let LATEST_EVENT_TAB = "LatestEventTab"
     static let UPCOMMING_EVENT_TAB = "UpcommingEventTab"
     static let PROJECT_DETAIL_SCREEN = "ProjectDetailViewController"
@@ -124,4 +124,13 @@ struct UserDefaultKeys {
     public static let tabBarIndexKey = "tabBarIndex"
     public static let didShowIntroDemoKey = "didShowIntroDemoKey"
     public static let loginEmailAddress = "loginEmailAddress"
+}
+
+struct AppStrings {
+    /// Create a custom `Build Setting` like `DEFAULT_BUILD` in the project target. For each schema create a build environment. For example: Dev, Prod, UAT.
+    /// In the application Info.plist create a new string with the key `CFBuildType` and place the name of the newly created build setting `${DEFAULT_BUILD}`
+    public static let BuildTypeKey = "CFBuildType"
+    
+    /// Add different base URL depending on the environment that the application is running in. In the application Info.plist create a Dictionary with the key `CFURLEndPoints` and create a element for each environment (e.g., Dev, Prod, UAT). Add the respective URL end points for those environments.
+    public static let BaseURLEndpointKeys = "CFURLEndPoints"
 }

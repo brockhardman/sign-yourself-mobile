@@ -246,6 +246,9 @@
                                                     <constraint firstAttribute="width" constant="24" id="Xey-qm-s79"/>
                                                 </constraints>
                                                 <state key="normal" image="RoundIcon"/>
+                                                <connections>
+                                                    <action selector="btnRememberTapped:" destination="UTt-MD-g21" eventType="touchUpInside" id="oHj-EQ-1Uv"/>
+                                                </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Remember Me" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KXW-9k-9ZJ">
                                                 <rect key="frame" x="44" y="14" width="94" height="17"/>
@@ -345,10 +348,10 @@
             </objects>
             <point key="canvasLocation" x="1009" y="-406"/>
         </scene>
-        <!--Sign Up Screen-->
+        <!--Register View Controller-->
         <scene sceneID="huu-7X-Y8F">
             <objects>
-                <viewController storyboardIdentifier="SignUpScreen" id="hMd-wu-xka" customClass="SignUpScreen" customModule="SignYourselfMobile" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="RegisterViewController" id="hMd-wu-xka" customClass="RegisterViewController" customModule="SignYourselfMobile" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="uAb-9I-Oxu"/>
                         <viewControllerLayoutGuide type="bottom" id="L8S-F0-kPx"/>
@@ -376,6 +379,9 @@
                                             <constraint firstAttribute="width" constant="24" id="fJe-dk-ML1"/>
                                         </constraints>
                                         <state key="normal" image="RoundIcon"/>
+                                        <connections>
+                                            <action selector="agreeButtonTapped:" destination="hMd-wu-xka" eventType="touchUpInside" id="grS-aT-F8I"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -391,14 +397,14 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="H34-WI-sg4">
                                 <rect key="frame" x="0.0" y="617" width="375" height="50"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Don't have an account?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yOk-A3-wdn">
-                                        <rect key="frame" x="82" y="17" width="151.5" height="17"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Already have an account?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yOk-A3-wdn">
+                                        <rect key="frame" x="75" y="17" width="165.5" height="17"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SignIn" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TBS-Ts-8GN">
-                                        <rect key="frame" x="238.5" y="16.5" width="45" height="18"/>
+                                        <rect key="frame" x="245.5" y="16.5" width="45" height="18"/>
                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>

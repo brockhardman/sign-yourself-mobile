@@ -39,14 +39,17 @@ class RegisterViewController: UIViewController,UIGestureRecognizerDelegate {
     //MARK:Views Actions
     @objc func signInTapped(){
         dismiss(animated: true) {
-            NotificationCenter.default.post(name: NSNotification.Name(Constants.signInNeededNotification), object: nil)
+//            NotificationCenter.default.post(name: NSNotification.Name(Constants.signInNeededNotification), object: nil)
         }
     }
     
     @objc func iAgreeViewGestureTapped()  {
-        //setUpButton(button: btnIAgree,checkedImage: #imageLiteral(resourceName: "check"),uncheckedImage: #imageLiteral(resourceName: "RoundIcon"))
+        setUpButton(button: btnIAgree,checkedImage: #imageLiteral(resourceName: "check"),uncheckedImage: #imageLiteral(resourceName: "RoundIcon"))
     }
     
+    @IBAction func agreeButtonTapped(_ sender: UIButton) {
+        setUpButton(button: btnIAgree,checkedImage: #imageLiteral(resourceName: "check"),uncheckedImage: #imageLiteral(resourceName: "RoundIcon"))
+    }
     
     @IBAction func registerButtonTapped(_ sender: UIButton) {
 //        SignYourselfAPIClient.shared.register(email: emailField.text ?? "", username: usernameTextField.text ?? "", password: passwordField.text ?? "", verifyPassword: verifyPasswordTextField.text ?? "", toc: true) { result in

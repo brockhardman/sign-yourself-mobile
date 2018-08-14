@@ -39,6 +39,7 @@ class TabbedViewController: UIViewController, UIScrollViewDelegate, UIGestureRec
             };
         })
         
+        setUpBarButtonItems()
 //        let pinchGesture : UIPinchGestureRecognizer = UIPinchGestureRecognizer(target: self, action:#selector(userDidPinch(pinch:)))
 //        self.scrollView?.addGestureRecognizer(pinchGesture)
         self.scrollView?.delegate = self;
@@ -51,27 +52,27 @@ class TabbedViewController: UIViewController, UIScrollViewDelegate, UIGestureRec
         //        [[MParticle sharedInstance] logScreen:screenTitle eventInfo:screenInfo];
     }
     
-    @objc func userDidPinch(pinch:UIPinchGestureRecognizer) {
-        let scaleToUse : CGFloat = getUpdatedScaleWithScale(scale: pinch.scale);
-        
-        if (pinch.state == UIGestureRecognizerState.changed)
-        {
-            updateControllersWithScale(scale: scaleToUse);
-        }
-        else if (pinch.state == UIGestureRecognizerState.ended)
-        {
-            let scaleLowerThreshold = (1.0 - ((self.mainPinchGestureMaxScale - self.mainPinchGestureMinScale) / 2.0));
-            
-            if (scaleToUse < scaleLowerThreshold)
-            {
-                setControllersToMinScaleWithDuration(timeInterval: 0.2);
-            }
-            else
-            {
-                setControllersToMaxScaleWithDuration(timeInterval: 0.2);
-            }
-        }
-    }
+//    @objc func userDidPinch(pinch:UIPinchGestureRecognizer) {
+//        let scaleToUse : CGFloat = getUpdatedScaleWithScale(scale: pinch.scale);
+//
+//        if (pinch.state == UIGestureRecognizerState.changed)
+//        {
+//            updateControllersWithScale(scale: scaleToUse);
+//        }
+//        else if (pinch.state == UIGestureRecognizerState.ended)
+//        {
+//            let scaleLowerThreshold = (1.0 - ((self.mainPinchGestureMaxScale - self.mainPinchGestureMinScale) / 2.0));
+//
+//            if (scaleToUse < scaleLowerThreshold)
+//            {
+//                setControllersToMinScaleWithDuration(timeInterval: 0.2);
+//            }
+//            else
+//            {
+//                setControllersToMaxScaleWithDuration(timeInterval: 0.2);
+//            }
+//        }
+//    }
     
     func buildScrollViewWithActiveControllers() {
         let screenBounds = UIScreen.main.bounds
@@ -212,6 +213,26 @@ class TabbedViewController: UIViewController, UIScrollViewDelegate, UIGestureRec
         fadeTextAnimation.type = kCATransitionFade;
         navigationController?.navigationBar.layer.add(fadeTextAnimation, forKey: "fadeText")
         navigationItem.title = activeControllersObjects[self.currentControllerIndex].navigationTitle
+    }
+    
+    func setUpBarButtonItems() {
+        let btnLeft = UIButton(frame: CGRect(x: 0, y: 0, width: 25, height: 20))
+        btnLeft.addTarget(self, action: #selector(openMenu),  for: .touchUpInside)
+        btnLeft.setBackgroundImage(#imageLiteral(resourceName: "NavButton"), for: .normal)
+        navigationItem.leftBarButtonItem = UIBarButtonItem(customView: btnLeft)
+        
+        let btnRight = UIButton(frame: CGRect(x: 0, y: 0, width: 25, height: 25))
+        btnRight.addTarget(self, action: #selector(logout),  for: .touchUpInside)
+        btnRight.setBackgroundImage(#imageLiteral(resourceName: "SettingsIcon"), for: .normal)
+        navigationItem.rightBarButtonItem = UIBarButtonItem(customView: btnRight)
+    }
+    
+    @objc func openMenu() {
+        
+    }
+    
+    @objc func logout() {
+        SignYourselfAPIManager.shared.logout()
     }
     
     func addTapGestureToView(view:UIView) {

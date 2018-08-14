@@ -79,13 +79,13 @@ class ProfileViewController: ActiveViewController, UIGestureRecognizerDelegate, 
     func setUpTabs(){
         let mediaTabViewController = UIStoryboard(name: "Media", bundle: nil).instantiateViewController(withIdentifier: Constants.MEDIA_TAB_VIEW_CONTROLLER) as! MediaTabViewController
         mediaTabViewController.collapseDelegate = self
-//        let projectsTab = getStoryboard().instantiateViewController(withIdentifier: Constants.GLOBAL_SCREEN) as? GlobalScreen
-//        projectsTab?.collapseDelegate = self
-//        let eventsTab = getStoryboard().instantiateViewController(withIdentifier: Constants.GLOBAL_SCREEN) as? GlobalScreen
-//        eventsTab?.collapseDelegate = self
+        let projectsTabViewController = UIStoryboard(name: "Projects", bundle: nil).instantiateViewController(withIdentifier: Constants.PROJECTS_SCREEN) as! ProjectsViewController
+        projectsTabViewController.collapseDelegate = self
+        let eventsTabViewController = UIStoryboard(name: "Events", bundle: nil).instantiateViewController(withIdentifier: Constants.EVENTS_SCREEN) as! EventsViewController
+        eventsTabViewController.collapseDelegate = self
         tabList.append(mediaTabViewController)
-//        tabList.append(projectsTab!)
-//        tabList.append(eventsTab!)
+        tabList.append(projectsTabViewController)
+        tabList.append(eventsTabViewController)
     }
     func setUpViewPager()  {
         options = getViewPagerOptions(view: self.view)

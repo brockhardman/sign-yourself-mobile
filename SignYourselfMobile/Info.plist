@@ -2,6 +2,8 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>CFBuildType</key>
+	<string>${DEFAULT_BUILD}</string>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>en</string>
 	<key>CFBundleExecutable</key>
@@ -27,6 +29,11 @@
 	</array>
 	<key>CFBundleVersion</key>
 	<string>1</string>
+	<key>CFURLEndpoints</key>
+	<dict>
+		<key>baseURL</key>
+		<string>${BASE_URL}</string>
+	</dict>
 	<key>Fabric</key>
 	<dict>
 		<key>APIKey</key>
