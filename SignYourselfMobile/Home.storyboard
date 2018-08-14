@@ -69,7 +69,7 @@
                                                                             <constraint firstItem="IED-19-9HO" firstAttribute="centerY" secondItem="HND-Sw-0X8" secondAttribute="centerY" constant="-8" id="vpc-t0-8pF"/>
                                                                         </constraints>
                                                                         <userDefinedRuntimeAttributes>
-                                                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadiusV">
+                                                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                                                                 <real key="value" value="5"/>
                                                                             </userDefinedRuntimeAttribute>
                                                                         </userDefinedRuntimeAttributes>
@@ -110,7 +110,7 @@
                                                                             <constraint firstItem="gUa-55-mUE" firstAttribute="centerX" secondItem="Nuu-jZ-mgq" secondAttribute="centerX" id="voQ-Up-ddh"/>
                                                                         </constraints>
                                                                         <userDefinedRuntimeAttributes>
-                                                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadiusV">
+                                                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                                                                 <real key="value" value="5"/>
                                                                             </userDefinedRuntimeAttribute>
                                                                         </userDefinedRuntimeAttributes>
@@ -151,7 +151,7 @@
                                                                             <constraint firstItem="ct5-Xs-05d" firstAttribute="centerX" secondItem="k3V-Ys-kQH" secondAttribute="centerX" id="xiW-2X-jVL"/>
                                                                         </constraints>
                                                                         <userDefinedRuntimeAttributes>
-                                                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadiusV">
+                                                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                                                                 <real key="value" value="5"/>
                                                                             </userDefinedRuntimeAttribute>
                                                                         </userDefinedRuntimeAttributes>
@@ -192,7 +192,7 @@
                                                                             <constraint firstItem="oW2-6K-M2D" firstAttribute="centerY" secondItem="sYe-rd-gF7" secondAttribute="centerY" constant="-8" id="swm-Qe-Tnb"/>
                                                                         </constraints>
                                                                         <userDefinedRuntimeAttributes>
-                                                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadiusV">
+                                                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                                                                 <real key="value" value="5"/>
                                                                             </userDefinedRuntimeAttribute>
                                                                         </userDefinedRuntimeAttributes>
@@ -244,7 +244,7 @@
                                                                             <constraint firstItem="nJM-bo-Vyw" firstAttribute="centerX" secondItem="G2M-EQ-nuY" secondAttribute="centerX" id="tfI-vE-DSX"/>
                                                                         </constraints>
                                                                         <userDefinedRuntimeAttributes>
-                                                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadiusV">
+                                                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                                                                 <real key="value" value="35"/>
                                                                             </userDefinedRuntimeAttribute>
                                                                         </userDefinedRuntimeAttributes>
@@ -286,7 +286,7 @@
                                                                             <constraint firstAttribute="width" constant="70" id="deF-iI-7M3"/>
                                                                         </constraints>
                                                                         <userDefinedRuntimeAttributes>
-                                                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadiusV">
+                                                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                                                                 <real key="value" value="35"/>
                                                                             </userDefinedRuntimeAttribute>
                                                                         </userDefinedRuntimeAttributes>
@@ -328,7 +328,7 @@
                                                                             <constraint firstItem="pnI-HD-aUp" firstAttribute="centerX" secondItem="FAO-aM-4O9" secondAttribute="centerX" id="qSQ-1d-0Ki"/>
                                                                         </constraints>
                                                                         <userDefinedRuntimeAttributes>
-                                                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadiusV">
+                                                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                                                                 <real key="value" value="35"/>
                                                                             </userDefinedRuntimeAttribute>
                                                                         </userDefinedRuntimeAttributes>
@@ -493,7 +493,7 @@
                                                             <color key="titleColor" red="0.9998579621" green="0.99615257980000005" blue="0.99593871830000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         </state>
                                                         <userDefinedRuntimeAttributes>
-                                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadiusV">
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                                                 <real key="value" value="20"/>
                                                             </userDefinedRuntimeAttribute>
                                                         </userDefinedRuntimeAttributes>

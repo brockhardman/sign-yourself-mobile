@@ -73,7 +73,7 @@
                                             <constraint firstItem="SRn-DG-cvP" firstAttribute="centerY" secondItem="uDe-lh-seS" secondAttribute="centerY" id="hgi-67-ki2"/>
                                         </constraints>
                                         <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadiusV">
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                                 <real key="value" value="15"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
@@ -119,13 +119,13 @@
                                             <constraint firstItem="ysV-Pl-upH" firstAttribute="leading" secondItem="35A-vS-EZD" secondAttribute="leading" constant="5" id="rpi-tV-cTZ"/>
                                         </constraints>
                                         <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadiusV">
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                                 <real key="value" value="5"/>
                                             </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColorV">
+                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
                                                 <color key="value" red="0.08235294118" green="0.62352941179999999" blue="0.59215686270000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidthV">
+                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
                                                 <real key="value" value="1"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
