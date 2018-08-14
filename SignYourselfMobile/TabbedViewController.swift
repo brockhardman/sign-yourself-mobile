@@ -40,8 +40,6 @@ class TabbedViewController: UIViewController, UIScrollViewDelegate, UIGestureRec
         })
         
         setUpBarButtonItems()
-//        let pinchGesture : UIPinchGestureRecognizer = UIPinchGestureRecognizer(target: self, action:#selector(userDidPinch(pinch:)))
-//        self.scrollView?.addGestureRecognizer(pinchGesture)
         self.scrollView?.delegate = self;
     }
     
@@ -51,28 +49,6 @@ class TabbedViewController: UIViewController, UIScrollViewDelegate, UIGestureRec
         debugPrint(screenInfo)
         //        [[MParticle sharedInstance] logScreen:screenTitle eventInfo:screenInfo];
     }
-    
-//    @objc func userDidPinch(pinch:UIPinchGestureRecognizer) {
-//        let scaleToUse : CGFloat = getUpdatedScaleWithScale(scale: pinch.scale);
-//
-//        if (pinch.state == UIGestureRecognizerState.changed)
-//        {
-//            updateControllersWithScale(scale: scaleToUse);
-//        }
-//        else if (pinch.state == UIGestureRecognizerState.ended)
-//        {
-//            let scaleLowerThreshold = (1.0 - ((self.mainPinchGestureMaxScale - self.mainPinchGestureMinScale) / 2.0));
-//
-//            if (scaleToUse < scaleLowerThreshold)
-//            {
-//                setControllersToMinScaleWithDuration(timeInterval: 0.2);
-//            }
-//            else
-//            {
-//                setControllersToMaxScaleWithDuration(timeInterval: 0.2);
-//            }
-//        }
-//    }
     
     func buildScrollViewWithActiveControllers() {
         let screenBounds = UIScreen.main.bounds

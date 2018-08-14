@@ -10,24 +10,10 @@ import Foundation
 
 class HomeViewController: ActiveViewController, UIGestureRecognizerDelegate {
     //MARK:Properties
-    @IBOutlet weak var easyView: UIView!
-    @IBOutlet weak var mediumView: UIView!
-    @IBOutlet weak var hardView: UIView!
-    @IBOutlet weak var easy1View: UIView!
     @IBOutlet weak var marketingView: UIView!
     @IBOutlet weak var myPageView: UIView!
     @IBOutlet weak var myProfileView: UIView!
     @IBOutlet weak var btnAddNew: UIButton!
-    
-    @IBOutlet weak var easyTitle: UILabel!
-    @IBOutlet weak var mediumTitle: UILabel!
-    @IBOutlet weak var hardTitle: UILabel!
-    @IBOutlet weak var easy1Title: UILabel!
-    
-    @IBOutlet weak var easyLabel: UILabel!
-    @IBOutlet weak var mediumLabel: UILabel!
-    @IBOutlet weak var hardLabel: UILabel!
-    @IBOutlet weak var easy1Label: UILabel!
     
 //    var addNewProjectScreen:AddNewProjectScreen?
     var projectDetailViewController:ProjectDetailViewController?
@@ -79,25 +65,6 @@ class HomeViewController: ActiveViewController, UIGestureRecognizerDelegate {
     
     //MARK:Set up the Gestures
     func setUpGestures()  {
-        let easyGesture = UITapGestureRecognizer.init(target: self, action: #selector(easyTapped))
-        easyGesture.delegate = self
-        easyView.isUserInteractionEnabled = true
-        easyView.addGestureRecognizer(easyGesture)
-        
-        let mediumGesture = UITapGestureRecognizer.init(target: self, action: #selector(mediumTapped))
-        mediumGesture.delegate = self
-        mediumView.isUserInteractionEnabled = true
-        mediumView.addGestureRecognizer(mediumGesture)
-        
-        let hardGesture = UITapGestureRecognizer.init(target: self, action: #selector(hardTapped))
-        hardGesture.delegate = self
-        hardView.isUserInteractionEnabled = true
-        hardView.addGestureRecognizer(hardGesture)
-        
-        let easy1Gesture = UITapGestureRecognizer.init(target: self, action: #selector(easy1Tapped))
-        easy1Gesture.delegate = self
-        easy1View.isUserInteractionEnabled = true
-        easy1View.addGestureRecognizer(easy1Gesture)
         
         let marketingGesture = UITapGestureRecognizer.init(target: self, action: #selector(marketingTapped))
         marketingGesture.delegate = self
@@ -143,7 +110,7 @@ extension HomeViewController : UICollectionViewDelegate{
         return 1
     }
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        //present(projectDetailScreen!, animated: true, completion: nil)
+        present(projectDetailViewController!, animated: true, completion: nil)
     }
 }
 extension HomeViewController : UICollectionViewDelegateFlowLayout{

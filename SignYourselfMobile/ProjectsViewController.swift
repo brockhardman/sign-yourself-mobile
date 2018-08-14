@@ -14,15 +14,17 @@ class ProjectsViewController: ActiveViewController {
     
     @IBOutlet weak var projectsCollectionView: UICollectionView!
     @IBOutlet weak var searchView: UIView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         initializeScreens()
         searchView.dropShadow()
         
          NotificationCenter.default.addObserver(self, selector: #selector(didLogin), name: Notification.Name(Constants.userDidLoginNotification), object: nil)
     }
     
-    private func initializeScreens()  {
+    private func initializeScreens()      {
         projectDetailScreen = UIStoryboard(name: "Projects", bundle: nil).instantiateViewController(withIdentifier: Constants.PROJECT_DETAIL_SCREEN) as? ProjectDetailViewController
         projectDetailScreen?.modalTransitionStyle = .crossDissolve
     }
