@@ -19,8 +19,6 @@ extension SignYourselfAPIClient {
             }
             if (data != nil) {
                 do {
-                    let test = try JSONSerialization.jsonObject(with: data!, options: [])
-                    print(test)
                     let project = try JSONDecoder().decode([Project].self, from: data!)
                     completionHandlerAPI(Result.Success(project))
                 } catch {

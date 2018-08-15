@@ -9,6 +9,7 @@
 import Foundation
 import Fabric
 import Crashlytics
+import SwiftyJSON
 
 public enum EnvironmentBuildType: String {
     case QA
@@ -21,9 +22,10 @@ public enum EnvironmentBuildType: String {
 
 class AppHelper {
     
-    public static var shared = AppHelper()
-    public var buildType : EnvironmentBuildType = .QA
-    public var baseURL : URL?
+    static var shared = AppHelper()
+    var buildType : EnvironmentBuildType = .QA
+    var baseURL : URL?
+    var config = [String: Any]()
     
     /*
      * Call this function to load all globally used app dependencies
@@ -32,6 +34,7 @@ class AppHelper {
         setLocalVariables()
         setURLCache()
         loadFabric()
+        setupConfiguration()
     }
     
     private func setLocalVariables() {
@@ -55,6 +58,24 @@ class AppHelper {
         let cacheSizeMemory: Int = 4*1024*1024 // 4MB
         let cacheSizeDisk:Int = 32*1024*1024 // 32MB
         URLCache.shared = URLCache(memoryCapacity: cacheSizeMemory, diskCapacity: cacheSizeDisk, diskPath: nil)
+    }
+    
+    private func setupConfiguration() {
+        //TODO: Put all configuration entries into filename at location in constant
+        parseConfiguration(fileName: Constants.configFileName)
+        if Constants.isDebug {
+            
+        }
+    }
+    
+    private func parseConfiguration(fileName : String) {
+        if let fileUrl = Bundle.main.url(forResource: fileName, withExtension: "plist"),
+            let data = try? Data(contentsOf: fileUrl) {
+            if let result = try? PropertyListSerialization.propertyList(from: data, options: [], format: nil) as? [String: Any] {
+                config = result!;
+                debugPrint("JSON: \(JSON(config))")
+            }
+        }
     }
 }
 

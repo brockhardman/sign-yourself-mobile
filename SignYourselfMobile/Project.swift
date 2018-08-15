@@ -7,12 +7,12 @@
 //
 
 class Project : Codable {
-    var id : String?
+    var id : Int?
     var name : String?
     var description : String?
     var goal : String?
-    var status : String?
-    var trending : String?
+    var status : Int?
+    var trending : Int?
     var image_thumb_path : String?
     var image_path : String?
     var media_path : String?
@@ -20,7 +20,7 @@ class Project : Codable {
     var video_path : String?
     var embed_video : String?
     var slug : String?
-    var owner_id : String?
+    var owner_id : Int?
     var members : [String]?
     var token : String?
     var created_at : String?

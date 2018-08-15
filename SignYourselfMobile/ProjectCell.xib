@@ -71,6 +71,12 @@
             </constraints>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
             <size key="customSize" width="279" height="233"/>
+            <connections>
+                <outlet property="amount" destination="08g-dc-1Xg" id="QdB-l9-RpX"/>
+                <outlet property="artistName" destination="y8N-qq-uGc" id="9Z7-9C-Ti1"/>
+                <outlet property="title" destination="MD0-9T-2UE" id="ak4-a7-fSs"/>
+                <outlet property="topImageView" destination="ewc-tp-AoF" id="cAo-De-iTA"/>
+            </connections>
             <point key="canvasLocation" x="-40.5" y="-21.5"/>
         </collectionViewCell>
     </objects>

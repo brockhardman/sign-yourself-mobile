@@ -11,6 +11,7 @@ class ProjectsViewController: ActiveViewController {
     var projectDetailScreen: ProjectDetailViewController?
     var collapseDelegate: CollapseDelegate?
     var offset:CGFloat?
+    var projects: [Project] = []
     
     @IBOutlet weak var projectsCollectionView: UICollectionView!
     @IBOutlet weak var searchView: UIView!
@@ -35,9 +36,19 @@ class ProjectsViewController: ActiveViewController {
     
     private func getProjects() {
         if let ownerID = SignYourselfAPIManager.shared.currentUser?.id! {
-            SignYourselfAPIClient.shared.getProjects(ownerID:ownerID, completionHandlerAPI: { projects in
+            SignYourselfAPIClient.shared.getProjects(ownerID:ownerID, completionHandlerAPI: { result in
                 DispatchQueue.main.async {
-                    
+                    switch result {
+                    case .Success(let projectsResponse):
+                        if let projects = projectsResponse as? [Project] {
+                            self.projects = projects
+                            self.projectsCollectionView.reloadData()
+                        }
+                    case .Errors(let errors):
+                        debugPrint(errors)
+                    case .Failure(let error):
+                        debugPrint(error)
+                    }
                 }
             })
         }
@@ -47,11 +58,12 @@ class ProjectsViewController: ActiveViewController {
 //MARK:Extension for Collection View for this Screen
 extension ProjectsViewController : UICollectionViewDataSource{
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 20
+        return self.projects.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ProjectCell", for: indexPath) as? ProjectCell
+        cell?.configureWithProject(project: self.projects[indexPath.item])
         return cell!
     }
     

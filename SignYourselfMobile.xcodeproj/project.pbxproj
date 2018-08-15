@@ -86,7 +86,6 @@
 		389E68051EABFD0200B28BDA /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 389E68041EABFD0200B28BDA /* Profile.storyboard */; };
 		389E68081EABFE5600B28BDA /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 389E68071EABFE5600B28BDA /* ProfileViewController.swift */; };
 		389E680A1EABFE9D00B28BDA /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 389E68091EABFE9D00B28BDA /* RootViewController.swift */; };
-		389E68111EAC7EDA00B28BDA /* AppBootstrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 389E680F1EAC7EDA00B28BDA /* AppBootstrapper.swift */; };
 		389E68121EAC7EDA00B28BDA /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 389E68101EAC7EDA00B28BDA /* Constants.swift */; };
 		38A6BB142120DF8400F956FB /* CollapseProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38A6BB132120DF8400F956FB /* CollapseProtocol.swift */; };
 		38A6BB162120DFC000F956FB /* CollapsingUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38A6BB152120DFC000F956FB /* CollapsingUtil.swift */; };
@@ -198,7 +197,6 @@
 		389E68071EABFE5600B28BDA /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		389E68091EABFE9D00B28BDA /* RootViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
 		389E680E1EAC7E4800B28BDA /* SignYourselfMobile-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SignYourselfMobile-Bridging-Header.h"; sourceTree = "<group>"; };
-		389E680F1EAC7EDA00B28BDA /* AppBootstrapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppBootstrapper.swift; sourceTree = "<group>"; };
 		389E68101EAC7EDA00B28BDA /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		38A6BB132120DF8400F956FB /* CollapseProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollapseProtocol.swift; sourceTree = "<group>"; };
 		38A6BB152120DFC000F956FB /* CollapsingUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollapsingUtil.swift; sourceTree = "<group>"; };
@@ -274,7 +272,6 @@
 			isa = PBXGroup;
 			children = (
 				38E34BFF1DEE866E00D1D37E /* AppDelegate.swift */,
-				389E680F1EAC7EDA00B28BDA /* AppBootstrapper.swift */,
 				389E68101EAC7EDA00B28BDA /* Constants.swift */,
 				3813B91621226F910070FE2D /* AppHelper.swift */,
 			);
@@ -703,7 +700,6 @@
 				3813B94D212273650070FE2D /* Date+Extension.swift in Sources */,
 				38A995F9211FD69E0061A022 /* UIView+Extension.swift in Sources */,
 				38ACB7F61F2D4035005B9085 /* ProfileHeaderViewController.swift in Sources */,
-				389E68111EAC7EDA00B28BDA /* AppBootstrapper.swift in Sources */,
 				38426DCC212122150003791B /* UserManager.swift in Sources */,
 				3813B961212278520070FE2D /* AlertMessage.swift in Sources */,
 				3813B95C212275EA0070FE2D /* SignYourselfHud.swift in Sources */,

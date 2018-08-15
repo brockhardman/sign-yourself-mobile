@@ -10,7 +10,7 @@ struct Constants {
     //TESTING VALUES
     #if DEBUG
         static let isDebug = true
-        static let baseRestURL = "https://sy-api-prod.herokuapp.com/site/v1"
+        static let baseRestURL = "https://sy-api-staging.herokuapp.com/site/v1"
         static let wepayEnvironment = kWPEnvironmentStage
         static let wepayClientId = ""
     #else

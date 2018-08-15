@@ -121,6 +121,12 @@
                                                     <constraint firstItem="0rK-iE-Q6t" firstAttribute="top" secondItem="Yzs-ss-UQJ" secondAttribute="top" constant="10" id="pn5-ZK-5s2"/>
                                                 </constraints>
                                                 <size key="customSize" width="172" height="215"/>
+                                                <connections>
+                                                    <outlet property="amount" destination="r0s-id-VHi" id="NpQ-do-sL3"/>
+                                                    <outlet property="artistName" destination="4YA-JS-68W" id="Tdo-sC-BQd"/>
+                                                    <outlet property="title" destination="gdP-M7-3UU" id="l7s-hi-qdT"/>
+                                                    <outlet property="topImageView" destination="hMf-uu-VEf" id="DhE-ae-kbw"/>
+                                                </connections>
                                             </collectionViewCell>
                                         </cells>
                                         <connections>

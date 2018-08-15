@@ -31,25 +31,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     //Custom
     
     func initializeApp() {
+        AppHelper.shared.loadDependencies()
         RadarManager.shared.loadDefaults()
-        configureFabric()
-        bootstrapServices()
         configureAppDefaults()
     }
     
     func configureAppDefaults() {
         let navigationBarAppearace = UINavigationBar.appearance()
         navigationBarAppearace.titleTextAttributes = [NSAttributedStringKey.foregroundColor:UIColor.white]
-    }
-    
-    func configureFabric() {
-        Fabric.with([Crashlytics.self])
-    }
-    
-    func bootstrapServices() {
-        //Bootstrap application for startup
-        let bootstrapper = AppBootstrapper()
-        bootstrapper.bootstrap()
     }
 }
 
