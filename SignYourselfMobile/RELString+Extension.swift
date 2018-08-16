@@ -155,7 +155,7 @@ extension String {
     
     func uppercaseFirstLetter() -> String {
 
-        return self.components(separatedBy: CharacterSet.whitespaces.union(.newlines)).enumerated().flatMap() { (index, value) in
+        return self.components(separatedBy: CharacterSet.whitespaces.union(.newlines)).enumerated().compactMap() { (index, value) in
         
             return value.sentenceCase()
             

@@ -104,7 +104,7 @@ public extension String {
     ///
     /// - Returns: Sentenced cased string.
     public func sentenceCase() -> String {
-        return self.components(separatedBy: " ").enumerated().flatMap() { (index, value) in
+        return self.components(separatedBy: " ").enumerated().compactMap() { (index, value) in
             
             guard index != 0 else {
                 return value.lowercased().uppercaseFirst

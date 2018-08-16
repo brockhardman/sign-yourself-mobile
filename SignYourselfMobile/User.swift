@@ -24,7 +24,5 @@ struct User : Codable {
     var author_id : String?
     var created_at : String?
     var updated_at : String?
-    var projects : [Project]?
-    var events : [Event]?
     var roles : [Role]?
 }

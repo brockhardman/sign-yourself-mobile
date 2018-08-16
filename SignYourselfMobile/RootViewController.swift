@@ -42,11 +42,33 @@ extension RootViewController : LoginProtocol {
         UserManager.shared.currentUser = loginResponse.user
         
         if let userId = UserManager.shared.currentUser?.id {
-            SignYourselfAPIManager.shared.loadProfileData(userId: userId) {
-                DispatchQueue.main.async {
-                    self.dismiss(animated: true, completion: {
-                        NotificationCenter.default.post(name: NSNotification.Name(Constants.userDidLoginNotification), object: nil)
-                    })
+            
+            SignYourselfAPIClient.shared.getProfileData(profileID: userId) { result in
+                
+                switch result {
+                case .Success(let profile):
+                    UserManager.shared.profileData = profile as? Profile
+                    DispatchQueue.main.async {
+                        self.dismiss(animated: true, completion: {
+                            NotificationCenter.default.post(name: NSNotification.Name(Constants.userDidLoginNotification), object: nil)
+                        })
+                    }
+                case .Errors(let errors):
+                    debugPrint(errors)
+                case .Failure(let error):
+                    debugPrint(error)
+                }
+            }
+            
+            SignYourselfAPIClient.shared.getEvents(authorID: userId) { result in
+                
+                switch result {
+                case .Success(let events):
+                    debugPrint(events)
+                case .Errors(let errors):
+                    debugPrint(errors)
+                case .Failure(let error):
+                    debugPrint(error)
                 }
             }
         }

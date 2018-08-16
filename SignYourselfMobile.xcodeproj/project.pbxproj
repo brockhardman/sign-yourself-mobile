@@ -20,7 +20,6 @@
 		380426E320308E6200F336B4 /* SignYourselfLoginAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 380426E220308E6200F336B4 /* SignYourselfLoginAPI.swift */; };
 		380426E5203093CB00F336B4 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 380426E4203093CB00F336B4 /* LoginViewController.swift */; };
 		380426E72030BE0700F336B4 /* LoginResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 380426E62030BE0700F336B4 /* LoginResponse.swift */; };
-		380426E92030C67F00F336B4 /* SignYourselfAPIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 380426E82030C67F00F336B4 /* SignYourselfAPIManager.swift */; };
 		380426EB20321BD900F336B4 /* UIImageView+SYS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 380426EA20321BD900F336B4 /* UIImageView+SYS.swift */; };
 		380426ED203240D600F336B4 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 380426EC203240D600F336B4 /* RegisterViewController.swift */; };
 		380426EF2032428300F336B4 /* RegisterResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 380426EE2032428300F336B4 /* RegisterResponse.swift */; };
@@ -129,7 +128,6 @@
 		380426E220308E6200F336B4 /* SignYourselfLoginAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignYourselfLoginAPI.swift; sourceTree = "<group>"; };
 		380426E4203093CB00F336B4 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		380426E62030BE0700F336B4 /* LoginResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginResponse.swift; sourceTree = "<group>"; };
-		380426E82030C67F00F336B4 /* SignYourselfAPIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignYourselfAPIManager.swift; sourceTree = "<group>"; };
 		380426EA20321BD900F336B4 /* UIImageView+SYS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+SYS.swift"; sourceTree = "<group>"; };
 		380426EC203240D600F336B4 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		380426EE2032428300F336B4 /* RegisterResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterResponse.swift; sourceTree = "<group>"; };
@@ -388,7 +386,6 @@
 		38652335203A48C400D0871C /* Managers */ = {
 			isa = PBXGroup;
 			children = (
-				380426E82030C67F00F336B4 /* SignYourselfAPIManager.swift */,
 				38652336203A490900D0871C /* WePayManager.swift */,
 				38A995F6211F780A0061A022 /* RadarManager.swift */,
 				38426DCB212122150003791B /* UserManager.swift */,
@@ -535,7 +532,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0800;
-				LastUpgradeCheck = 0900;
+				LastUpgradeCheck = 0940;
 				ORGANIZATIONNAME = SignYourself;
 				TargetAttributes = {
 					38E34BFB1DEE866E00D1D37E = {
@@ -736,7 +733,6 @@
 				38426DC5212116E30003791B /* GlobalCell.swift in Sources */,
 				380426EB20321BD900F336B4 /* UIImageView+SYS.swift in Sources */,
 				3813B944212273650070FE2D /* Calendar+Extension.swift in Sources */,
-				380426E92030C67F00F336B4 /* SignYourselfAPIManager.swift in Sources */,
 				380426D9201D312500F336B4 /* Donation.swift in Sources */,
 				3813B943212273650070FE2D /* ReliantFont.swift in Sources */,
 				3813B940212273650070FE2D /* DateComponents+Extension.swift in Sources */,
@@ -789,6 +785,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -796,6 +793,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -847,6 +845,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -854,6 +853,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
