@@ -9,21 +9,18 @@
 class SignYourselfAPIManager : NSObject {
     
     static let shared : SignYourselfAPIManager = SignYourselfAPIManager()
-    var profileData : Profile?
-    var currentUser : User?
-    var accessToken : String = ""
     
-    func loadProfileData(completion: @escaping () -> Void) {
+    func loadProfileData(userId: String, completion: @escaping () -> Void) {
         
-        guard currentUser?.id != nil else {
+        guard userId.count != 0 else {
             return
         }
         
-        SignYourselfAPIClient.shared.getProfileData(profileID: (currentUser?.id)!) { result in
+        SignYourselfAPIClient.shared.getProfileData(profileID: userId) { result in
             
             switch result {
             case .Success(let profile):
-                self.profileData = profile as? Profile
+                UserManager.shared.profileData = profile as? Profile
                 completion()
             case .Errors(let errors):
                 debugPrint(errors)
@@ -33,11 +30,5 @@ class SignYourselfAPIManager : NSObject {
         }
     }
     
-    func logout() {
-        profileData = nil
-        currentUser = nil
-        accessToken = ""
-        UserDefaults.standard.set(false, forKey: UserDefaultKeys.loggedInKey)
-        NotificationCenter.default.post(name: NSNotification.Name(Constants.signInNeededNotification), object: nil)
-    }
+    
 }

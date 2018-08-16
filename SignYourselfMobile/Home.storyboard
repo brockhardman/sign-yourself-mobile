@@ -200,7 +200,7 @@
                                                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                                                 </collectionViewFlowLayout>
                                                                 <cells>
-                                                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="ProjectsCollectionCell" id="Fcg-Uj-zD3" customClass="ProjectsCollectionCell" customModule="SignYourselfMobile" customModuleProvider="target">
+                                                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="ProjectCell" id="Fcg-Uj-zD3" customClass="ProjectCell" customModule="SignYourselfMobile" customModuleProvider="target">
                                                                         <rect key="frame" x="0.0" y="-2.5" width="150" height="132"/>
                                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
@@ -270,6 +270,11 @@
                                                                             <constraint firstAttribute="bottom" secondItem="N2q-yY-YGf" secondAttribute="bottom" id="kXM-RD-GPb"/>
                                                                             <constraint firstItem="N2q-yY-YGf" firstAttribute="leading" secondItem="Fcg-Uj-zD3" secondAttribute="leading" constant="5" id="yLy-SH-U9w"/>
                                                                         </constraints>
+                                                                        <connections>
+                                                                            <outlet property="amount" destination="w8s-Cq-5ff" id="zBN-cr-DcC"/>
+                                                                            <outlet property="title" destination="Qgd-4V-hX5" id="kw3-0F-qY1"/>
+                                                                            <outlet property="topImageView" destination="1u8-ch-Yey" id="Frb-3o-yNc"/>
+                                                                        </connections>
                                                                     </collectionViewCell>
                                                                 </cells>
                                                                 <connections>
@@ -356,6 +361,7 @@
                     </view>
                     <connections>
                         <outlet property="btnAddNew" destination="fuo-Tl-6fN" id="vfZ-ly-RIO"/>
+                        <outlet property="collectionView" destination="BoB-vH-bd1" id="gNx-3w-Rwr"/>
                         <outlet property="marketingView" destination="G2M-EQ-nuY" id="uuB-pl-G7j"/>
                         <outlet property="myPageView" destination="orG-AI-kI3" id="bdV-HL-Mx4"/>
                         <outlet property="myProfileView" destination="FAO-aM-4O9" id="yAO-J1-Y9L"/>

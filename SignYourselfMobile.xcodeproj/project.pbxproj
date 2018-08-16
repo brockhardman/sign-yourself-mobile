@@ -77,7 +77,6 @@
 		385318572120CD590022DF76 /* Fans.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 385318562120CD590022DF76 /* Fans.storyboard */; };
 		385318592120D3820022DF76 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 385318582120D3820022DF76 /* Home.storyboard */; };
 		3853185B2120D3A10022DF76 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3853185A2120D3A10022DF76 /* HomeViewController.swift */; };
-		3853185F2120D6570022DF76 /* ProjectsCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3853185E2120D6570022DF76 /* ProjectsCollectionCell.swift */; };
 		385318612120D7EA0022DF76 /* ProjectDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 385318602120D7EA0022DF76 /* ProjectDetailViewController.swift */; };
 		385A6B2E1EB199CD00004F33 /* ActiveControllerService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 385A6B2D1EB199CD00004F33 /* ActiveControllerService.swift */; };
 		385A6B301EB1AC8100004F33 /* NSDictionary+SYS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 385A6B2F1EB1AC8100004F33 /* NSDictionary+SYS.swift */; };
@@ -187,7 +186,6 @@
 		385318562120CD590022DF76 /* Fans.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Fans.storyboard; sourceTree = "<group>"; };
 		385318582120D3820022DF76 /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
 		3853185A2120D3A10022DF76 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
-		3853185E2120D6570022DF76 /* ProjectsCollectionCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProjectsCollectionCell.swift; sourceTree = "<group>"; };
 		385318602120D7EA0022DF76 /* ProjectDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectDetailViewController.swift; sourceTree = "<group>"; };
 		385A6B2D1EB199CD00004F33 /* ActiveControllerService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActiveControllerService.swift; sourceTree = "<group>"; };
 		385A6B2F1EB1AC8100004F33 /* NSDictionary+SYS.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSDictionary+SYS.swift"; sourceTree = "<group>"; };
@@ -375,7 +373,6 @@
 				38426DC02121166F0003791B /* MediaCell.xib */,
 				38A6BB172120E01100F956FB /* ProjectCell.swift */,
 				38A6BB182120E01100F956FB /* ProjectCell.xib */,
-				3853185E2120D6570022DF76 /* ProjectsCollectionCell.swift */,
 			);
 			name = CollectionViewCells;
 			sourceTree = "<group>";
@@ -691,7 +688,6 @@
 				38A6BB162120DFC000F956FB /* CollapsingUtil.swift in Sources */,
 				380426DB201D334E00F336B4 /* Role.swift in Sources */,
 				380426E5203093CB00F336B4 /* LoginViewController.swift in Sources */,
-				3853185F2120D6570022DF76 /* ProjectsCollectionCell.swift in Sources */,
 				389E68081EABFE5600B28BDA /* ProfileViewController.swift in Sources */,
 				38B7E4D520373E0E000B5CA0 /* ProjectsViewController.swift in Sources */,
 				38A6BB252120E32600F956FB /* FansViewController.swift in Sources */,

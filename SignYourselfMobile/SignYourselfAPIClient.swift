@@ -25,7 +25,7 @@ class SignYourselfAPIClient : NSObject {
     
     func defaultSession() -> URLSession {
         let configuration = URLSessionConfiguration.default
-        configuration.httpAdditionalHeaders = ["Authorization": SignYourselfAPIManager.shared.accessToken]
+        configuration.httpAdditionalHeaders = ["Authorization": UserManager.shared.accessToken]
         return URLSession(configuration: configuration, delegate: nil, delegateQueue: OperationQueue.main)
     }
     

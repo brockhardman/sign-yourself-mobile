@@ -208,7 +208,7 @@ class TabbedViewController: UIViewController, UIScrollViewDelegate, UIGestureRec
     }
     
     @objc func logout() {
-        SignYourselfAPIManager.shared.logout()
+        UserManager.shared.logout()
     }
     
     func addTapGestureToView(view:UIView) {

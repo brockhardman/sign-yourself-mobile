@@ -38,9 +38,7 @@ class RegisterViewController: UIViewController,UIGestureRecognizerDelegate {
     }
     //MARK:Views Actions
     @objc func signInTapped(){
-        dismiss(animated: true) {
-//            NotificationCenter.default.post(name: NSNotification.Name(Constants.signInNeededNotification), object: nil)
-        }
+        dismiss(animated: true) 
     }
     
     @objc func iAgreeViewGestureTapped()  {

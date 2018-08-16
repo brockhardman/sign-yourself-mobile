@@ -25,9 +25,9 @@ class ProfileHeaderViewController: UIViewController {
     }
     
     @objc func didLogin() {
-        joinedOnLabel.text = "Joined on: \(SignYourselfAPIManager.shared.profileData?.created_at ?? "")"
-        firstNameLabel.text = SignYourselfAPIManager.shared.profileData?.first_name
-        lastNameLabel.text = SignYourselfAPIManager.shared.profileData?.last_name
-        locationLabel.text = (SignYourselfAPIManager.shared.profileData?.state_province ?? "") + ", " + (SignYourselfAPIManager.shared.profileData?.country ?? "")
+        joinedOnLabel.text = "Joined on: \(UserManager.shared.profileData?.created_at ?? "")"
+        firstNameLabel.text = UserManager.shared.profileData?.first_name
+        lastNameLabel.text = UserManager.shared.profileData?.last_name
+        locationLabel.text = (UserManager.shared.profileData?.state_province ?? "") + ", " + (UserManager.shared.profileData?.country ?? "")
     }
 }

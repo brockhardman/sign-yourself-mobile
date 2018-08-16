@@ -13,11 +13,11 @@ class ProjectCell: UICollectionViewCell {
     @IBOutlet var topImageView: UIImageView!
     @IBOutlet var title: UILabel!
     @IBOutlet var amount: UILabel!
-    @IBOutlet var artistName: UILabel!
+    @IBOutlet var artistName: UILabel?
     
     func configureWithProject(project: Project) {
         title.text = project.description
         amount.text = project.goal
-        artistName.text = project.name
+        artistName?.text = project.name
     }
 }
