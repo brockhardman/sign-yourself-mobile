@@ -99,7 +99,6 @@
 		38A6BB2B2120E3EA00F956FB /* ContributionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38A6BB292120E3EA00F956FB /* ContributionCell.swift */; };
 		38A995F7211F780A0061A022 /* RadarManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38A995F6211F780A0061A022 /* RadarManager.swift */; };
 		38A995F9211FD69E0061A022 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38A995F8211FD69E0061A022 /* UIView+Extension.swift */; };
-		38ACB7F61F2D4035005B9085 /* ProfileHeaderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38ACB7F51F2D4035005B9085 /* ProfileHeaderViewController.swift */; };
 		38B7E4D320373DB4000B5CA0 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38B7E4D220373DB4000B5CA0 /* SearchViewController.swift */; };
 		38B7E4D520373E0E000B5CA0 /* ProjectsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38B7E4D420373E0E000B5CA0 /* ProjectsViewController.swift */; };
 		38B7E4D720377C54000B5CA0 /* Search.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 38B7E4D620377C54000B5CA0 /* Search.storyboard */; };
@@ -214,7 +213,6 @@
 		38A995EB209613190061A022 /* SignYourselfMobile.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SignYourselfMobile.entitlements; sourceTree = "<group>"; };
 		38A995F6211F780A0061A022 /* RadarManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RadarManager.swift; sourceTree = "<group>"; };
 		38A995F8211FD69E0061A022 /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
-		38ACB7F51F2D4035005B9085 /* ProfileHeaderViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileHeaderViewController.swift; sourceTree = "<group>"; };
 		38B7E4D220373DB4000B5CA0 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		38B7E4D420373E0E000B5CA0 /* ProjectsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectsViewController.swift; sourceTree = "<group>"; };
 		38B7E4D620377C54000B5CA0 /* Search.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Search.storyboard; sourceTree = "<group>"; };
@@ -415,7 +413,6 @@
 				380426E4203093CB00F336B4 /* LoginViewController.swift */,
 				380426EC203240D600F336B4 /* RegisterViewController.swift */,
 				389E68071EABFE5600B28BDA /* ProfileViewController.swift */,
-				38ACB7F51F2D4035005B9085 /* ProfileHeaderViewController.swift */,
 				389E68091EABFE9D00B28BDA /* RootViewController.swift */,
 				382715BE1EAEEC2D004B1994 /* EventsViewController.swift */,
 				295DBE371EBFAC8000355ABE /* TabbedViewController.swift */,
@@ -708,7 +705,6 @@
 				3813B919212272F80070FE2D /* Optional+Extension.swift in Sources */,
 				3813B94D212273650070FE2D /* Date+Extension.swift in Sources */,
 				38A995F9211FD69E0061A022 /* UIView+Extension.swift in Sources */,
-				38ACB7F61F2D4035005B9085 /* ProfileHeaderViewController.swift in Sources */,
 				38426DCC212122150003791B /* UserManager.swift in Sources */,
 				3813B961212278520070FE2D /* AlertMessage.swift in Sources */,
 				3813B95C212275EA0070FE2D /* SignYourselfHud.swift in Sources */,

@@ -43,7 +43,15 @@ class TabbedViewController: UIViewController, UIScrollViewDelegate, UIGestureRec
         
         setUpBarButtonItems()
         setUpBarButtonItemControllers()
-        self.scrollView?.delegate = self;
+        self.scrollView?.delegate = self
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(didLogin), name: Notification.Name(Constants.userDidLoginNotification), object: nil)
+    }
+    
+    @objc func didLogin() {
+        let homeButton = UIButton(type: UIButtonType.system)
+        homeButton.tag = 0
+        navButtonTapped(sender: homeButton)
     }
     
     func trackScreenInfoForIndex(index:NSInteger, didUseNavButton:Bool) {
@@ -58,7 +66,7 @@ class TabbedViewController: UIViewController, UIScrollViewDelegate, UIGestureRec
         
         for (index, _) in self.activeControllers.enumerated() {
             let originX = CGFloat(index) * screenBounds.size.width;
-            let height = screenBounds.size.height - (self.bottomNavView?.frame.size.height)! - 64;
+            let height = scrollView!.bounds.height;
             let frame = CGRect(x:originX, y:screenBounds.origin.y, width:screenBounds.size.width, height:height);
             let backingView = UIView(frame: frame)
             self.scrollView?.addSubview(backingView)
@@ -83,7 +91,7 @@ class TabbedViewController: UIViewController, UIScrollViewDelegate, UIGestureRec
             self.addChildViewController(activeController)
             activeController.didMove(toParentViewController: self)
             view.addSubview(activeController.view)
-            activeController.view.frame = view.bounds
+            activeController.view.frame = scrollView!.bounds
             self.activeControllersObjects.append(activeController)
         }
     }

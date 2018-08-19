@@ -16,11 +16,7 @@ class MenuViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // set variables to their initial conditions - these can be set in Storyboard as well
-        menuLeftConstraint.constant = -menuWidthConstraint.constant
-        
-        blackBackgroundView.alpha = 0
-        blackBackgroundView.isHidden = true
+        hideMenu()
     }
     
     @IBAction func gesturePan(_ sender: UIPanGestureRecognizer) {
