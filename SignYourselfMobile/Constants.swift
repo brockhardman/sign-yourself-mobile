@@ -74,7 +74,7 @@ struct Constants {
     static let REGISTER_SCREEN = "RegisterViewController"
     static let LOGIN_SCREEN = "LoginViewController"
     static let DASHBOARD_SCREEN = "HomeViewController"
-    static let MENU_SCREEN = "MenuScreen"
+    static let MENU_SCREEN = "MenuViewController"
     static let CONTRIBUTION_SCREEN = "ContributionViewController"
     static let MAIN_SCREEN = "MainScreen"
     static let PROJECTS_SCREEN = "ProjectsViewController"

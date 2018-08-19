@@ -8,12 +8,22 @@
 
 import CoreLocation
 
+protocol RootViewControllerScreenEdgeProtocol {
+    func screenEdgeDidPan(_ sender: UIScreenEdgePanGestureRecognizer)
+}
+
 class RootViewController: TabbedViewController {
     
     var locationManager: CLLocationManager = CLLocationManager()
+    var delegate : RootViewControllerScreenEdgeProtocol?
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        delegate = menuController
+        let screenEdgePanGesture = UIScreenEdgePanGestureRecognizer(target: self,  action: #selector(gestureScreenEdgePan(_:)))
+        screenEdgePanGesture.edges = .left
+        view.addGestureRecognizer(screenEdgePanGesture)
         
         NotificationCenter.default.addObserver(self, selector: #selector(showLoginScreen), name: NSNotification.Name(Constants.signInNeededNotification), object: nil)
     }
@@ -33,6 +43,10 @@ class RootViewController: TabbedViewController {
         loginController.modalTransitionStyle = .crossDissolve
         loginController.delegate = self
         present(loginController, animated: true, completion: nil)
+    }
+    
+    @objc func gestureScreenEdgePan(_ sender: UIScreenEdgePanGestureRecognizer) {
+        delegate?.screenEdgeDidPan(sender)
     }
 }
 

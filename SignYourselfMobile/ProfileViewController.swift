@@ -24,7 +24,7 @@ class ProfileViewController: ActiveViewController, UIGestureRecognizerDelegate, 
     var absolutePercenatge:CGFloat = 0
     var tabs = [
         ViewPagerTab(title: "MEDIA", image: #imageLiteral(resourceName: "SettingsIcon")),
-        ViewPagerTab(title: "PROJECTS", image:#imageLiteral(resourceName: "SettingsIcon") ),
+        ViewPagerTab(title: "PROJECTS", image:#imageLiteral(resourceName: "SettingsIcon")),
         ViewPagerTab(title: "EVENTS", image: #imageLiteral(resourceName: "SettingsIcon")),
         ]
     var viewPager:ViewPagerController!

@@ -109,6 +109,11 @@
 		38BCC055201914AB004343B5 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 38BCC054201914AB004343B5 /* GoogleService-Info.plist */; };
 		38BCC058201B74EF004343B5 /* SignYourselfAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38BCC057201B74EF004343B5 /* SignYourselfAPIClient.swift */; };
 		38C11E321EB9888500D788D0 /* ActiveViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38C11E311EB9888500D788D0 /* ActiveViewController.swift */; };
+		38D319882128B1510039ACEB /* Menu.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 38D319872128B1510039ACEB /* Menu.storyboard */; };
+		38D3198C2128B2210039ACEB /* HamburgerLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38D3198B2128B2210039ACEB /* HamburgerLayer.swift */; };
+		38D3198E2128B22E0039ACEB /* MenuItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38D3198D2128B22E0039ACEB /* MenuItemCell.swift */; };
+		38D319912128B23F0039ACEB /* MenuItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38D3198F2128B23F0039ACEB /* MenuItemViewController.swift */; };
+		38D319922128B23F0039ACEB /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38D319902128B23F0039ACEB /* MenuViewController.swift */; };
 		38E34C001DEE866E00D1D37E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38E34BFF1DEE866E00D1D37E /* AppDelegate.swift */; };
 		38E34C071DEE866E00D1D37E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 38E34C061DEE866E00D1D37E /* Assets.xcassets */; };
 		38E34C0A1DEE866E00D1D37E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 38E34C081DEE866E00D1D37E /* LaunchScreen.storyboard */; };
@@ -219,6 +224,11 @@
 		38BCC054201914AB004343B5 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		38BCC057201B74EF004343B5 /* SignYourselfAPIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignYourselfAPIClient.swift; sourceTree = "<group>"; };
 		38C11E311EB9888500D788D0 /* ActiveViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActiveViewController.swift; sourceTree = "<group>"; };
+		38D319872128B1510039ACEB /* Menu.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Menu.storyboard; sourceTree = "<group>"; };
+		38D3198B2128B2210039ACEB /* HamburgerLayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HamburgerLayer.swift; sourceTree = "<group>"; };
+		38D3198D2128B22E0039ACEB /* MenuItemCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuItemCell.swift; sourceTree = "<group>"; };
+		38D3198F2128B23F0039ACEB /* MenuItemViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuItemViewController.swift; sourceTree = "<group>"; };
+		38D319902128B23F0039ACEB /* MenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		38E34BFC1DEE866E00D1D37E /* SignYourselfMobile.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SignYourselfMobile.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		38E34BFF1DEE866E00D1D37E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		38E34C061DEE866E00D1D37E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -251,6 +261,7 @@
 		380426CF201CED1100F336B4 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				38D3198B2128B2210039ACEB /* HamburgerLayer.swift */,
 				380426D0201CED2000F336B4 /* User.swift */,
 				380426D2201D306000F336B4 /* Profile.swift */,
 				380426D4201D307D00F336B4 /* Project.swift */,
@@ -326,6 +337,7 @@
 				385318562120CD590022DF76 /* Fans.storyboard */,
 				385318582120D3820022DF76 /* Home.storyboard */,
 				38426DC9212117B10003791B /* Media.storyboard */,
+				38D319872128B1510039ACEB /* Menu.storyboard */,
 			);
 			name = Storyboards;
 			sourceTree = "<group>";
@@ -396,6 +408,8 @@
 		389E68061EABFE3300B28BDA /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				38D319902128B23F0039ACEB /* MenuViewController.swift */,
+				38D3198F2128B23F0039ACEB /* MenuItemViewController.swift */,
 				38426DBD212116470003791B /* MediaTabViewController.swift */,
 				38C11E311EB9888500D788D0 /* ActiveViewController.swift */,
 				380426E4203093CB00F336B4 /* LoginViewController.swift */,
@@ -429,6 +443,7 @@
 		38A6BB212120E24E00F956FB /* TableViewCells */ = {
 			isa = PBXGroup;
 			children = (
+				38D3198D2128B22E0039ACEB /* MenuItemCell.swift */,
 				3813B911212255490070FE2D /* EventCell.swift */,
 				3813B912212255490070FE2D /* EventCell.xib */,
 				38A6BB292120E3EA00F956FB /* ContributionCell.swift */,
@@ -595,6 +610,7 @@
 				385A6B321EB1BD7100004F33 /* activeViewControllers.json in Resources */,
 				382715771EAD1535004B1994 /* Events.storyboard in Resources */,
 				38BCC055201914AB004343B5 /* GoogleService-Info.plist in Resources */,
+				38D319882128B1510039ACEB /* Menu.storyboard in Resources */,
 				38426DCA212117B10003791B /* Media.storyboard in Resources */,
 				38426DC22121166F0003791B /* MediaCell.xib in Resources */,
 				3813B914212255490070FE2D /* EventCell.xib in Resources */,
@@ -701,6 +717,7 @@
 				38B7E4DB20389A01000B5CA0 /* SignYourselfEventAPI.swift in Sources */,
 				3813B91721226F910070FE2D /* AppHelper.swift in Sources */,
 				380426D1201CED2000F336B4 /* User.swift in Sources */,
+				38D319922128B23F0039ACEB /* MenuViewController.swift in Sources */,
 				3813B950212273650070FE2D /* UIImage+Extension.swift in Sources */,
 				380426D7201D30B700F336B4 /* Event.swift in Sources */,
 				3813B953212273650070FE2D /* UIToolbar+Extension.swift in Sources */,
@@ -728,6 +745,7 @@
 				38A6BB1C2120E0DD00F956FB /* UIViewController+Extensions.swift in Sources */,
 				3813B951212273650070FE2D /* TimeInterval+Extension.swift in Sources */,
 				382715741EAD08CC004B1994 /* UIColor+SYS.swift in Sources */,
+				38D3198E2128B22E0039ACEB /* MenuItemCell.swift in Sources */,
 				385A6B301EB1AC8100004F33 /* NSDictionary+SYS.swift in Sources */,
 				3813B94F212273650070FE2D /* UserDefaults+Extension.swift in Sources */,
 				38426DC5212116E30003791B /* GlobalCell.swift in Sources */,
@@ -747,9 +765,11 @@
 				3813B94E212273650070FE2D /* Double+Extension.swift in Sources */,
 				3813B910212254720070FE2D /* AllEventsTabViewController.swift in Sources */,
 				3813B946212273650070FE2D /* CGPoint+Extension.swift in Sources */,
+				38D3198C2128B2210039ACEB /* HamburgerLayer.swift in Sources */,
 				38BCC058201B74EF004343B5 /* SignYourselfAPIClient.swift in Sources */,
 				380426D5201D307D00F336B4 /* Project.swift in Sources */,
 				380426EF2032428300F336B4 /* RegisterResponse.swift in Sources */,
+				38D319912128B23F0039ACEB /* MenuItemViewController.swift in Sources */,
 				38652337203A490900D0871C /* WePayManager.swift in Sources */,
 				38A6BB232120E26400F956FB /* AssociateCell.swift in Sources */,
 				380426E320308E6200F336B4 /* SignYourselfLoginAPI.swift in Sources */,

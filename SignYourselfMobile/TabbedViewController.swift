@@ -23,6 +23,8 @@ class TabbedViewController: UIViewController, UIScrollViewDelegate, UIGestureRec
     @IBOutlet weak var scrollView:UIScrollView?
     @IBOutlet weak var bottomNavView:UIView?
     
+    var menuController : MenuViewController?
+    
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
     }
@@ -40,6 +42,7 @@ class TabbedViewController: UIViewController, UIScrollViewDelegate, UIGestureRec
         })
         
         setUpBarButtonItems()
+        setUpBarButtonItemControllers()
         self.scrollView?.delegate = self;
     }
     
@@ -192,22 +195,41 @@ class TabbedViewController: UIViewController, UIScrollViewDelegate, UIGestureRec
     }
     
     func setUpBarButtonItems() {
-        let btnLeft = UIButton(frame: CGRect(x: 0, y: 0, width: 25, height: 20))
-        btnLeft.addTarget(self, action: #selector(openMenu),  for: .touchUpInside)
-        btnLeft.setBackgroundImage(#imageLiteral(resourceName: "NavButton"), for: .normal)
-        navigationItem.leftBarButtonItem = UIBarButtonItem(customView: btnLeft)
+        let renderedImageMenu = UIImage(named: "NavButton")?.withRenderingMode(.alwaysOriginal)
+        let leftBarButtonItem = UIBarButtonItem(image: renderedImageMenu, style: UIBarButtonItemStyle.plain, target: self, action: #selector(menuTapped))
+        leftBarButtonItem.tintColor = .white
+        navigationItem.leftBarButtonItem = leftBarButtonItem
         
-        let btnRight = UIButton(frame: CGRect(x: 0, y: 0, width: 25, height: 25))
-        btnRight.addTarget(self, action: #selector(logout),  for: .touchUpInside)
-        btnRight.setBackgroundImage(#imageLiteral(resourceName: "SettingsIcon"), for: .normal)
-        navigationItem.rightBarButtonItem = UIBarButtonItem(customView: btnRight)
+        let renderedImageSettings = UIImage(named: "SettingsIcon")?.withRenderingMode(.alwaysOriginal)
+        let rightBarButtonItem = UIBarButtonItem(image: renderedImageSettings, style: UIBarButtonItemStyle.plain, target: self, action: #selector(settingsTapped))
+        rightBarButtonItem.tintColor = .white
+        navigationItem.rightBarButtonItem = rightBarButtonItem
     }
     
-    @objc func openMenu() {
+    func setUpBarButtonItemControllers() {
+        setupLeftBarButtonItemController()
+        setupRightBarButtonItemController()
+    }
+    
+    func setupLeftBarButtonItemController() {
+        if let menuController = UIStoryboard(name: "Menu", bundle: nil).instantiateViewController(withIdentifier: Constants.MENU_SCREEN) as? MenuViewController {
+            addChildViewController(menuController)
+            view.addSubview(menuController.view)
+            menuController.didMove(toParentViewController: self)
+            menuController.loadViewIfNeeded()
+            self.menuController = menuController
+        }
+    }
+    
+    func setupRightBarButtonItemController() {
         
     }
     
-    @objc func logout() {
+    @objc func menuTapped() {
+        self.menuController?.openMenu()
+    }
+    
+    @objc func settingsTapped() {
         UserManager.shared.logout()
     }
     
