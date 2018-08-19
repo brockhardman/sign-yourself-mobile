@@ -13,6 +13,7 @@ pod 'WePay'
 pod 'DropDown'
 pod 'Charts', '~>3.0.1'
 pod 'ViewPager-Swift'
+pod 'AppCenter'
 
 end
 

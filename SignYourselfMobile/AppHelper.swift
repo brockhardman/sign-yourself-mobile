@@ -10,6 +10,9 @@ import Foundation
 import Fabric
 import Crashlytics
 import SwiftyJSON
+import AppCenter
+import AppCenterAnalytics
+import AppCenterCrashes
 
 public enum EnvironmentBuildType: String {
     case QA
@@ -34,6 +37,7 @@ class AppHelper {
         setLocalVariables()
         setURLCache()
         loadFabric()
+        loadAppCenter()
         setupConfiguration()
     }
     
@@ -52,6 +56,10 @@ class AppHelper {
     private func loadFabric() {
         Crashlytics.sharedInstance().setUserName(UIDevice.current.name)
         Fabric.with([Crashlytics.self])
+    }
+    
+    private func loadAppCenter() {
+        MSAppCenter.start("5553af16-6d67-404f-bcc5-cde039d16d0e", withServices:[ MSAnalytics.self, MSCrashes.self ])
     }
     
     private func setURLCache() {
