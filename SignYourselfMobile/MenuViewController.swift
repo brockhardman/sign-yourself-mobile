@@ -117,7 +117,7 @@ class MenuViewController: UIViewController {
     
     func hideMenuQuickly() {
         
-        // when menu is closed, it's left constraint should be of value that allows it to be completely hidden to the left of the screen - which is negative value of it's width
+        //This performs the same hideMenu, just without animation
         menuLeftConstraint.constant = -menuWidthConstraint.constant
         self.view.layoutIfNeeded()
         self.blackBackgroundView.alpha = 0
