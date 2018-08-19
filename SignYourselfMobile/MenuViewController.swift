@@ -79,9 +79,8 @@ class MenuViewController: UIViewController {
             return
         }
         
-        super.view.bringSubview(toFront: self.view)
+        self.view.isHidden = false
 
-        
         // when menu is opened, it's left constraint should be 0
         menuLeftConstraint.constant = 0
     
@@ -116,7 +115,7 @@ class MenuViewController: UIViewController {
             
             // hide the view for dimming effect so it wont interrupt touches for views underneath it
             self.blackBackgroundView.isHidden = true
-            super.view.sendSubview(toBack: self.view)
+            self.view.isHidden = true
         })
     }
 }
@@ -125,7 +124,7 @@ extension MenuViewController : RootViewControllerScreenEdgeProtocol {
     
     func screenEdgeDidPan(_ sender: UIScreenEdgePanGestureRecognizer) {
         
-        super.view.bringSubview(toFront: self.view)
+        self.view.isHidden = false
         
         if isOpen {return}
         
