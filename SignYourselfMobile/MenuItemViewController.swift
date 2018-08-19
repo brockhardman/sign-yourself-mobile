@@ -76,14 +76,14 @@ extension MenuItemViewController: UITableViewDataSource, UITableViewDelegate {
         
         switch row {
         case .home: homeAction()
-        case .documents: documentsAction()
-        case .wallet: walletAction()
-        case .invite: inviteAction()
-        case .settings: settingsAction()
-        case .contactUs: contactUsAction()
-        case .help: helpAction()
-        case .package: packageAction()
-        case .cars: carsAction()
+        case .members: documentsAction()
+        case .banners: walletAction()
+        case .perks: inviteAction()
+        case .products: settingsAction()
+        case .socialMedia: contactUsAction()
+        case .analytics: helpAction()
+        case .events: packageAction()
+        case .news: carsAction()
         }
     }
 

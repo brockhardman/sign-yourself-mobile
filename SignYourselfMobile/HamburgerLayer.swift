@@ -4,40 +4,40 @@ import UIKit
 
 enum MenuItem {
     case home
-    case documents
-    case wallet
-    case invite
-    case settings
-    case contactUs
-    case help
-    case package
-    case cars
+    case members
+    case banners
+    case perks
+    case products
+    case socialMedia
+    case analytics
+    case events
+    case news
     
     var name: String {
         switch self {
-        case .home: return "Home"
-        case .documents: return "Documents"
-        case .wallet: return "Wallet"
-        case .invite: return "Gift"
-        case .settings: return "Settings"
-        case .contactUs: return "Contact Us"
-        case .help: return "Help"
-        case .package: return "Holiday Package"
-        case .cars: return "Cars"
+        case .home: return Constants.HOME
+        case .members: return Constants.MEMBERS
+        case .banners: return Constants.BANNERS
+        case .perks: return Constants.PERKS
+        case .products: return Constants.PRODUCTS
+        case .socialMedia: return Constants.SOCIAL_MEDIA
+        case .analytics: return Constants.ANALYTICS
+        case .events: return Constants.EVENTS
+        case .news: return Constants.NEWS
         }
     }
     
     var iconName: String {
         switch self {
-        case .home: return "homeIcon"
-        case .documents: return "documentsIcon"
-        case .wallet: return "paymentIcon"
-        case .invite: return "giftIcon"
-        case .settings: return "settingsIcon"
-        case .contactUs: return "callUsIcon"
-        case .help: return "helpIcon"
-        case .package: return "packageIcon"
-        case .cars: return "carsIcon"
+        case .home: return "dashboard"
+        case .members: return "member"
+        case .banners: return "banner"
+        case .perks: return "gift_gray"
+        case .products: return "product"
+        case .socialMedia: return Constants.SOCIAL_MEDIA
+        case .analytics: return "marketing"
+        case .events: return Constants.EVENTS
+        case .news: return Constants.NEWS
         }
     }
     
@@ -50,14 +50,14 @@ enum MenuItem {
         var items: [MenuItem] = []
         
         items.append(.home)
-        items.append(.documents)
-        items.append(.wallet)
-        items.append(.invite)
-        items.append(.settings)
-        items.append(.contactUs)
-        items.append(.help)
-        items.append(.package)
-        items.append(.cars)
+        items.append(.members)
+        items.append(.banners)
+        items.append(.perks)
+        items.append(.products)
+        items.append(.socialMedia)
+        items.append(.analytics)
+        items.append(.events)
+        items.append(.news)
         
         return items
     }

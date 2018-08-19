@@ -39,7 +39,7 @@ struct Constants {
     //Strings
     static let PUBLISHED = "published"
     static let DRAFT = "draft"
-    static let DASHBOARD = "Dashboard"
+    static let HOME = "Home"
     static let ADVISOR = "Advisor"
     static let FANS = "Fans"
     static let ASSOCIATES = "Associates"
@@ -50,7 +50,7 @@ struct Constants {
     static let BANNERS = "Banners"
     static let MEMBERS = "Members"
     static let PERKS = "Perks"
-    static let MY_PRODUCTS = "My Products"
+    static let PRODUCTS = "Products"
     static let TRACKING = "Tracking"
     static let DISCOVER_PRODUCTS = "Discover Products"
     static let ANALYTICS = "Analytics"
