@@ -4,7 +4,6 @@ use_frameworks!
 
 target 'SignYourselfMobile' do
 
-pod 'SwiftyJSON'
 pod 'SVProgressHUD'
 pod 'Fabric'
 pod 'Crashlytics'

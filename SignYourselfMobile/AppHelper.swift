@@ -9,7 +9,6 @@
 import Foundation
 import Fabric
 import Crashlytics
-import SwiftyJSON
 import AppCenter
 import AppCenterAnalytics
 import AppCenterCrashes
@@ -81,7 +80,6 @@ class AppHelper {
             let data = try? Data(contentsOf: fileUrl) {
             if let result = try? PropertyListSerialization.propertyList(from: data, options: [], format: nil) as? [String: Any] {
                 config = result!;
-                debugPrint("JSON: \(JSON(config))")
             }
         }
     }
