@@ -16,7 +16,7 @@ class MenuViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        hideMenu()
+        hideMenuQuickly()
     }
     
     @IBAction func gesturePan(_ sender: UIPanGestureRecognizer) {
@@ -113,6 +113,21 @@ class MenuViewController: UIViewController {
             self.blackBackgroundView.isHidden = true
             self.view.isHidden = true
         })
+    }
+    
+    func hideMenuQuickly() {
+        
+        // when menu is closed, it's left constraint should be of value that allows it to be completely hidden to the left of the screen - which is negative value of it's width
+        menuLeftConstraint.constant = -menuWidthConstraint.constant
+        self.view.layoutIfNeeded()
+        self.blackBackgroundView.alpha = 0
+        
+        // reenable the screen edge pan gesture so we can detect it next time
+        self.isOpen = false
+        
+        // hide the view for dimming effect so it wont interrupt touches for views underneath it
+        self.blackBackgroundView.isHidden = true
+        self.view.isHidden = true
     }
 }
 
