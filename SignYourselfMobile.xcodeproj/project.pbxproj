@@ -916,18 +916,7 @@
 				DEFAULT_BUILD = QA;
 				DEVELOPMENT_TEAM = J724PJQ9EM;
 				ENABLE_BITCODE = NO;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)/**",
-					"\"$PODS_CONFIGURATION_BUILD_DIR/Charts\"",
-					"\"$PODS_CONFIGURATION_BUILD_DIR/DropDown\"",
-					"\"$PODS_CONFIGURATION_BUILD_DIR/SVProgressHUD\"",
-					"\"$PODS_CONFIGURATION_BUILD_DIR/ViewPager-Swift\"",
-					"\"${PODS_ROOT}/AppCenter/AppCenter-SDK-Apple/iOS\"",
-					"\"${PODS_ROOT}/Crashlytics/iOS\"",
-					"\"${PODS_ROOT}/Fabric/iOS\"",
-					"\"${PODS_ROOT}/RadarSDK/RadarSDK\"",
-					"\"${PODS_ROOT}/WePay\"",
-				);
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = SignYourselfMobile/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -958,18 +947,7 @@
 				DEFAULT_BUILD = Prod;
 				DEVELOPMENT_TEAM = J724PJQ9EM;
 				ENABLE_BITCODE = NO;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)/**",
-					"\"$PODS_CONFIGURATION_BUILD_DIR/Charts\"",
-					"\"$PODS_CONFIGURATION_BUILD_DIR/DropDown\"",
-					"\"$PODS_CONFIGURATION_BUILD_DIR/SVProgressHUD\"",
-					"\"$PODS_CONFIGURATION_BUILD_DIR/ViewPager-Swift\"",
-					"\"${PODS_ROOT}/AppCenter/AppCenter-SDK-Apple/iOS\"",
-					"\"${PODS_ROOT}/Crashlytics/iOS\"",
-					"\"${PODS_ROOT}/Fabric/iOS\"",
-					"\"${PODS_ROOT}/RadarSDK/RadarSDK\"",
-					"\"${PODS_ROOT}/WePay\"",
-				);
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = SignYourselfMobile/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
