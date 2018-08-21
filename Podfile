@@ -15,7 +15,7 @@ target 'SignYourselfMobile' do
   pod 'RadarSDK', '~> 2.0.0'
   pod 'WePay'
   pod 'DropDown'
-  pod 'Charts', '~>3.0.1'
+  pod 'Charts', '~>3.1.1'
   pod 'ViewPager-Swift'
   pod 'AppCenter'  
 
