@@ -40,7 +40,6 @@
 		3813B944212273650070FE2D /* Calendar+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3813B925212273610070FE2D /* Calendar+Extension.swift */; };
 		3813B945212273650070FE2D /* UIBarButtonItem+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3813B926212273610070FE2D /* UIBarButtonItem+Extension.swift */; };
 		3813B946212273650070FE2D /* CGPoint+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3813B927212273620070FE2D /* CGPoint+Extension.swift */; };
-		3813B948212273650070FE2D /* NSDateFormatter+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3813B929212273620070FE2D /* NSDateFormatter+Extension.swift */; };
 		3813B94B212273650070FE2D /* URL+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3813B92C212273630070FE2D /* URL+Extension.swift */; };
 		3813B94C212273650070FE2D /* RELString+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3813B92D212273630070FE2D /* RELString+Extension.swift */; };
 		3813B94D212273650070FE2D /* Date+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3813B92E212273630070FE2D /* Date+Extension.swift */; };
@@ -152,7 +151,6 @@
 		3813B925212273610070FE2D /* Calendar+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Calendar+Extension.swift"; sourceTree = "<group>"; };
 		3813B926212273610070FE2D /* UIBarButtonItem+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIBarButtonItem+Extension.swift"; sourceTree = "<group>"; };
 		3813B927212273620070FE2D /* CGPoint+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CGPoint+Extension.swift"; sourceTree = "<group>"; };
-		3813B929212273620070FE2D /* NSDateFormatter+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSDateFormatter+Extension.swift"; sourceTree = "<group>"; };
 		3813B92C212273630070FE2D /* URL+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "URL+Extension.swift"; sourceTree = "<group>"; };
 		3813B92D212273630070FE2D /* RELString+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "RELString+Extension.swift"; sourceTree = "<group>"; };
 		3813B92E212273630070FE2D /* Date+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Date+Extension.swift"; sourceTree = "<group>"; };
@@ -298,7 +296,6 @@
 				3813B91F212273600070FE2D /* Dictionary+Extension.swift */,
 				3813B92F212273630070FE2D /* Double+Extension.swift */,
 				3813B91B2122735F0070FE2D /* Int+Extension.swift */,
-				3813B929212273620070FE2D /* NSDateFormatter+Extension.swift */,
 				3813B937212273650070FE2D /* NSLineBreakMode+Extension.swift */,
 				3813B91E212273600070FE2D /* NSTextAlignment+Extension.swift */,
 				3813B938212273650070FE2D /* NumberFormatter+Extension.swift */,
@@ -725,7 +722,6 @@
 				38C11E321EB9888500D788D0 /* ActiveViewController.swift in Sources */,
 				380426E72030BE0700F336B4 /* LoginResponse.swift in Sources */,
 				38A995F7211F780A0061A022 /* RadarManager.swift in Sources */,
-				3813B948212273650070FE2D /* NSDateFormatter+Extension.swift in Sources */,
 				3813B93F212273650070FE2D /* CGSize+Extension.swift in Sources */,
 				3853185B2120D3A10022DF76 /* HomeViewController.swift in Sources */,
 				38B7E4DD2038A13E000B5CA0 /* SignYourselfProjectAPI.swift in Sources */,

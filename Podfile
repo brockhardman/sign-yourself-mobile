@@ -1,6 +1,8 @@
 source 'https://github.com/CocoaPods/Specs.git'
 platform :ios, '10.0'
 
+workspace 'SignYourselfMobile'
+
 target 'SignYourselfMobile' do
   project 'SignYourselfMobile.xcodeproj'
   
