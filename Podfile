@@ -17,7 +17,8 @@ target 'SignYourselfMobile' do
   pod 'DropDown'
   pod 'Charts', '~>3.1.1'
   pod 'ViewPager-Swift'
-  pod 'AppCenter'  
+  pod 'AppCenter' 
+  pod 'AppCenter/Push' 
 
 end
 

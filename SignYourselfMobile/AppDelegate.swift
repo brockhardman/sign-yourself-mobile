@@ -34,8 +34,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     func configureAppDefaults() {
-        let navigationBarAppearace = UINavigationBar.appearance()
-        navigationBarAppearace.titleTextAttributes = [NSAttributedStringKey.foregroundColor:UIColor.white]
+        UINavigationBar.appearance().titleTextAttributes = [NSAttributedStringKey.foregroundColor:UIColor.white]
     }
 }
 

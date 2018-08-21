@@ -12,6 +12,7 @@ import Crashlytics
 import AppCenter
 import AppCenterAnalytics
 import AppCenterCrashes
+import AppCenterPush
 
 public enum EnvironmentBuildType: String {
     case QA
@@ -58,7 +59,7 @@ class AppHelper {
     }
     
     private func loadAppCenter() {
-        MSAppCenter.start("5553af16-6d67-404f-bcc5-cde039d16d0e", withServices:[ MSAnalytics.self, MSCrashes.self ])
+        MSAppCenter.start("5553af16-6d67-404f-bcc5-cde039d16d0e", withServices:[ MSAnalytics.self, MSCrashes.self, MSPush.self ])
     }
     
     private func setURLCache() {
