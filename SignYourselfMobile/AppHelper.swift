@@ -59,7 +59,7 @@ class AppHelper {
     }
     
     private func loadAppCenter() {
-        MSAppCenter.start("5553af16-6d67-404f-bcc5-cde039d16d0e", withServices:[ MSAnalytics.self, MSCrashes.self, MSPush.self ])
+        MSAppCenter.start("73db21e4-82ef-42e7-b704-7783ccb046fe", withServices:[ MSAnalytics.self, MSCrashes.self, MSPush.self ])
     }
     
     private func setURLCache() {
