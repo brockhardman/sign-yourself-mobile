@@ -169,6 +169,7 @@
 		3813B95E2122772B0070FE2D /* SpinnerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpinnerView.swift; sourceTree = "<group>"; };
 		3813B960212278520070FE2D /* AlertMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertMessage.swift; sourceTree = "<group>"; };
 		3822A216213AD59D00515CE0 /* SignYourselfMobileDev.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SignYourselfMobileDev.entitlements; sourceTree = "<group>"; };
+		3822A217213AE4BA00515CE0 /* SignYourselfMobile.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SignYourselfMobile.entitlements; sourceTree = "<group>"; };
 		382715731EAD08CC004B1994 /* UIColor+SYS.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+SYS.swift"; sourceTree = "<group>"; };
 		382715761EAD1535004B1994 /* Events.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Events.storyboard; sourceTree = "<group>"; };
 		382715BE1EAEEC2D004B1994 /* EventsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventsViewController.swift; sourceTree = "<group>"; };
@@ -209,7 +210,6 @@
 		38A6BB262120E37F00F956FB /* ContributionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContributionsViewController.swift; sourceTree = "<group>"; };
 		38A6BB282120E3EA00F956FB /* ContributionCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ContributionCell.xib; sourceTree = "<group>"; };
 		38A6BB292120E3EA00F956FB /* ContributionCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContributionCell.swift; sourceTree = "<group>"; };
-		38A995EB209613190061A022 /* SignYourselfMobile.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SignYourselfMobile.entitlements; sourceTree = "<group>"; };
 		38A995F6211F780A0061A022 /* RadarManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RadarManager.swift; sourceTree = "<group>"; };
 		38A995F8211FD69E0061A022 /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
 		38B7E4D220373DB4000B5CA0 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
@@ -485,7 +485,7 @@
 			isa = PBXGroup;
 			children = (
 				389E680E1EAC7E4800B28BDA /* SignYourselfMobile-Bridging-Header.h */,
-				38A995EB209613190061A022 /* SignYourselfMobile.entitlements */,
+				3822A217213AE4BA00515CE0 /* SignYourselfMobile.entitlements */,
 				3822A216213AD59D00515CE0 /* SignYourselfMobileDev.entitlements */,
 				3813B91521226F380070FE2D /* App */,
 				38A6BB122120DF7400F956FB /* Protocols */,
@@ -561,7 +561,7 @@
 								enabled = 0;
 							};
 							com.apple.Push = {
-								enabled = 1;
+								enabled = 0;
 							};
 							com.apple.Wallet = {
 								enabled = 0;
@@ -907,7 +907,6 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_ENTITLEMENTS = SignYourselfMobile/SignYourselfMobile.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
@@ -938,7 +937,6 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_ENTITLEMENTS = SignYourselfMobile/SignYourselfMobile.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				CODE_SIGN_STYLE = Manual;
