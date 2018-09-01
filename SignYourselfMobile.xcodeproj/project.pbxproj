@@ -355,6 +355,9 @@
 		385318512120AAEC0022DF76 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				38E34C061DEE866E00D1D37E /* Assets.xcassets */,
+				38BCC054201914AB004343B5 /* GoogleService-Info.plist */,
+				38E34C0B1DEE866E00D1D37E /* Info.plist */,
 				385A6B311EB1BD7100004F33 /* activeViewControllers.json */,
 			);
 			name = Resources;
@@ -480,12 +483,13 @@
 		38E34BFE1DEE866E00D1D37E /* SignYourselfMobile */ = {
 			isa = PBXGroup;
 			children = (
+				389E680E1EAC7E4800B28BDA /* SignYourselfMobile-Bridging-Header.h */,
+				38A995EB209613190061A022 /* SignYourselfMobile.entitlements */,
 				3813B91521226F380070FE2D /* App */,
 				38A6BB122120DF7400F956FB /* Protocols */,
 				3853185C2120D6340022DF76 /* Views */,
 				385318512120AAEC0022DF76 /* Resources */,
 				3853184C21209FCD0022DF76 /* Utilities */,
-				38A995EB209613190061A022 /* SignYourselfMobile.entitlements */,
 				38652335203A48C400D0871C /* Managers */,
 				380426CF201CED1100F336B4 /* Models */,
 				38BCC056201B74C4004343B5 /* Networking */,
@@ -493,10 +497,6 @@
 				382715751EAD151C004B1994 /* Storyboards */,
 				382715721EAD08AE004B1994 /* Extensions */,
 				389E68061EABFE3300B28BDA /* ViewControllers */,
-				38E34C061DEE866E00D1D37E /* Assets.xcassets */,
-				38E34C0B1DEE866E00D1D37E /* Info.plist */,
-				38BCC054201914AB004343B5 /* GoogleService-Info.plist */,
-				389E680E1EAC7E4800B28BDA /* SignYourselfMobile-Bridging-Header.h */,
 			);
 			path = SignYourselfMobile;
 			sourceTree = "<group>";

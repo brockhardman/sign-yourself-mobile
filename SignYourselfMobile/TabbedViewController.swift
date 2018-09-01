@@ -203,12 +203,12 @@ class TabbedViewController: UIViewController, UIScrollViewDelegate, UIGestureRec
     }
     
     func setUpBarButtonItems() {
-        let renderedImageMenu = UIImage(named: "NavButton")?.withRenderingMode(.alwaysOriginal)
+        let renderedImageMenu = UIImage(named: "menu")?.withRenderingMode(.alwaysOriginal)
         let leftBarButtonItem = UIBarButtonItem(image: renderedImageMenu, style: UIBarButtonItemStyle.plain, target: self, action: #selector(menuTapped))
         leftBarButtonItem.tintColor = .white
         navigationItem.leftBarButtonItem = leftBarButtonItem
         
-        let renderedImageSettings = UIImage(named: "SettingsIcon")?.withRenderingMode(.alwaysOriginal)
+        let renderedImageSettings = UIImage(named: "ProfileIcon")?.aspectFit(in: CGSize(width: 29, height: 29))
         let rightBarButtonItem = UIBarButtonItem(image: renderedImageSettings, style: UIBarButtonItemStyle.plain, target: self, action: #selector(settingsTapped))
         rightBarButtonItem.tintColor = .white
         navigationItem.rightBarButtonItem = rightBarButtonItem
