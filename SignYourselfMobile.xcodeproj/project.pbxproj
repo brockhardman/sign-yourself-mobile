@@ -168,6 +168,7 @@
 		3813B95B212275EA0070FE2D /* Hud.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Hud.swift; sourceTree = "<group>"; };
 		3813B95E2122772B0070FE2D /* SpinnerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpinnerView.swift; sourceTree = "<group>"; };
 		3813B960212278520070FE2D /* AlertMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertMessage.swift; sourceTree = "<group>"; };
+		3822A216213AD59D00515CE0 /* SignYourselfMobileDev.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SignYourselfMobileDev.entitlements; sourceTree = "<group>"; };
 		382715731EAD08CC004B1994 /* UIColor+SYS.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+SYS.swift"; sourceTree = "<group>"; };
 		382715761EAD1535004B1994 /* Events.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Events.storyboard; sourceTree = "<group>"; };
 		382715BE1EAEEC2D004B1994 /* EventsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventsViewController.swift; sourceTree = "<group>"; };
@@ -485,6 +486,7 @@
 			children = (
 				389E680E1EAC7E4800B28BDA /* SignYourselfMobile-Bridging-Header.h */,
 				38A995EB209613190061A022 /* SignYourselfMobile.entitlements */,
+				3822A216213AD59D00515CE0 /* SignYourselfMobileDev.entitlements */,
 				3813B91521226F380070FE2D /* App */,
 				38A6BB122120DF7400F956FB /* Protocols */,
 				3853185C2120D6340022DF76 /* Views */,
@@ -553,6 +555,9 @@
 								enabled = 0;
 							};
 							com.apple.InAppPurchase = {
+								enabled = 0;
+							};
+							com.apple.InterAppAudio = {
 								enabled = 0;
 							};
 							com.apple.Push = {
