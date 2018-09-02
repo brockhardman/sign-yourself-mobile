@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import PassKit
 
 class ContributionsViewController: ActiveViewController {
     //MARK:Properties

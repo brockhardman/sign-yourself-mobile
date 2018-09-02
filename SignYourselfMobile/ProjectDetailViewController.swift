@@ -46,16 +46,31 @@ class ProjectDetailViewController: UIViewController,UIGestureRecognizerDelegate,
         setUpGestures()
         setUpTabs()
         setUpViewPager()
+        addDonateButton()
         print(headerViewHeight.constant)
     }
     override func viewWillAppear(_ animated: Bool) {
         setUpViews()
     }
     
+    private func addDonateButton() {
+        let donateButton = UIButton(type: .roundedRect)
+        donateButton.setTitle("Donate Now", for: .normal)
+        donateButton.addTarget(self, action: #selector(donateButtonTapped), for: .touchUpInside)
+        headerView.addSubview(donateButton)
+        headerView.bringSubview(toFront: donateButton)
+        donateButton.frame = CGRect(x: 200, y: 50, width: 100, height: 40)
+        donateButton.backgroundColor = .red
+    }
     
     //MARK:Views Actions
-    @objc func backArrowViewTapped(){
+    @objc func backArrowViewTapped() {
         dismiss(animated: true, completion: nil)
+    }
+    
+    @objc func donateButtonTapped() {
+        let donateController = UIStoryboard(name: "Contributions", bundle: nil).instantiateViewController(withIdentifier: "DonateViewController")
+        present(donateController, animated: true, completion: nil)
     }
     
     //MARK:Set Up Views from View will appear
