@@ -1,10 +1,4 @@
-//
-//  Double+Extension.swift
-//  Reliant
-//
-//  Created by Woodall, Kristopher on 3/19/17.
-//  Copyright © 2017 Woodall, Kristopher. All rights reserved.
-//
+
 
 import Foundation
 

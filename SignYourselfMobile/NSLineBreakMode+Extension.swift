@@ -1,10 +1,4 @@
-//
-//  NSLineBreakMode+Extension.swift
-//  Reliant
-//
-//  Created by Woodall, Kristopher on 10/18/16.
-//  Copyright © 2016 Relaint. All rights reserved.
-//
+
 
 import Foundation
 

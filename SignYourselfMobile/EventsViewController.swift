@@ -47,9 +47,9 @@ class EventsViewController: UIViewController {
         viewPager.dataSource = self
         viewPager.delegate = self
         
-        self.addChildViewController(viewPager)
+        self.addChild(viewPager)
         self.view.addSubview(viewPager.view)
-        viewPager.didMove(toParentViewController: self)
+        viewPager.didMove(toParent: self)
     }
     override func viewWillLayoutSubviews() {
         super.viewWillLayoutSubviews()

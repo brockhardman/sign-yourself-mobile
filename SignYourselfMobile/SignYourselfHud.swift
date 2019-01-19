@@ -1,10 +1,4 @@
-//
-//  ReliantHud.swift
-//  Reliant
-//
-//  Created by Woodall, Kristopher on 7/10/17.
-//  Copyright © 2017 Relaint. All rights reserved.
-//
+
 
 public class SignYourselfHud: Hud {
 
@@ -39,7 +33,7 @@ public class SignYourselfHud: Hud {
         
         hudContent?.center = hudCenter
         overlayView.addSubview(hudContent!)
-        UIView.animate(withDuration: 0.2, delay: 0, options: UIViewAnimationOptions.curveEaseIn, animations: {
+        UIView.animate(withDuration: 0.2, delay: 0, options: UIView.AnimationOptions.curveEaseIn, animations: {
             self.overlayView.alpha = 1
         }, completion: nil)
 

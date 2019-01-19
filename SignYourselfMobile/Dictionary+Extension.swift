@@ -1,10 +1,4 @@
-//
-//  Dictionary+Extension.swift
-//  Reliant 
-//
-//  Created by Woodall, Kristopher on 5/19/16.
-//  Copyright © 2016 Woodall, Kristopher. All rights reserved.
-//
+
 
 import Foundation
 

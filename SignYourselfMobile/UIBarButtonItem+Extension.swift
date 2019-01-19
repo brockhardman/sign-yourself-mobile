@@ -1,10 +1,4 @@
-//
-//  UIBarButtonItem+Extension.swift
-//  Reliant
-//
-//  Created by Zachary Slayter on 9/27/17.
-//  Copyright © 2017 Relaint. All rights reserved.
-//
+
 
 import Foundation
 
@@ -33,7 +27,7 @@ extension UIBarButtonItem {
         // Initialiaze Badge's label
         let label = CATextLayer()
         label.string = "\(number)"
-        label.alignmentMode = kCAAlignmentCenter
+        label.alignmentMode = CATextLayerAlignmentMode.center
         label.fontSize = 12
         label.font = UIFont.effra(type: .regular, size: 12)
         label.frame = CGRect(origin: CGPoint(x: location.x - 8, y: offset.y), size: CGSize(width: 15+(8*(String(number).count-1)), height: 15))

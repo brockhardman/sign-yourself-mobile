@@ -1,10 +1,3 @@
-//
-//  CGSize+Extension.swift
-//  Utility
-//
-//  Created by Woodall, Kristopher on 3/15/17.
-//  Copyright © 2017 Reliant. All rights reserved.
-//
 
 import Foundation
 

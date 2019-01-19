@@ -70,16 +70,16 @@ extension String {
         
         let textRange = NSRange(location: 0, length: self.count)
         let nsText = self as NSString
-        attributedString.addAttributes([NSAttributedStringKey.paragraphStyle: paragraphStyle], range: textRange)
+        attributedString.addAttributes([NSAttributedString.Key.paragraphStyle: paragraphStyle], range: textRange)
         
         allBoldWords.forEach { (subString) in
             let subStringRange = nsText.range(of: subString)
-            attributedString.addAttributes([NSAttributedStringKey.font: boldFont], range: subStringRange)
+            attributedString.addAttributes([NSAttributedString.Key.font: boldFont], range: subStringRange)
         }
         
         allColorWords.forEach { (subString) in
             let subStringRange = nsText.range(of: subString)
-            attributedString.addAttributes([NSAttributedStringKey.foregroundColor: color], range: subStringRange)
+            attributedString.addAttributes([NSAttributedString.Key.foregroundColor: color], range: subStringRange)
         }
         
         return attributedString

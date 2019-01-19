@@ -1,10 +1,4 @@
-//
-//  Int+Extension.swift
-//  Common
-//
-//  Created by Brock Hardman on 7/1/18.
-//  Copyright © 2018 NRG. All rights reserved.
-//
+
 
 extension Int {
     

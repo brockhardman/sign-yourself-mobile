@@ -118,7 +118,7 @@ public func bounceAnimation() -> CAKeyframeAnimation {
     let bounceAnimation = CAKeyframeAnimation(keyPath: "transform.scale")
     bounceAnimation.values = [1.0 ,1.4, 0.9, 1.15, 0.95, 1.02, 1.0]
     bounceAnimation.duration = TimeInterval(0.5)
-    bounceAnimation.calculationMode = kCAAnimationCubic
+    bounceAnimation.calculationMode = CAAnimationCalculationMode.cubic
     bounceAnimation.isRemovedOnCompletion = true
     
     return bounceAnimation

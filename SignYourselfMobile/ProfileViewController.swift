@@ -93,9 +93,9 @@ class ProfileViewController: ActiveViewController, UIGestureRecognizerDelegate, 
         viewPager.dataSource = self
         viewPager.delegate = self
         
-        self.addChildViewController(viewPager)
+        self.addChild(viewPager)
         self.containerView.addSubview(viewPager.view)
-        viewPager.didMove(toParentViewController: self)
+        viewPager.didMove(toParent: self)
     }
     override func viewWillLayoutSubviews() {
         super.viewWillLayoutSubviews()

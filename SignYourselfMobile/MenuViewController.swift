@@ -22,10 +22,10 @@ class MenuViewController: UIViewController {
     @IBAction func gesturePan(_ sender: UIPanGestureRecognizer) {
         
         // retrieve the current state of the gesture
-        if sender.state == UIGestureRecognizerState.began {
+        if sender.state == UIGestureRecognizer.State.began {
             
             // no need to do anything
-        } else if sender.state == UIGestureRecognizerState.changed {
+        } else if sender.state == UIGestureRecognizer.State.changed {
             
             // retrieve the amount viewMenu has been dragged
             let translationX = sender.translation(in: sender.view).x
@@ -140,13 +140,13 @@ extension MenuViewController : RootViewControllerScreenEdgeProtocol {
         if isOpen {return}
         
         // retrieve the current state of the gesture
-        if sender.state == UIGestureRecognizerState.began {
+        if sender.state == UIGestureRecognizer.State.began {
             
             // if the user has just started dragging, make sure view for dimming effect is hidden well
             blackBackgroundView.isHidden = false
             blackBackgroundView.alpha = 0
             
-        } else if (sender.state == UIGestureRecognizerState.changed) {
+        } else if (sender.state == UIGestureRecognizer.State.changed) {
             
             // retrieve the amount viewMenu has been dragged
             let translationX = sender.translation(in: sender.view).x

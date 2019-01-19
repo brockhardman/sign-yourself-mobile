@@ -1,10 +1,4 @@
-//
-//  UIToolbar+Extension.swift
-//  Reliant
-//
-//  Created by Yuichi Fujiki on 11/16/16.
-//  Copyright © 2016 Relaint. All rights reserved.
-//
+
 
 import Foundation
 

@@ -1,10 +1,4 @@
-//
-//  NSTextAlignment+Extension.swift
-//  Reliant
-//
-//  Created by Woodall, Kristopher on 10/17/16.
-//  Copyright © 2016 Relaint. All rights reserved.
-//
+
 
 import UIKit
 

@@ -19,7 +19,6 @@ class DonateViewController: UIViewController {
     
     private func addApplePayButton() {
         let applePayButton = PKPaymentButton(paymentButtonType: .donate, paymentButtonStyle: .black)
-        applePayButton.cornerRadius = 10
         view.addSubview(applePayButton)
         applePayButton.center = view.center
     }

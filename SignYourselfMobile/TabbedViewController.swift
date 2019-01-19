@@ -49,7 +49,7 @@ class TabbedViewController: UIViewController, UIScrollViewDelegate, UIGestureRec
     }
     
     @objc func didLogin() {
-        let homeButton = UIButton(type: UIButtonType.system)
+        let homeButton = UIButton(type: UIButton.ButtonType.system)
         homeButton.tag = 0
         navButtonTapped(sender: homeButton)
     }
@@ -88,8 +88,8 @@ class TabbedViewController: UIViewController, UIScrollViewDelegate, UIGestureRec
             let activeController : ActiveViewController = UIStoryboard(name: storyboardName as! String, bundle:nil).instantiateViewController(withIdentifier: viewControllerClassName as! String) as! ActiveViewController
             
             activeController.configure(title:navTitle as! String, image:navImage as! String)
-            self.addChildViewController(activeController)
-            activeController.didMove(toParentViewController: self)
+            self.addChild(activeController)
+            activeController.didMove(toParent: self)
             view.addSubview(activeController.view)
             activeController.view.frame = scrollView!.bounds
             self.activeControllersObjects.append(activeController)
@@ -109,13 +109,13 @@ class TabbedViewController: UIViewController, UIScrollViewDelegate, UIGestureRec
             let navButton = UIButton()
             navButton.frame = CGRect(x: 0, y: 0, width: navButtonWidth, height: (self.bottomNavView?.frame.size.height)!)
             navButton.tag = index
-            navButton.addTarget(self, action: #selector(navButtonTapped), for: UIControlEvents.touchUpInside)
+            navButton.addTarget(self, action: #selector(navButtonTapped), for: UIControl.Event.touchUpInside)
             let dict = self.activeControllers.object(at: index) as! NSDictionary
-            navButton.setTitle(dict.object(forKey: "navTitle") as? String, for: UIControlState.normal)
+            navButton.setTitle(dict.object(forKey: "navTitle") as? String, for: UIControl.State.normal)
             navButton.titleLabel?.textAlignment = NSTextAlignment.center;
             navButton.titleEdgeInsets = UIEdgeInsets(top:(self.bottomNavView?.frame.size.height)! - 18, left:0, bottom:0, right:0)
             navButton.titleLabel?.font = UIFont(name:"Helvetica", size:10)
-            navButton.setTitleColor(UIColor.white, for: UIControlState.normal)
+            navButton.setTitleColor(UIColor.white, for: UIControl.State.normal)
             navButtonView.addSubview(navButton)
             
             let buttonImageView = UIImageView(image:UIImage(named: (dict.object(forKey: "navImage") as? String)!))
@@ -197,19 +197,19 @@ class TabbedViewController: UIViewController, UIScrollViewDelegate, UIGestureRec
     func updateTitle() {
         let fadeTextAnimation : CATransition = CATransition()
         fadeTextAnimation.duration = 0.5;
-        fadeTextAnimation.type = kCATransitionFade;
+        fadeTextAnimation.type = CATransitionType.fade;
         navigationController?.navigationBar.layer.add(fadeTextAnimation, forKey: "fadeText")
         navigationItem.title = activeControllersObjects[self.currentControllerIndex].navigationTitle
     }
     
     func setUpBarButtonItems() {
         let renderedImageMenu = UIImage(named: "menu")?.withRenderingMode(.alwaysOriginal)
-        let leftBarButtonItem = UIBarButtonItem(image: renderedImageMenu, style: UIBarButtonItemStyle.plain, target: self, action: #selector(menuTapped))
+        let leftBarButtonItem = UIBarButtonItem(image: renderedImageMenu, style: UIBarButtonItem.Style.plain, target: self, action: #selector(menuTapped))
         leftBarButtonItem.tintColor = .white
         navigationItem.leftBarButtonItem = leftBarButtonItem
         
         let renderedImageSettings = UIImage(named: "ProfileIcon")?.aspectFit(in: CGSize(width: 29, height: 29))
-        let rightBarButtonItem = UIBarButtonItem(image: renderedImageSettings, style: UIBarButtonItemStyle.plain, target: self, action: #selector(settingsTapped))
+        let rightBarButtonItem = UIBarButtonItem(image: renderedImageSettings, style: UIBarButtonItem.Style.plain, target: self, action: #selector(settingsTapped))
         rightBarButtonItem.tintColor = .white
         navigationItem.rightBarButtonItem = rightBarButtonItem
     }
@@ -221,9 +221,9 @@ class TabbedViewController: UIViewController, UIScrollViewDelegate, UIGestureRec
     
     func setupLeftBarButtonItemController() {
         if let menuController = UIStoryboard(name: "Menu", bundle: nil).instantiateViewController(withIdentifier: Constants.MENU_SCREEN) as? MenuViewController {
-            addChildViewController(menuController)
+            addChild(menuController)
             view.addSubview(menuController.view)
-            menuController.didMove(toParentViewController: self)
+            menuController.didMove(toParent: self)
             menuController.loadViewIfNeeded()
             self.menuController = menuController
         }

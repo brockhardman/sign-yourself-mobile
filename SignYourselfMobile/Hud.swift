@@ -1,10 +1,4 @@
-//
-//  Hud.swift
-//  Reliant
-//
-//  Created by Woodall, Kristopher on 2/15/17.
-//  Copyright © 2017 Relaint. All rights reserved.
-//
+
 
 import UIKit
 
@@ -28,7 +22,7 @@ open class Hud {
         view.layer.cornerRadius = 10
         view.clipsToBounds = true
 
-        let blurEffect = UIBlurEffect(style: UIBlurEffectStyle.light)
+        let blurEffect = UIBlurEffect(style: UIBlurEffect.Style.light)
         let blurEffectView = UIVisualEffectView(effect: blurEffect)
         blurEffectView.frame = view.bounds
         blurEffectView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
@@ -77,7 +71,7 @@ open class Hud {
         
         hudContent?.center = hudCenter
         overlayView.addSubview(hudContent!)
-        UIView.animate(withDuration: 0.2, delay: 0, options: UIViewAnimationOptions.curveEaseIn, animations: {
+        UIView.animate(withDuration: 0.2, delay: 0, options: UIView.AnimationOptions.curveEaseIn, animations: {
             self.overlayView.alpha = 1
         }, completion: nil)
     }
@@ -111,7 +105,7 @@ open class Hud {
         
         hudContent?.center = hudCenter
         overlayView.addSubview(hudContent!)
-        UIView.animate(withDuration: 0.2, delay: 0, options: UIViewAnimationOptions.curveEaseIn, animations: {
+        UIView.animate(withDuration: 0.2, delay: 0, options: UIView.AnimationOptions.curveEaseIn, animations: {
             self.overlayView.alpha = 1
         }, completion: nil)
     }
@@ -122,7 +116,7 @@ open class Hud {
             return
         }
         
-        UIView.animate(withDuration: 0.2, delay: 0, options: UIViewAnimationOptions.curveEaseOut, animations: {
+        UIView.animate(withDuration: 0.2, delay: 0, options: UIView.AnimationOptions.curveEaseOut, animations: {
             self.overlayView.alpha = 0.0
         }) { _ in
             self.isVisible = false

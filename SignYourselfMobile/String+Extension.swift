@@ -1,10 +1,4 @@
-//
-//  String+Extension.swift
-//  Utility
-//
-//  Created by Woodall, Kristopher on 3/15/17.
-//  Copyright © 2017 Reliant. All rights reserved.
-//
+
 
 import Foundation
 import UIKit
@@ -93,7 +87,7 @@ public extension String {
         textStyle.alignment = alignment
         textStyle.lineBreakMode = lineBreakMode
         
-        let textFontAttributes = [NSAttributedStringKey.font: font, NSAttributedStringKey.foregroundColor: UIColor.white, NSAttributedStringKey.paragraphStyle: textStyle]
+        let textFontAttributes = [NSAttributedString.Key.font: font, NSAttributedString.Key.foregroundColor: UIColor.white, NSAttributedString.Key.paragraphStyle: textStyle]
         
         let textFrame: CGRect = self.boundingRect(with: boundingSize, options: NSStringDrawingOptions.usesLineFragmentOrigin, attributes: textFontAttributes, context: nil)
         

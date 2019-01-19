@@ -58,7 +58,7 @@ class ProjectDetailViewController: UIViewController,UIGestureRecognizerDelegate,
         donateButton.setTitle("Donate Now", for: .normal)
         donateButton.addTarget(self, action: #selector(donateButtonTapped), for: .touchUpInside)
         headerView.addSubview(donateButton)
-        headerView.bringSubview(toFront: donateButton)
+        headerView.bringSubviewToFront(donateButton)
         donateButton.frame = CGRect(x: 200, y: 50, width: 100, height: 40)
         donateButton.backgroundColor = .red
     }
@@ -115,9 +115,9 @@ class ProjectDetailViewController: UIViewController,UIGestureRecognizerDelegate,
         viewPager.dataSource = self
         viewPager.delegate = self
         
-        self.addChildViewController(viewPager)
+        self.addChild(viewPager)
         self.containerView.addSubview(viewPager.view)
-        viewPager.didMove(toParentViewController: self)
+        viewPager.didMove(toParent: self)
     }
     override func viewWillLayoutSubviews() {
         super.viewWillLayoutSubviews()

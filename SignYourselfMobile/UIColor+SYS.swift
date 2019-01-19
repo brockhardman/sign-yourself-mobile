@@ -21,7 +21,7 @@ extension UIColor {
 extension UIColor {
     
     //primary colors
-    public class func nrgLightGreen() -> UIColor {
+    public class func lightGreen() -> UIColor {
         return UIColor(hexString: "1F8C82")
     }
     

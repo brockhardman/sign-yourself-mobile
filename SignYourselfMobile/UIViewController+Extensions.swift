@@ -23,7 +23,7 @@ extension UIViewController{
         toastLabel.alpha = 1.0
         toastLabel.layer.cornerRadius = 10;
         toastLabel.clipsToBounds  =  true
-        UIView.animate(withDuration: 2.0, delay: 0.00, options: UIViewAnimationOptions.curveEaseOut, animations: {
+        UIView.animate(withDuration: 2.0, delay: 0.00, options: UIView.AnimationOptions.curveEaseOut, animations: {
             toastLabel.alpha = 0.0
         })
         
@@ -39,9 +39,9 @@ extension UIViewController{
     func transitionFromleft(view:UIView)  {
         let transition = CATransition()
         transition.duration = 0.5
-        transition.type = kCATransitionPush
-        transition.subtype = kCATransitionFromLeft
-        transition.timingFunction = CAMediaTimingFunction(name:kCAMediaTimingFunctionEaseInEaseOut)
+        transition.type = CATransitionType.push
+        transition.subtype = CATransitionSubtype.fromLeft
+        transition.timingFunction = CAMediaTimingFunction(name:CAMediaTimingFunctionName.easeInEaseOut)
         view.window!.layer.add(transition, forKey: kCATransition)
     }
 }
