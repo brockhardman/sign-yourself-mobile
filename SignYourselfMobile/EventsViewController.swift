@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import ViewPager_Swift
 
 class EventsViewController: UIViewController {
     

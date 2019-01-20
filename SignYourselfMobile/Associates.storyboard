@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -37,7 +37,7 @@
                                                     <rect key="frame" x="0.0" y="0.0" width="375" height="79.5"/>
                                                     <subviews>
                                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="profile_icon" translatesAutoresizingMaskIntoConstraints="NO" id="Ubz-o7-IRA">
-                                                            <rect key="frame" x="10" y="9" width="60" height="60"/>
+                                                            <rect key="frame" x="10" y="10" width="60" height="60"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="width" constant="60" id="8R6-MW-tlr"/>
                                                                 <constraint firstAttribute="height" constant="60" id="OPD-OM-nso"/>
@@ -125,10 +125,10 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="acf-tw-480" firstAttribute="bottom" secondItem="9Y4-5k-XGg" secondAttribute="bottom" id="6ox-wT-2gU"/>
                             <constraint firstAttribute="trailing" secondItem="9Y4-5k-XGg" secondAttribute="trailing" id="URg-uG-jln"/>
                             <constraint firstItem="9Y4-5k-XGg" firstAttribute="top" secondItem="eK9-bg-5Y5" secondAttribute="top" id="Y8f-5U-1we"/>
                             <constraint firstItem="9Y4-5k-XGg" firstAttribute="leading" secondItem="eK9-bg-5Y5" secondAttribute="leading" id="ewr-lA-B65"/>
-                            <constraint firstItem="wIo-8o-wQg" firstAttribute="top" secondItem="9Y4-5k-XGg" secondAttribute="bottom" id="rDx-yI-2AY"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="acf-tw-480"/>
                     </view>
@@ -144,7 +144,7 @@
     <resources>
         <image name="AddUser" width="40" height="40"/>
         <image name="EnvelopeIcon" width="40" height="40"/>
-        <image name="marker" width="32" height="32"/>
-        <image name="profile_icon" width="64" height="64"/>
+        <image name="marker" width="51.200000762939453" height="51.200000762939453"/>
+        <image name="profile_icon" width="102.40000152587891" height="102.40000152587891"/>
     </resources>
 </document>

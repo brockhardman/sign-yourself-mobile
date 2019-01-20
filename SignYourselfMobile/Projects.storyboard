@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -29,14 +29,14 @@
                                         <rect key="frame" x="10" y="5" width="355" height="45"/>
                                         <subviews>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="SEARCH...." minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2xf-L3-pnW">
-                                                <rect key="frame" x="10" y="13.5" width="305" height="17"/>
+                                                <rect key="frame" x="10" y="14" width="305" height="17"/>
                                                 <color key="tintColor" red="0.067309729750000005" green="0.58878129720000005" blue="0.53171449900000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="search" translatesAutoresizingMaskIntoConstraints="NO" id="R09-Ai-zq0">
-                                                <rect key="frame" x="325" y="12" width="20" height="20"/>
+                                                <rect key="frame" x="325" y="12.5" width="20" height="20"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="20" id="JSc-AT-71W"/>
                                                     <constraint firstAttribute="width" constant="20" id="wrh-um-OFO"/>
@@ -80,19 +80,19 @@
                                                                     </constraints>
                                                                 </imageView>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nunc laoreet lorem a sem auctor" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gdP-M7-3UU">
-                                                                    <rect key="frame" x="10" y="125" width="132" height="13.5"/>
+                                                                    <rect key="frame" x="10" y="125" width="132" height="26.5"/>
                                                                     <fontDescription key="fontDescription" type="system" weight="medium" pointSize="11"/>
                                                                     <nil key="textColor"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$ 100" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r0s-id-VHi">
-                                                                    <rect key="frame" x="10" y="148.5" width="43" height="19.5"/>
+                                                                    <rect key="frame" x="10" y="161.5" width="43" height="19.5"/>
                                                                     <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
                                                                     <color key="textColor" red="0.047058823530000002" green="0.47843137250000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="By Sheru" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4YA-JS-68W">
-                                                                    <rect key="frame" x="73.5" y="148.5" width="68.5" height="19.5"/>
+                                                                    <rect key="frame" x="73.5" y="161.5" width="68.5" height="19.5"/>
                                                                     <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
                                                                     <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="calibratedWhite"/>
                                                                     <nil key="highlightedColor"/>
@@ -219,7 +219,7 @@
                                                 <rect key="frame" x="0.0" y="0.0" width="50" height="45"/>
                                                 <subviews>
                                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="back_arrow" translatesAutoresizingMaskIntoConstraints="NO" id="rBS-7R-6mT">
-                                                        <rect key="frame" x="15" y="14.5" width="15" height="15"/>
+                                                        <rect key="frame" x="15" y="15" width="15" height="15"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="15" id="2YR-cn-lUd"/>
                                                             <constraint firstAttribute="height" constant="15" id="3HT-4W-aeb"/>
@@ -265,8 +265,8 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="2rL-1N-lnO" firstAttribute="top" secondItem="0ZH-UV-pkp" secondAttribute="bottom" id="RBH-sY-vRh"/>
-                            <constraint firstItem="eZW-Cf-z5d" firstAttribute="top" secondItem="2rL-1N-lnO" secondAttribute="bottom" id="gkj-jP-wjV"/>
+                            <constraint firstItem="2rL-1N-lnO" firstAttribute="top" secondItem="gYy-9z-DRL" secondAttribute="top" id="Jug-Ny-Aix"/>
+                            <constraint firstItem="gYy-9z-DRL" firstAttribute="bottom" secondItem="2rL-1N-lnO" secondAttribute="bottom" id="P7b-6e-XbX"/>
                             <constraint firstAttribute="trailing" secondItem="2rL-1N-lnO" secondAttribute="trailing" id="iUe-je-rjQ"/>
                             <constraint firstItem="2rL-1N-lnO" firstAttribute="leading" secondItem="dju-Mz-81P" secondAttribute="leading" id="xRu-0v-hsY"/>
                         </constraints>
@@ -287,9 +287,9 @@
         </scene>
     </scenes>
     <resources>
-        <image name="back_arrow" width="32" height="32"/>
-        <image name="car1" width="311" height="175"/>
-        <image name="car2" width="1968" height="1312"/>
-        <image name="search" width="32" height="32"/>
+        <image name="back_arrow" width="51.200000762939453" height="51.200000762939453"/>
+        <image name="car1" width="623" height="350"/>
+        <image name="car2" width="3936" height="2624"/>
+        <image name="search" width="51.200000762939453" height="51.200000762939453"/>
     </resources>
 </document>

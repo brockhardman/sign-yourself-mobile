@@ -12,12 +12,11 @@ target 'SignYourselfMobile' do
   pod 'SVProgressHUD'
   pod 'Fabric'
   pod 'Crashlytics'
-  pod 'RadarSDK', '~> 2.0.0'
+  pod 'RadarSDK'
   pod 'WePay'
   pod 'DropDown'
-  pod 'Charts', '~>3.1.1'
-  pod 'ViewPager-Swift'
-  pod 'AppCenter' 
+  pod 'Charts'
+  pod 'AppCenter'
   pod 'AppCenter/Push' 
 
 end

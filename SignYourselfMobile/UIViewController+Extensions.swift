@@ -9,7 +9,6 @@
 import Foundation
 
 import UIKit
-import ViewPager_Swift
 import DropDown
 //MARK: -UIViewController Extension for Toast and cliping Views
 extension UIViewController{

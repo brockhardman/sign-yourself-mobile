@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="zxu-jX-Fg7">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="zxu-jX-Fg7">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -40,10 +40,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DLp-MR-WBV">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
                                 <subviews>
                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" bounces="NO" bouncesZoom="NO" dataMode="prototypes" style="plain" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="XVz-AL-Hie">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <connections>
                                             <outlet property="dataSource" destination="cGm-j3-Pqs" id="tyL-IR-Qh0"/>
@@ -54,6 +54,7 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="XVz-AL-Hie" secondAttribute="trailing" id="D8z-vo-DUx"/>
+                                    <constraint firstAttribute="width" constant="375" id="DGB-vQ-dG3"/>
                                     <constraint firstAttribute="bottom" secondItem="XVz-AL-Hie" secondAttribute="bottom" id="MiS-1t-L5A"/>
                                     <constraint firstItem="XVz-AL-Hie" firstAttribute="leading" secondItem="DLp-MR-WBV" secondAttribute="leading" id="Yhi-rz-GeT"/>
                                     <constraint firstItem="XVz-AL-Hie" firstAttribute="top" secondItem="DLp-MR-WBV" secondAttribute="top" id="nYd-Si-afU"/>
@@ -63,8 +64,9 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="DLp-MR-WBV" firstAttribute="leading" secondItem="PnK-By-byv" secondAttribute="leading" id="7sA-jh-plC"/>
+                            <constraint firstItem="DLp-MR-WBV" firstAttribute="top" secondItem="ms5-1j-5so" secondAttribute="bottom" id="CDN-Lm-jRa"/>
                             <constraint firstItem="f3W-To-3Rs" firstAttribute="top" secondItem="DLp-MR-WBV" secondAttribute="bottom" id="IAi-vf-601"/>
-                            <constraint firstItem="DLp-MR-WBV" firstAttribute="top" secondItem="PnK-By-byv" secondAttribute="top" id="RJl-bF-GEz"/>
+                            <constraint firstItem="DLp-MR-WBV" firstAttribute="top" secondItem="PnK-By-byv" secondAttribute="top" constant="20" id="RJl-bF-GEz"/>
                             <constraint firstAttribute="trailing" secondItem="DLp-MR-WBV" secondAttribute="trailing" id="Wc2-fC-GEK"/>
                         </constraints>
                     </view>

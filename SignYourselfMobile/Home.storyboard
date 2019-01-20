@@ -1,21 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
-        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
-    <customFonts key="customFonts">
-        <array key="AvenirNext.ttc">
-            <string>AvenirNext-DemiBold</string>
-            <string>AvenirNext-Regular</string>
-        </array>
-    </customFonts>
     <scenes>
         <!--Home-->
         <scene sceneID="2Ht-DI-UEw">
@@ -39,16 +32,16 @@
                                                 <rect key="frame" x="0.0" y="0.0" width="375" height="162"/>
                                                 <subviews>
                                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="zfA-Zy-ngJ">
-                                                        <rect key="frame" x="0.0" y="-0.5" width="375" height="162.5"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="375" height="162"/>
                                                         <subviews>
                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ipp-j9-1ei">
-                                                                <rect key="frame" x="0.0" y="0.0" width="125" height="162.5"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="125" height="162"/>
                                                                 <subviews>
                                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="G2M-EQ-nuY">
-                                                                        <rect key="frame" x="28" y="16" width="70" height="70"/>
+                                                                        <rect key="frame" x="27.5" y="16" width="70" height="70"/>
                                                                         <subviews>
                                                                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="marketing" translatesAutoresizingMaskIntoConstraints="NO" id="nJM-bo-Vyw">
-                                                                                <rect key="frame" x="14.5" y="15" width="40" height="40"/>
+                                                                                <rect key="frame" x="15" y="15" width="40" height="40"/>
                                                                                 <constraints>
                                                                                     <constraint firstAttribute="width" constant="40" id="CXA-yj-tbN"/>
                                                                                     <constraint firstAttribute="height" constant="40" id="hNd-Db-bQR"/>
@@ -84,10 +77,10 @@
                                                                 </constraints>
                                                             </view>
                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ddR-Pd-UiU">
-                                                                <rect key="frame" x="125" y="0.0" width="125" height="162.5"/>
+                                                                <rect key="frame" x="125" y="0.0" width="125" height="162"/>
                                                                 <subviews>
                                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="orG-AI-kI3">
-                                                                        <rect key="frame" x="28" y="16" width="70" height="70"/>
+                                                                        <rect key="frame" x="27.5" y="16" width="70" height="70"/>
                                                                         <subviews>
                                                                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="my_page" translatesAutoresizingMaskIntoConstraints="NO" id="vez-Ch-uIM">
                                                                                 <rect key="frame" x="15" y="15" width="40" height="40"/>
@@ -126,7 +119,7 @@
                                                                 </constraints>
                                                             </view>
                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8q6-WU-z53">
-                                                                <rect key="frame" x="250" y="0.0" width="125" height="162.5"/>
+                                                                <rect key="frame" x="250" y="0.0" width="125" height="162"/>
                                                                 <subviews>
                                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FAO-aM-4O9">
                                                                         <rect key="frame" x="27.5" y="16" width="70" height="70"/>
@@ -309,7 +302,7 @@
                                         <rect key="frame" x="0.0" y="587" width="375" height="60"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fuo-Tl-6fN">
-                                                <rect key="frame" x="137" y="10" width="100" height="40"/>
+                                                <rect key="frame" x="137.5" y="10" width="100" height="40"/>
                                                 <color key="backgroundColor" red="0.08235294118" green="0.62352941179999999" blue="0.59215686270000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="40" id="8y8-MV-4cB"/>
@@ -351,9 +344,9 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="Pm9-Rp-ljJ" firstAttribute="bottom" secondItem="pjb-Wv-dbE" secondAttribute="bottom" id="3Yh-qc-fHP"/>
                             <constraint firstItem="pjb-Wv-dbE" firstAttribute="top" secondItem="Pm9-Rp-ljJ" secondAttribute="top" id="NQI-rB-h1c"/>
                             <constraint firstAttribute="trailing" secondItem="pjb-Wv-dbE" secondAttribute="trailing" id="O3X-jC-dQy"/>
-                            <constraint firstItem="AMs-YA-Tre" firstAttribute="top" secondItem="pjb-Wv-dbE" secondAttribute="bottom" id="PWp-iW-u3q"/>
                             <constraint firstItem="pjb-Wv-dbE" firstAttribute="centerY" secondItem="Pm9-Rp-ljJ" secondAttribute="centerY" id="Py6-up-hEA"/>
                             <constraint firstItem="pjb-Wv-dbE" firstAttribute="leading" secondItem="rRW-SU-SDC" secondAttribute="leading" id="vQV-CR-iIg"/>
                         </constraints>
@@ -373,10 +366,10 @@
         </scene>
     </scenes>
     <resources>
-        <image name="car1" width="311" height="175"/>
-        <image name="marketing" width="24" height="24"/>
-        <image name="more" width="32" height="32"/>
-        <image name="my_page" width="23" height="17"/>
-        <image name="profile" width="24" height="34"/>
+        <image name="car1" width="623" height="350"/>
+        <image name="marketing" width="48" height="48"/>
+        <image name="more" width="51.200000762939453" height="51.200000762939453"/>
+        <image name="my_page" width="47" height="35"/>
+        <image name="profile" width="48" height="69"/>
     </resources>
 </document>

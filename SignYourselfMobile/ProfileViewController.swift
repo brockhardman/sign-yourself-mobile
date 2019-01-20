@@ -6,8 +6,6 @@
 //  Copyright © 2017 SignYourself. All rights reserved.
 //
 
-import ViewPager_Swift
-
 class ProfileViewController: ActiveViewController, UIGestureRecognizerDelegate, CollapseDelegate {
     
     

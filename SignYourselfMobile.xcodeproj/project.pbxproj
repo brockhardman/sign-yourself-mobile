@@ -65,6 +65,10 @@
 		382715741EAD08CC004B1994 /* UIColor+SYS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 382715731EAD08CC004B1994 /* UIColor+SYS.swift */; };
 		382715771EAD1535004B1994 /* Events.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 382715761EAD1535004B1994 /* Events.storyboard */; };
 		382715BF1EAEEC2D004B1994 /* EventsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 382715BE1EAEEC2D004B1994 /* EventsViewController.swift */; };
+		38346F6F21F41F6A0019B6DC /* ViewPagerTab.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38346F6B21F41F6A0019B6DC /* ViewPagerTab.swift */; };
+		38346F7021F41F6A0019B6DC /* ViewPagerOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38346F6C21F41F6A0019B6DC /* ViewPagerOptions.swift */; };
+		38346F7121F41F6A0019B6DC /* ViewPagerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38346F6D21F41F6A0019B6DC /* ViewPagerController.swift */; };
+		38346F7221F41F6A0019B6DC /* ViewPagerTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38346F6E21F41F6A0019B6DC /* ViewPagerTabView.swift */; };
 		38426DBE212116470003791B /* MediaTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38426DBD212116470003791B /* MediaTabViewController.swift */; };
 		38426DC12121166F0003791B /* MediaCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38426DBF2121166F0003791B /* MediaCell.swift */; };
 		38426DC22121166F0003791B /* MediaCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 38426DC02121166F0003791B /* MediaCell.xib */; };
@@ -183,6 +187,10 @@
 		382715731EAD08CC004B1994 /* UIColor+SYS.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+SYS.swift"; sourceTree = "<group>"; };
 		382715761EAD1535004B1994 /* Events.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Events.storyboard; sourceTree = "<group>"; };
 		382715BE1EAEEC2D004B1994 /* EventsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventsViewController.swift; sourceTree = "<group>"; };
+		38346F6B21F41F6A0019B6DC /* ViewPagerTab.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewPagerTab.swift; sourceTree = "<group>"; };
+		38346F6C21F41F6A0019B6DC /* ViewPagerOptions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewPagerOptions.swift; sourceTree = "<group>"; };
+		38346F6D21F41F6A0019B6DC /* ViewPagerController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewPagerController.swift; sourceTree = "<group>"; };
+		38346F6E21F41F6A0019B6DC /* ViewPagerTabView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewPagerTabView.swift; sourceTree = "<group>"; };
 		38426DBD212116470003791B /* MediaTabViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MediaTabViewController.swift; sourceTree = "<group>"; };
 		38426DBF2121166F0003791B /* MediaCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MediaCell.swift; sourceTree = "<group>"; };
 		38426DC02121166F0003791B /* MediaCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MediaCell.xib; sourceTree = "<group>"; };
@@ -358,9 +366,21 @@
 			name = Storyboards;
 			sourceTree = "<group>";
 		};
+		38346F6221F41E5F0019B6DC /* View Pager */ = {
+			isa = PBXGroup;
+			children = (
+				38346F6D21F41F6A0019B6DC /* ViewPagerController.swift */,
+				38346F6C21F41F6A0019B6DC /* ViewPagerOptions.swift */,
+				38346F6B21F41F6A0019B6DC /* ViewPagerTab.swift */,
+				38346F6E21F41F6A0019B6DC /* ViewPagerTabView.swift */,
+			);
+			name = "View Pager";
+			sourceTree = "<group>";
+		};
 		3853184C21209FCD0022DF76 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				38346F6221F41E5F0019B6DC /* View Pager */,
 				3813B95B212275EA0070FE2D /* Hud.swift */,
 				3813B95A212275E90070FE2D /* SignYourselfHud.swift */,
 				3853184D2120A0260022DF76 /* HoshiTextField.swift */,
@@ -674,14 +694,12 @@
 				"${BUILT_PRODUCTS_DIR}/Charts/Charts.framework",
 				"${BUILT_PRODUCTS_DIR}/DropDown/DropDown.framework",
 				"${BUILT_PRODUCTS_DIR}/SVProgressHUD/SVProgressHUD.framework",
-				"${BUILT_PRODUCTS_DIR}/ViewPager-Swift/ViewPager_Swift.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Charts.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DropDown.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SVProgressHUD.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ViewPager_Swift.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -715,6 +733,7 @@
 			files = (
 				3813B954212273650070FE2D /* DateFormatter+Extension.swift in Sources */,
 				3813B93D212273650070FE2D /* NSTextAlignment+Extension.swift in Sources */,
+				38346F7121F41F6A0019B6DC /* ViewPagerController.swift in Sources */,
 				380426ED203240D600F336B4 /* RegisterViewController.swift in Sources */,
 				38A6BB2B2120E3EA00F956FB /* ContributionCell.swift in Sources */,
 				3813B955212273650070FE2D /* CLLocation+Extension.swift in Sources */,
@@ -743,6 +762,7 @@
 				38B7E4DB20389A01000B5CA0 /* SignYourselfEventAPI.swift in Sources */,
 				3813B91721226F910070FE2D /* AppHelper.swift in Sources */,
 				380426D1201CED2000F336B4 /* User.swift in Sources */,
+				38346F6F21F41F6A0019B6DC /* ViewPagerTab.swift in Sources */,
 				38D319922128B23F0039ACEB /* MenuViewController.swift in Sources */,
 				3813B950212273650070FE2D /* UIImage+Extension.swift in Sources */,
 				380426D7201D30B700F336B4 /* Event.swift in Sources */,
@@ -769,6 +789,7 @@
 				3813B94B212273650070FE2D /* URL+Extension.swift in Sources */,
 				38A6BB1C2120E0DD00F956FB /* UIViewController+Extensions.swift in Sources */,
 				3813B951212273650070FE2D /* TimeInterval+Extension.swift in Sources */,
+				38346F7021F41F6A0019B6DC /* ViewPagerOptions.swift in Sources */,
 				382715741EAD08CC004B1994 /* UIColor+SYS.swift in Sources */,
 				38D3198E2128B22E0039ACEB /* MenuItemCell.swift in Sources */,
 				385A6B301EB1AC8100004F33 /* NSDictionary+SYS.swift in Sources */,
@@ -779,6 +800,7 @@
 				380426D9201D312500F336B4 /* Donation.swift in Sources */,
 				3813B943212273650070FE2D /* ReliantFont.swift in Sources */,
 				3813B940212273650070FE2D /* DateComponents+Extension.swift in Sources */,
+				38346F7221F41F6A0019B6DC /* ViewPagerTabView.swift in Sources */,
 				3813B93A212273650070FE2D /* Int+Extension.swift in Sources */,
 				3813B94C212273650070FE2D /* RELString+Extension.swift in Sources */,
 				3853184E2120A0260022DF76 /* HoshiTextField.swift in Sources */,
