@@ -20,8 +20,7 @@ extension SignYourselfAPIClient {
             }
             if (data != nil) {
                 do {
-                    let profile = try JSONSerialization.jsonObject(with: data!, options: [])
-                    //let profile = try JSONDecoder().decode(Profile.self, from: data!)
+                    let profile = try JSONDecoder().decode(Profile.self, from: data!)
                     print(profile)
                     completionHandlerAPI(Result.Success(profile))
                 } catch {

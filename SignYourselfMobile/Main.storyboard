@@ -105,7 +105,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="VgO-8Y-MPN">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="1334"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="E3h-rM-ags">
                                 <rect key="frame" x="0.0" y="617" width="375" height="50"/>
@@ -322,6 +322,7 @@
                             <constraint firstItem="pyo-lA-luD" firstAttribute="centerX" secondItem="YMI-Is-BXg" secondAttribute="centerX" id="RRi-Ta-PGW"/>
                             <constraint firstItem="4HH-u9-d4Y" firstAttribute="top" secondItem="fjx-wx-NFR" secondAttribute="bottom" constant="10" id="av9-3B-4kc"/>
                             <constraint firstItem="4HH-u9-d4Y" firstAttribute="centerX" secondItem="VgO-8Y-MPN" secondAttribute="centerX" id="eWz-vP-qXD"/>
+                            <constraint firstItem="8ec-L0-uU5" firstAttribute="bottom" secondItem="VgO-8Y-MPN" secondAttribute="bottom" id="f0f-eF-lNJ"/>
                             <constraint firstItem="qrt-DE-ssp" firstAttribute="centerY" secondItem="YMI-Is-BXg" secondAttribute="centerY" constant="-25" id="h0t-yh-afb"/>
                             <constraint firstItem="qrt-DE-ssp" firstAttribute="centerX" secondItem="VgO-8Y-MPN" secondAttribute="centerX" id="ixQ-Sh-XCC"/>
                             <constraint firstAttribute="trailing" secondItem="E3h-rM-ags" secondAttribute="trailing" id="jNT-Yo-GLf"/>

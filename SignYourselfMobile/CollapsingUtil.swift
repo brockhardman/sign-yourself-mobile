@@ -29,7 +29,7 @@ class CollapsingUtil {
                 
             }
         }
-        print(scrollDiff)
+        
         previousContentOffset = scrollOffsetY
         return absolutePercentage!
     }
