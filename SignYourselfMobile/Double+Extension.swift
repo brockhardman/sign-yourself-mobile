@@ -28,7 +28,7 @@ public extension Double {
         return formatter
     }()
     
-    public var commaRepresentation: String {
+    var commaRepresentation: String {
         return Double.commaFormatter.string(from: NSNumber(value: self)) ?? ""
     }
     
@@ -48,7 +48,7 @@ public extension Double {
     ///   - b: Second float number.
     ///   - epsilon: Releative Error. So if you want 99.99% accuracy you would pass in 0.00001.
     /// - Returns: True if both float numbers are relative to each other based on the releative error.
-    public func compare(to value: Double, epsilon: Double) -> Bool {
+    func compare(to value: Double, epsilon: Double) -> Bool {
         let absA = abs(self)
         let absB = abs(value)
         let diff = abs(self - value)
@@ -66,17 +66,17 @@ public extension Double {
     }
     
     ///  Returns Double as a string
-    public var stringValue: String {
+    var stringValue: String {
         return String(self)
     }
     
     /// Returns the Integer Value rounded down to the nearst whole number
-    public var integerValue: Int? {
+    var integerValue: Int? {
         return Int(floor(self))
     }
     
     /// Returns Boolean value of double
-    public var boolValue: Bool {
+    var boolValue: Bool {
         return self != 0
     }
     
@@ -86,7 +86,7 @@ public extension Double {
     ///   - a: First float number.
     ///   - b: Second float number.
     /// - Returns: True if both float numbers are relative to each other based on the releative error.
-    public func compare(to value: Double) -> Bool {
+    func compare(to value: Double) -> Bool {
         return self.compare(to: value, epsilon: 0.00000000000001)
     }
     
@@ -105,7 +105,7 @@ public extension Double {
     /// Convenience method for superscripting the first decimal point in a double
     ///
     /// - Returns: String with the first decimal superscripted
-    public func superscriptedDecimalString() -> String {
+    func superscriptedDecimalString() -> String {
         let stringValueSplit = String(format: "%g", self).split(separator: ".")
         if stringValueSplit.count == 2 {
             if let superscript = Double.superscriptedIntegers[String(stringValueSplit[1])] {
@@ -119,7 +119,7 @@ public extension Double {
     }
     
     /// Rounds the double to decimal places value
-    public func rounded(toPlaces places:Int) -> Double {
+    func rounded(toPlaces places:Int) -> Double {
         let divisor = pow(10.0, Double(places))
         return (self * divisor).rounded() / divisor
     }
@@ -130,7 +130,7 @@ extension Double: OptionalDouble{}
 public extension Optional where Wrapped: OptionalDouble {
     
     ///  Returns Double as a string
-    public var stringValue: String? {
+    var stringValue: String? {
         
         guard self != nil else {
             return nil
@@ -140,7 +140,7 @@ public extension Optional where Wrapped: OptionalDouble {
     }
     
     /// Returns the Integer Value rounded down to the nearst whole number
-    public var integerValue: Int? {
+    var integerValue: Int? {
         
         guard self != nil else {
             return nil
@@ -149,7 +149,7 @@ public extension Optional where Wrapped: OptionalDouble {
     }
     
     /// Returns Boolean value of double
-    public var boolValue: Bool {
+    var boolValue: Bool {
         
         guard self != nil else {
             return false

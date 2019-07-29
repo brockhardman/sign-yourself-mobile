@@ -123,6 +123,8 @@ extension UIImage {
             break
         case UIImage.Orientation.up, UIImage.Orientation.upMirrored:
             break
+        @unknown default:
+            print("Unknown orientation")
         }
         
         switch self.imageOrientation {
@@ -135,6 +137,8 @@ extension UIImage {
             transform.scaledBy(x: -1, y: 1)
         case UIImage.Orientation.up, UIImage.Orientation.down, UIImage.Orientation.left, UIImage.Orientation.right:
             break
+        @unknown default:
+            print("Unknown orientation")
         }
         
         let ctx:CGContext = CGContext(data: nil, width: Int(self.size.width), height: Int(self.size.height), bitsPerComponent: self.cgImage!.bitsPerComponent, bytesPerRow: 0, space: self.cgImage!.colorSpace!, bitmapInfo: CGImageAlphaInfo.premultipliedLast.rawValue)!

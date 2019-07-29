@@ -7,7 +7,7 @@ public extension Calendar {
     /// Returns a default Gregorian Calendar
     ///
     /// - Returns: Gregorian Calendar
-    public static func Default() -> Calendar {
+    static func Default() -> Calendar {
         return Calendar(identifier: .gregorian)
     }
     
@@ -16,7 +16,7 @@ public extension Calendar {
     ///
     /// - Parameter date: Date to retrieve data components from
     /// - Returns: DateComponents
-    public func components(of date: Date) -> DateComponents {
+    func components(of date: Date) -> DateComponents {
         return dateComponents(in: TimeZone.current, from: date)
     }
 }

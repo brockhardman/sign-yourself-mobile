@@ -15,7 +15,7 @@ public enum ApplicationSandBox {
 
 public extension URL {
     
-    public static func url(with httpServerString: String?) -> URL? {
+    static func url(with httpServerString: String?) -> URL? {
         guard let serverString = httpServerString, serverString.count > 0 else {
             return nil
         }
@@ -37,7 +37,7 @@ public extension URL {
     /// - Returns: URL of the file or directory
     
     @discardableResult
-    public static func file(name path: String? = nil, in directory: String? = nil, sandBox: ApplicationSandBox) -> URL? {
+    static func file(name path: String? = nil, in directory: String? = nil, sandBox: ApplicationSandBox) -> URL? {
         
         guard let directoryPath = self.directory(name: directory, sandBox: sandBox) else {
             return nil
@@ -55,7 +55,7 @@ public extension URL {
     ///
     /// - Parameter data: Data that will be written to the URL
     /// - Throws: Error if data was not able to write to
-    public func write(data: Data) throws {
+    func write(data: Data) throws {
         do {
             try data.write(to: self, options: NSData.WritingOptions.atomicWrite)
         } catch let error {
@@ -65,7 +65,7 @@ public extension URL {
     
     // MARK: Private Methods 
     
-    private static func directory(name directory: String?, sandBox: ApplicationSandBox) -> URL? {
+    static func directory(name directory: String?, sandBox: ApplicationSandBox) -> URL? {
         guard var sandBoxDirectory = self.appSandboxDirectory(sandBox) else {
             return nil
         }

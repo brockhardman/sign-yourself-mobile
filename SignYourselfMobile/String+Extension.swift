@@ -11,30 +11,30 @@ public let MISSING_STRING = "--"
 
 public extension String {
   
-    public var first: String {
+    var first: String {
         return String(prefix(1))
     }
     
-    public var last: String {
+    var last: String {
         return String(suffix(1))
     }
     
-    public var uppercaseFirst: String {
+    var uppercaseFirst: String {
         return first.uppercased() + String(dropFirst())
     }
     
     /// Returns Integer value of String if found.
-    public var integerValue: Int? {
+    var integerValue: Int? {
         return Int(self)
     }
     
     /// Return Double value of String if found
-    public var doubleValue: Double? {
+    var doubleValue: Double? {
         return Double(self)
     }
 
     /// Checks if String contains `Yes` or `No` and returns a bool value.
-    public var boolValue: Bool {
+    var boolValue: Bool {
         return (self).lowercased() == ("yes") || (self).lowercased() == ("true") || (self).lowercased() == ("1") || (self).lowercased() == "y" || (self).lowercased() == "success" || (self).lowercased() == "s"
     }
     
@@ -44,7 +44,7 @@ public extension String {
     ///   - format: The format of the date
     ///   - formatter: ateFormatter defaults to UTC time zone if not specified.
     /// - Returns: Date from literal string
-    public func date(format: String, formatter: DateFormatter = DateFormatter.Default()) -> Date? {
+    func date(format: String, formatter: DateFormatter = DateFormatter.Default()) -> Date? {
         
         guard self != EMPTY_STRING else {
             return nil
@@ -59,7 +59,7 @@ public extension String {
     ///
     /// - Parameter characterList: List of characters
     /// - Returns:  Filtered string that matches the characters
-    public func filter(characterList: String) -> String {
+    func filter(characterList: String) -> String {
         return filter({ characterList.contains($0) }).reduce("", { $0 + String($1) })
     }
     
@@ -69,7 +69,7 @@ public extension String {
     ///   - character: Character that will inserted into string.
     ///   - index: Where in the string the character will be inserted.
     /// - Returns: New string with added character.
-    public func insert(string: String, index: Int) -> String {
+    func insert(string: String, index: Int) -> String {
         return String(self.prefix(index)) + string + String(self.suffix(self.count-index))
     }
     
@@ -81,7 +81,7 @@ public extension String {
     ///   - alignment: If the text is center, left, or right justified.
     ///   - lineBreak: The line break mode of the string.
     /// - Returns: The size of the string.
-    public func size(with font: UIFont, boundingSize: CGSize, alignment: NSTextAlignment = .left, lineBreakMode: NSLineBreakMode = .byWordWrapping) -> CGSize {
+    func size(with font: UIFont, boundingSize: CGSize, alignment: NSTextAlignment = .left, lineBreakMode: NSLineBreakMode = .byWordWrapping) -> CGSize {
         
         let textStyle = NSParagraphStyle.default.mutableCopy() as! NSMutableParagraphStyle
         textStyle.alignment = alignment
@@ -97,7 +97,7 @@ public extension String {
     /// Formats string as a string sentenced cased. The first word is only capitalized.
     ///
     /// - Returns: Sentenced cased string.
-    public func sentenceCase() -> String {
+    func sentenceCase() -> String {
         return self.components(separatedBy: " ").enumerated().compactMap() { (index, value) in
             
             guard index != 0 else {
@@ -116,7 +116,7 @@ public extension String {
     ///   - start: Start index of search
     ///   - end: End index of search
     /// - Returns: Return substring from range.
-    public func subString(from start: Int, to end: Int? = nil) -> String {
+    func subString(from start: Int, to end: Int? = nil) -> String {
         
         let maximum = count
         var startIndex = start < 0 ? self.endIndex : self.startIndex
@@ -161,7 +161,7 @@ extension String: OptionalString{}
 public extension Optional where Wrapped: OptionalString {
     
     /// Returns Integer value of String if found.
-    public var integerValue: Int? {
+    var integerValue: Int? {
         
         guard self != nil  else {
             return nil
@@ -171,7 +171,7 @@ public extension Optional where Wrapped: OptionalString {
     }
     
     /// Return Double value of String if found
-    public var doubleValue: Double? {
+    var doubleValue: Double? {
         
         guard self != nil  else {
             return nil
@@ -181,7 +181,7 @@ public extension Optional where Wrapped: OptionalString {
     }
         
     /// Checks if String returns a bool value. 
-    public var boolValue: Bool {
+    var boolValue: Bool {
         
         guard self != nil  else {
             return false
@@ -191,7 +191,7 @@ public extension Optional where Wrapped: OptionalString {
     }
     
     /// Checks to see if the string is a Valid String. It is not nil and is not empty
-    public var isValid: Bool {
+    var isValid: Bool {
        return (self is String) && !(self as! String).isEmpty
     }
     
@@ -201,7 +201,7 @@ public extension Optional where Wrapped: OptionalString {
     ///   - format: The format of the date
     ///   - formatter: DateFormatter defaults to UTC time zone if not specified.
     /// - Returns: Date from literal string
-    public func date(format: String, formatter: DateFormatter = DateFormatter.Default()) -> Date? {
+    func date(format: String, formatter: DateFormatter = DateFormatter.Default()) -> Date? {
         
         guard self != nil  else {
             return nil

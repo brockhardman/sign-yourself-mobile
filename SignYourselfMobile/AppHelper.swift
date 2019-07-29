@@ -79,7 +79,7 @@ class AppHelper {
     private func parseConfiguration(fileName : String) {
         if let fileUrl = Bundle.main.url(forResource: fileName, withExtension: "plist"),
             let data = try? Data(contentsOf: fileUrl) {
-            if let result = try? PropertyListSerialization.propertyList(from: data, options: [], format: nil) as? [String: Any] {
+            if let result = ((try? PropertyListSerialization.propertyList(from: data, options: [], format: nil) as? [String: Any]) as [String : Any]??) {
                 config = result!;
             }
         }

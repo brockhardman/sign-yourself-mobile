@@ -18,7 +18,7 @@ public extension TimeInterval {
     ///
     /// - Parameter conversion: Type of conversion from seconds.
     /// - Returns: Converted time
-    public func convert(to type: Conversion) -> Double {
+    func convert(to type: Conversion) -> Double {
         switch type {
         case .day: return self / (60 * 60 * 24)
         case .hour: return self / (60 * 60)

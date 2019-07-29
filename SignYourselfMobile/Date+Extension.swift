@@ -100,7 +100,7 @@ public extension Date {
     }
     
     /// Returns UTC Date that is equivalent with the current stystem date.
-    public static var UTC: Date {
+    static var UTC: Date {
         let currentDate = Date()
         let timeDifference = TimeZone.current.secondsFromGMT()
         return currentDate + TimeInterval(timeDifference)
@@ -112,7 +112,7 @@ public extension Date {
     ///   - format:  The format of the date string
     ///   - formatter: DateFormatter defaults to UTC Date format if not provided.
     /// - Returns: Formatted string
-    public func string(format: String) -> String {
+    func string(format: String) -> String {
         
         let formater = self.formatter ?? DateFormatter.Default()
         formater.dateFormat = format
@@ -123,7 +123,7 @@ public extension Date {
     /// Checks to see if the year is a leap year.
     ///
     /// - Returns: True if year is a leap year
-    public func isLeapYear() -> Bool {
+    func isLeapYear() -> Bool {
         
         if let year = Int(self.string(format: "YYYY")) {
             return (year % 100 != 0) && (year % 4 == 0) || year % 400 == 0
@@ -137,7 +137,7 @@ public extension Date {
     ///
     /// - Parameter info: Date info used to calculate the date this is optional
     /// - Returns: Returns true if curent month is a leap month
-    public func isLeapMonth() -> Bool {
+    func isLeapMonth() -> Bool {
         
         let calendar = self.calendar ?? Calendar.Default()
         let component = calendar.dateComponents([Calendar.Component.month], from: self)
@@ -150,7 +150,7 @@ public extension Date {
     ///
     /// - Parameter info: Date info used to calculate the date this is optional
     /// - Returns: Number of the month
-    public func monthNumber() -> Int {
+    func monthNumber() -> Int {
         
         let calendar = self.calendar ?? Calendar.Default()
         let component = calendar.dateComponents([Calendar.Component.month], from: self)
@@ -162,7 +162,7 @@ public extension Date {
     ///
     /// - Parameter info: Date info used to calculate the date this is optional
     /// - Returns: Returns the week number
-    public func weekNumber() -> Int {
+    func weekNumber() -> Int {
         
         let calendar = self.calendar ?? Calendar.Default()
         let component = calendar.dateComponents([Calendar.Component.weekOfYear], from: self)
@@ -200,7 +200,7 @@ public extension Date {
     ///   - startDate: The start of the date range
     ///   - endDate: The end of the date range
     /// - Returns: True if the date falls any where in the range inculding the start and end date.
-    public func inRange(of startDate: Date, to endDate: Date) -> Bool {
+    func inRange(of startDate: Date, to endDate: Date) -> Bool {
         guard self == startDate else {
             return true
         }
@@ -279,7 +279,7 @@ public extension Date {
     /// End of week
     ///
     /// - returns: Last day of the week of this date instance
-    public func endOfWeek() -> Date {
+    func endOfWeek() -> Date {
         
         let calendar = self.calendar ?? Calendar.Default()
         let components = calendar.components(of: self)
@@ -292,7 +292,7 @@ public extension Date {
     /// End of Day
     ///
     /// - Returns: Returns End of day Date based on current date.
-    public func endOfDay() -> Date {
+    func endOfDay() -> Date {
         let calendar = self.calendar ?? Calendar.Default()
         
         var components = calendar.components(of: self)
@@ -303,7 +303,7 @@ public extension Date {
         return calendar.date(from: components)!
     }
     
-    public var yearValue: Int {
+    var yearValue: Int {
         return Calendar.current.component(.year, from: self)
     }
 }
@@ -318,7 +318,7 @@ public extension Optional where Wrapped: OptionalDate {
     ///   - format:  The format of the date string
     ///   - formatter: DateFormatter defaults to UTC Date format if not provided.
     /// - Returns: Formatted string
-    public func string(format: String, formatter: DateFormatter = DateFormatter.Default()) -> String? {
+    func string(format: String, formatter: DateFormatter = DateFormatter.Default()) -> String? {
         
         guard self != nil  else {
             return nil
