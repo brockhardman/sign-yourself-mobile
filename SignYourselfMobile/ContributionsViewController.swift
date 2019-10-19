@@ -32,7 +32,7 @@ extension ContributionsViewController : UITableViewDataSource{
         var cell = tableView.dequeueReusableCell(withIdentifier: "ContributionCell") as? ContributionCell
         if (cell == nil)
         {
-            var nib = Bundle.main.loadNibNamed("ContributionCell", owner: self, options: nil)
+            let nib = Bundle.main.loadNibNamed("ContributionCell", owner: self, options: nil)
             cell = nib?[0] as? ContributionCell
             if indexPath.row % 2 == 0 || indexPath.row == 0 {
                 cell?.backgroundView?.backgroundColor = UIColor.lightGray

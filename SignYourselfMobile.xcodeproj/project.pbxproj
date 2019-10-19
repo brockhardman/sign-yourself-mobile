@@ -624,10 +624,9 @@
 			};
 			buildConfigurationList = 38E34BF71DEE866E00D1D37E /* Build configuration list for PBXProject "SignYourselfMobile" */;
 			compatibilityVersion = "Xcode 3.2";
-			developmentRegion = English;
+			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
-				English,
 				en,
 				Base,
 			);

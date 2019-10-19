@@ -23,7 +23,7 @@ extension AllEventsTabViewController:UITableViewDataSource{
         var cell = tableView.dequeueReusableCell(withIdentifier: "EventCell") as? EventCell
         if (cell == nil)
         {
-            var nib = Bundle.main.loadNibNamed("EventCell", owner: self, options: nil)
+            let nib = Bundle.main.loadNibNamed("EventCell", owner: self, options: nil)
             cell = nib?[0] as? EventCell
         }
         return cell!

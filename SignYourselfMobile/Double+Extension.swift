@@ -7,9 +7,6 @@ public extension Double {
     // Normal Minimum Value of double
     static var minNormal: Double { return 2.2250738585072014e-308 }
     
-    // Minimum value of double
-    static var min: Double { return 4.9406564584124654e-324 }
-    
     // Maximum value of double
     static var max: Double { return 1.7976931348623157e308 }
     
